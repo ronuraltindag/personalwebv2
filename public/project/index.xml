@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ongoing Projects on Onur Altindag</title>
+    <link>https://onuraltindag.info/project/</link>
+    <description>Recent content in Ongoing Projects on Onur Altindag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023 Onur Altındağ · Cover photo: Bayt Beirut, 2019</copyright>
+    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://onuraltindag.info/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ADRD, Family Caregiving and Children’s Labor Supply in Denmark</title>
+      <link>https://onuraltindag.info/project/adrd_denmark/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/project/adrd_denmark/</guid>
+      <description>Abstract Research in progress.
+Click here to download the full study.</description>
+    </item>
+    
+    <item>
+      <title>The Role of Well-being Measurement in Targeting Social Protection Programs</title>
+      <link>https://onuraltindag.info/project/poverty_targeting/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/project/poverty_targeting/</guid>
+      <description>Abstract Research in progress.
+Click here to download the full study.</description>
+    </item>
+    
+  </channel>
+</rss>

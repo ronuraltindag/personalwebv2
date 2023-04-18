@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Refugees on Onur Altindag</title>
+    <link>https://onuraltindag.info/categories/refugees/</link>
+    <description>Recent content in Refugees on Onur Altindag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023 Onur Altındağ · Cover photo: Bayt Beirut, 2019</copyright>
+    <lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://onuraltindag.info/categories/refugees/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blessing or burden? Impacts of refugees on businesses and the informal economy</title>
+      <link>https://onuraltindag.info/research/turkey_refugees_firms/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/turkey_refugees_firms/</guid>
+      <description>Abstract We study the impact of the sudden arrival of more than three million Syrian refugees in Turkey on Turkish businesses. Our empirical methodology exploits the annual variation in refugee outflows from Syria and geographic concentrations of Arabic-speaking communities in Turkey, which date back to the rupture of the Ottoman Empire after World War I. Using yearly firm census data from 2006 to 2015, we document that refugee inflows induced a positive impact on the intensive and extensive margins of firm production.</description>
+    </item>
+    
+  </channel>
+</rss>
