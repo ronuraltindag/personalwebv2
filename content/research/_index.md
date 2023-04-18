@@ -1,7 +1,7 @@
 ---
 author: 
 cascade:
-  show_author_byline: true
+  show_author_byline: false
   show_comments: false
   show_post_date: false
   sidebar:
@@ -10,12 +10,12 @@ cascade:
     text_link_url: /research/
 description: 
 layout: list-grid
-show_author_byline: true
+show_author_byline: false
 show_button_links: false
 show_post_date: false
 show_post_thumbnail: true
 sidebar:
-  show_sidebar_adunit: true
+  show_sidebar_adunit: false
   author: 
   description: "We are looking for a research assistant"
   text_link_label: ""
