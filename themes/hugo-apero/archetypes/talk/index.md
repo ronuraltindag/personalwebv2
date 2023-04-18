@@ -6,7 +6,7 @@ date: {{ .Date }}
 date_end: {{ .Date }}
 author: ""
 location: "Online"
-draft: true
+draft: false
 series:
 tags:
 categories:
