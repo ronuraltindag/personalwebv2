@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Refugees on Onur Altindag</title>
+    <link>https://onuraltindag.info/categories/refugees/</link>
+    <description>Recent content in Refugees on Onur Altindag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023 Onur Altındağ · Cover photo: Bayt Beirut, 2019</copyright>
+    <lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://onuraltindag.info/categories/refugees/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Short-lived Effects of Unconditional Cash Transfers to Refugees</title>
+      <link>https://onuraltindag.info/research/lebanon_uct_rd/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/lebanon_uct_rd/</guid>
+      <description>Abstract We study two yearlong unconditional cash-based assistance programs for Syrian refugees in Lebanon, and show that they improve consumption, child well-being, food security, and reduce livelihood coping. Despite high transfer values, we find no evidence of lasting effects at six months after either program ends. Households spend transfers on basic needs, and take children out of work and re-enroll them in school. Beneficiaries increase cash savings and their stock of durable goods, but liquidate and spend these assets during or soon after the beneficiary period.</description>
+    </item>
+    
+    <item>
+      <title>Do refugees impact voting behavior in the host country? Evidence from Syrian refugee inflows to Turkey</title>
+      <link>https://onuraltindag.info/research/turkey_refugees_voting/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/turkey_refugees_voting/</guid>
+      <description>Abstract We study how individual political preferences changed in response to the influx of over 3.5 million Syrian refugees to Turkey during 2012–2016. Using a difference-in-differences research design, we compare the political outcomes in geographic areas with high versus low intensities of refugee presence before and after the beginning of the Syrian Civil War. To address the endogeneity of refugees’ location choices, we adopt an instrumental variables approach that relies on (1) historical dispersion of Arabic speakers in Turkish provinces and (2) driving distances between Turkish and Syrian residential areas to predict the flows of refugees across Turkish provinces during the study period.</description>
+    </item>
+    
+    <item>
+      <title>Targeting Humanitarian Aid Using Administrative Data: Model Design and Validation</title>
+      <link>https://onuraltindag.info/research/lebanon_uct_targeting/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/lebanon_uct_targeting/</guid>
+      <description>Abstract We develop and assess the performance of an econometric prediction model that relies on administrative data held by international agencies to target over $380 million annually in unconditional cash transfers to Syrian refugees in Lebanon. Standard metrics of prediction accuracy suggest targeting using administrative data is comparable to a short-form Proxy Means Test, which requires a survey of the entire target population. We show that small differences in accuracy across approaches are largely attributable to a few data fields.</description>
+    </item>
+    
+    <item>
+      <title>Blessing or burden? Impacts of refugees on businesses and the informal economy</title>
+      <link>https://onuraltindag.info/research/turkey_refugees_firms/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/turkey_refugees_firms/</guid>
+      <description>Abstract We study the impact of the sudden arrival of more than three million Syrian refugees in Turkey on Turkish businesses. Our empirical methodology exploits the annual variation in refugee outflows from Syria and geographic concentrations of Arabic-speaking communities in Turkey, which date back to the rupture of the Ottoman Empire after World War I. Using yearly firm census data from 2006 to 2015, we document that refugee inflows induced a positive impact on the intensive and extensive margins of firm production.</description>
+    </item>
+    
+  </channel>
+</rss>

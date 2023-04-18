@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Denmark on Onur Altindag</title>
+    <link>https://onuraltindag.info/categories/denmark/</link>
+    <description>Recent content in Denmark on Onur Altindag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023 Onur Altındağ · Cover photo: Bayt Beirut, 2019</copyright>
+    <lastBuildDate>Thu, 22 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://onuraltindag.info/categories/denmark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Register</title>
+      <link>https://onuraltindag.info/research/denmark_mmr_chsr-/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/denmark_mmr_chsr-/</guid>
+      <description>Under review</description>
+    </item>
+    
+    <item>
+      <title>Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark</title>
+      <link>https://onuraltindag.info/research/denmark_sids/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/denmark_sids/</guid>
+      <description>Abstract We evaluate the impact of a nationwide public health intervention on deaths from sudden infant death syndrome (SIDS), using population data from Denmark in a regression discontinuity research design. The information campaign—implemented primarily through a universal nurse home visiting program—reduced infant mortality by 17.2 percent and saved between 11.6-13.5 lives over 10,000 births. The estimated effect sizes are 11-14 times larger among low birthweight and preterm infants relative to the overall population.</description>
+    </item>
+    
+  </channel>
+</rss>
