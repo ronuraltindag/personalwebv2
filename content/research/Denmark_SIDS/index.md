@@ -6,7 +6,7 @@ categories:
 - Denmark
 - Regression Discontinuity Design
 draft: false
-excerpt: "Onur Altindağ, Jane Greve, Erdal Tekin; Public Health Policy at Scale: Impact of a Government-Sponsored Information Campaign on Infant Mortality in Denmark. *Review of Economics and Statistics* 2022; doi: https://doi.org/10.1162/rest_a_01211. This research was funded by Novo Nordisk Foundation."
+excerpt: "Onur Altindağ, Jane Greve, Erdal Tekin; Public Health Policy at Scale: Impact of a Government-Sponsored Information Campaign on Infant Mortality in Denmark. **Review of Economics and Statistics** 2022; doi: https://doi.org/10.1162/rest_a_01211. This research was funded by Novo Nordisk Foundation."
 layout: single
 title: "Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark"
 links:

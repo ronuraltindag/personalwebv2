@@ -5,7 +5,7 @@ author:
 - Difference-in-differences
 date: "2019-12-10"
 draft: false
-excerpt: "Kobayashi, L. C., Altindag, O., Truskinovsky, Y., & Berkman, L. F. (2019). Effects of the Affordable Care Act Medicaid Expansion on Subjective Well-Being in the US Adult Population, 2010-2016. *American Journal of Public Health*, 109(9), 1236–1242. https://doi.org/10.2105/AJPH.2019.305164"
+excerpt: "Kobayashi, L. C., Altindag, O., Truskinovsky, Y., & Berkman, L. F. (2019). Effects of the Affordable Care Act Medicaid Expansion on Subjective Well-Being in the US Adult Population, 2010-2016. **American Journal of Public Health**, 109(9), 1236–1242. https://doi.org/10.2105/AJPH.2019.305164"
 layout: single
 title: "Effects of the Affordable Care Act Medicaid Expansion on Subjective Well-Being in the US Adult Population, 2010–2016"
 links:

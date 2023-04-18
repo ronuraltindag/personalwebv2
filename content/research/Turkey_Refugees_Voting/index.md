@@ -8,7 +8,7 @@ categories:
 - Instrumental Variables 
 date: "2021-01-01" 
 draft: false
-excerpt: "Altındağ, O., Kaushal, N. Do refugees impact voting behavior in the host country? Evidence from Syrian refugee inflows to Turkey. *Public Choice* 186, 149–178 2021. https://doi.org/10.1007/s11127-019-00768-3"
+excerpt: "Altındağ, O., Kaushal, N. Do refugees impact voting behavior in the host country? Evidence from Syrian refugee inflows to Turkey. **Public Choice** 186, 149–178 2021. https://doi.org/10.1007/s11127-019-00768-3"
 layout: single
 title: Do refugees impact voting behavior in the host country? Evidence from Syrian refugee inflows to Turkey
 links:

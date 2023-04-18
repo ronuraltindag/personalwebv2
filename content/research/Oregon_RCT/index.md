@@ -6,7 +6,7 @@ categories:
 - Randomized Experiment
 date: "2014-12-12"
 draft: false
-excerpt: "Reeder JA, Joyce T, Sibley K, Arnold D, Altindag O. Telephone peer counseling of breastfeeding among WIC participants: a randomized controlled trial. Pediatrics. 2014 Sep;134(3):e700-9."
+excerpt: "Reeder JA, Joyce T, Sibley K, Arnold D, Altindag O. Telephone peer counseling of breastfeeding among WIC participants: a randomized controlled trial. **Pediatrics**. 2014 Sep;134(3):e700-9."
 layout: single
 title: "Telephone peer counseling of breastfeeding among WIC participants: a randomized controlled trial"
 links:

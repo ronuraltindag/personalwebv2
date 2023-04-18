@@ -9,7 +9,7 @@ date: "2020-12-20"
 draft: false
 excerpt: "Onur Altındağ, Stephen D. O'Connell, Aytuğ Şaşmaz, Zeynep Balcıoğlu, Paola Cadoni, Matilda Jerneck, Aimee Kunze Foong,
 Targeting humanitarian aid using administrative data: Model design and validation,
-*Journal of Development Economics*,
+**Journal of Development Economics**,
 Volume 148,
 2021,
 102564,

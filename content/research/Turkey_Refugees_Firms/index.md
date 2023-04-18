@@ -10,7 +10,7 @@ date: "2020-09-22"
 draft: false
 excerpt: "Onur Altındağ, Ozan Bakış, Sandra V. Rozo,
 Blessing or burden? Impacts of refugees on businesses and the informal economy,
-*Journal of Development Economics*,
+**Journal of Development Economics**,
 Volume 146,
 2020,
 102490,

@@ -6,7 +6,7 @@ categories:
 - Randomized Experiment
 date: "2017-06-06"
 draft: false
-excerpt: "Joyce T, Remler DK, Jaeger DA, Altindag O, O'Connell SD, Crockett S. On Measuring and Reducing Selection Bias With a Quasi‐Doubly Randomized Preference Trial. *Journal of Policy Analysis and Management*. 2017 Mar;36(2):438-59. https://doi.org/10.1002/pam.21976"
+excerpt: "Joyce T, Remler DK, Jaeger DA, Altindag O, O'Connell SD, Crockett S. On Measuring and Reducing Selection Bias With a Quasi‐Doubly Randomized Preference Trial. **Journal of Policy Analysis and Management**. 2017 Mar;36(2):438-59. https://doi.org/10.1002/pam.21976"
 layout: single
 title: "On Measuring and Reducing Selection Bias With a Quasi-Doubly Randomized Preference Trial"
 links:

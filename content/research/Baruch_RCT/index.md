@@ -6,7 +6,7 @@ categories:
 - Randomized Experiment
 date: "2015-12-12"
 draft: false
-excerpt: "Ted Joyce, Sean Crockett, David A. Jaeger, Onur Altindag, Stephen D. O'Connell, Does classroom time matter?, Economics of Education Review, Volume 46, 2015, Pages 64-77, ISSN 0272-7757, https://doi.org/10.1016/j.econedurev.2015.02.007"
+excerpt: "Ted Joyce, Sean Crockett, David A. Jaeger, Onur Altindag, Stephen D. O'Connell, Does classroom time matter?, **Economics of Education Review**, Volume 46, 2015, Pages 64-77, ISSN 0272-7757, https://doi.org/10.1016/j.econedurev.2015.02.007"
 layout: single
 title: "Does classroom time matter?"
 links:

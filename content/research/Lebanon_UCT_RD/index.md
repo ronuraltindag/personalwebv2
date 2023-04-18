@@ -9,7 +9,7 @@ date: "2022-08-22"
 draft: false
 excerpt: "Onur Altındağ, Stephen D. O’Connell,
 The short-lived effects of unconditional cash transfers to refugees,
-*Journal of Development Economics*,
+**Journal of Development Economics**,
 Volume 160,
 2023,
 102942,

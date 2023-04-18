@@ -6,7 +6,7 @@ categories:
 - Descriptive Analysis
 date: "2017-12-12"
 draft: false
-excerpt: "Altindag O, Joyce T. Judicial bypass for minors seeking abortions in Arkansas versus other states. *American Journal of Public Health*. 2017 Aug;107(8):1266-71"
+excerpt: "Altindag O, Joyce T. Judicial bypass for minors seeking abortions in Arkansas versus other states. **American Journal of Public Health**. 2017 Aug;107(8):1266-71"
 layout: single
 title: "Judicial Bypass for Minors Obtaining an Abortion: Ten years of Data from Arkansas"
 links:

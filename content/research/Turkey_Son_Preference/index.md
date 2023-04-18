@@ -6,7 +6,7 @@ categories:
 - Difference-in-differences 
 date: "2016-12-12"
 draft: false
-excerpt: "Onur Altindag; Son Preference, Fertility Decline, and the Nonmissing Girls of Turkey. Demography 1 April 2016; 53 (2): 541–566. doi: https://doi.org/10.1007/s13524-016-0455-0"
+excerpt: "Onur Altindag; Son Preference, Fertility Decline, and the Nonmissing Girls of Turkey. **Demography** 1 April 2016; 53 (2): 541–566. doi: https://doi.org/10.1007/s13524-016-0455-0"
 layout: single
 title: "Son Preference, Fertility Decline, and the Nonmissing Girls of Turkey"
 links:

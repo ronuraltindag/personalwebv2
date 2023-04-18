@@ -7,14 +7,15 @@ show_social_links: true # specify social accounts in site config
 audio_link_label: "How to say my name" # leave blank to exclude
 link_list_label: "community" # bookmarks, elsewhere, etc.
 link_list:
-- name: My better 1/2
-  url: https://www.bu.edu/sph/profile/kiersten-strombotne/
-- name: People that I work(ed) with  
+
+- name: People  I work(ed) with  
   url: /colleagues/
-- name: People that I run with 
+- name: People  I run with 
   url: https://www.srr.org/ 
-- name: People that I dive with  
+- name: People  I dive with  
   url: https://www.dragoman-turkey.com/  
+- name: My better half
+  url: https://www.bu.edu/sph/profile/kiersten-strombotne/
 ---
 
 ** index doesn't contain a body, just front matter above.

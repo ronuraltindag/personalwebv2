@@ -7,7 +7,7 @@ date: "2022-06-26"
 draft: false
 excerpt: "Onur Altındağ, Theodore Joyce,
 Another day, another visit: Impact of Arkansas’ mandatory waiting period for women seeking an abortion by demographic groups,
-*Journal of Public Economics*,
+**Journal of Public Economics**,
 Volume 213,
 2022,
 104715,
