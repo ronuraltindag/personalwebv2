@@ -4,7 +4,7 @@ subtitle: ""
 excerpt: ""
 date: {{ .Date }}
 author: ""
-draft: true
+draft: fals
 series:
 tags:
 categories:

@@ -4,7 +4,7 @@ categories:
 - Health Economics
 - Turkey
 date: "2022-01-10"
-draft: true
+draft: false
 excerpt: 'Altindag, Onur, Bilge Erten, and Pinar Keskin. 2022. Mental Health Costs of Lockdowns: Evidence from Age-Specific Curfews in Turkey. *American Economic Journal: Applied Economics*, 14 (2): 320-43.
 DOI: 10.1257/app.20200811. Field work was funded by 
 The College of Social Sciences and Humanities Research Development Initiative at Northeastern University.'

@@ -5,7 +5,7 @@ categories:
 - Denmark
 - Descriptive analysis
 date: "2022-09-22"
-draft: true
+draft: false
 excerpt: Under review 
 layout: single
 title: Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Register

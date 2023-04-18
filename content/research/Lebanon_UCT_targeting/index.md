@@ -1,5 +1,6 @@
 ---
 author: 
+categories:
 - Development Economics
 - Lebanon
 - Descriptive analysis

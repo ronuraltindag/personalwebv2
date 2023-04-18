@@ -7,47 +7,83 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2023 Onur Altındağ · Cover photo: Bayt Beirut, 2019</copyright>
-    <lastBuildDate>Thu, 10 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://onuraltindag.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://onuraltindag.info/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Denmark</title>
       <link>https://onuraltindag.info/categories/denmark/</link>
-      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://onuraltindag.info/categories/denmark/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Descriptive Analysis</title>
+      <link>https://onuraltindag.info/categories/descriptive-analysis/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/categories/descriptive-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Health Economics</title>
       <link>https://onuraltindag.info/categories/health-economics/</link>
-      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://onuraltindag.info/categories/health-economics/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Regression Discontinuity Design</title>
-      <link>https://onuraltindag.info/categories/regression-discontinuity-design/</link>
-      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://onuraltindag.info/categories/regression-discontinuity-design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Development Economics</title>
       <link>https://onuraltindag.info/categories/development-economics/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://onuraltindag.info/categories/development-economics/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Lebanon</title>
+      <link>https://onuraltindag.info/categories/lebanon/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/categories/lebanon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Refugees</title>
+      <link>https://onuraltindag.info/categories/refugees/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/categories/refugees/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression Discontinuity Design</title>
+      <link>https://onuraltindag.info/categories/regression-discontinuity-design/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/categories/regression-discontinuity-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Turkey</title>
+      <link>https://onuraltindag.info/categories/turkey/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/categories/turkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Difference-in-differences</title>
       <link>https://onuraltindag.info/categories/difference-in-differences/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://onuraltindag.info/categories/difference-in-differences/</guid>
       <description></description>
@@ -56,27 +92,9 @@
     <item>
       <title>Instrumental Variables</title>
       <link>https://onuraltindag.info/categories/instrumental-variables/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://onuraltindag.info/categories/instrumental-variables/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Refugees</title>
-      <link>https://onuraltindag.info/categories/refugees/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://onuraltindag.info/categories/refugees/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Turkey</title>
-      <link>https://onuraltindag.info/categories/turkey/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://onuraltindag.info/categories/turkey/</guid>
       <description></description>
     </item>
     
@@ -95,15 +113,6 @@
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://onuraltindag.info/categories/united-states/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Descriptive Analysis</title>
-      <link>https://onuraltindag.info/categories/descriptive-analysis/</link>
-      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://onuraltindag.info/categories/descriptive-analysis/</guid>
       <description></description>
     </item>
     

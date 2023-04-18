@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2023 Onur Altındağ · Cover photo: Bayt Beirut, 2019</copyright>
-    <lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://onuraltindag.info/research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://onuraltindag.info/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Register</title>
+      <link>https://onuraltindag.info/research/denmark_mmr_chsr-/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/denmark_mmr_chsr-/</guid>
+      <description>Under review</description>
+    </item>
+    
     <item>
       <title>The Short-lived Effects of Unconditional Cash Transfers to Refugees</title>
       <link>https://onuraltindag.info/research/lebanon_uct_rd/</link>
@@ -18,12 +27,39 @@
     </item>
     
     <item>
+      <title>Another Day, Another Visit: Impact of Arkansas&#39; Mandatory Waiting Period for Women Seeking an Abortion by Demographic Groups</title>
+      <link>https://onuraltindag.info/research/arkansas_abortion/</link>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/arkansas_abortion/</guid>
+      <description>Abstract Twenty-six states require that women seeking an abortion wait between 18 and 72 h after receipt of counseling before the abortion can be completed. Thirteen states require that the counseling be given in person necessitating at least two visits to the provider. In April of 2015, Arkansas increased the waiting period for an abortion from 24 to 48 h and more significantly, required that women receive the counseling in person.</description>
+    </item>
+    
+    <item>
       <title>Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark</title>
       <link>https://onuraltindag.info/research/denmark_sids/</link>
       <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://onuraltindag.info/research/denmark_sids/</guid>
       <description>Abstract We evaluate the impact of a nationwide public health intervention on deaths from sudden infant death syndrome (SIDS), using population data from Denmark in a regression discontinuity research design. The information campaign—implemented primarily through a universal nurse home visiting program—reduced infant mortality by 17.2 percent and saved between 11.6-13.5 lives over 10,000 births. The estimated effect sizes are 11-14 times larger among low birthweight and preterm infants relative to the overall population.</description>
+    </item>
+    
+    <item>
+      <title>Mental Health Costs of Lockdowns: Evidence from Age-Specific Curfews in Turkey</title>
+      <link>https://onuraltindag.info/research/turkey_curfew/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/turkey_curfew/</guid>
+      <description>Abstract Using a strict, age-specific lockdown order for adults aged 65 and older in Turkey, we examine the mental health consequences of an extended period of tight mobility restrictions on senior adults. Adopting a regression discontinuity design, we find that the curfew-induced decline in mobility substantially worsened mental health outcomes, including somatic and nonsomatic symptoms of mental distress (approximately 0.2 standard deviation). Exploring potential channels, we document an increase in social and physical isolation, with no evidence of robust changes in labor market outcomes or intrahousehold conflict for this subpopulation.</description>
+    </item>
+    
+    <item>
+      <title>Do refugees impact voting behavior in the host country? Evidence from Syrian refugee inflows to Turkey</title>
+      <link>https://onuraltindag.info/research/turkey_refugees_voting/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://onuraltindag.info/research/turkey_refugees_voting/</guid>
+      <description>Abstract We study how individual political preferences changed in response to the influx of over 3.5 million Syrian refugees to Turkey during 2012–2016. Using a difference-in-differences research design, we compare the political outcomes in geographic areas with high versus low intensities of refugee presence before and after the beginning of the Syrian Civil War. To address the endogeneity of refugees’ location choices, we adopt an instrumental variables approach that relies on (1) historical dispersion of Arabic speakers in Turkish provinces and (2) driving distances between Turkish and Syrian residential areas to predict the flows of refugees across Turkish provinces during the study period.</description>
     </item>
     
     <item>
