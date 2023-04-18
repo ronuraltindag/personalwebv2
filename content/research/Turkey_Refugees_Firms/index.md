@@ -15,7 +15,7 @@ Volume 146,
 2020,
 102490,
 ISSN 0304-3878,
-https://doi.org/10.1016/j.jdeveco.2020.102490."
+https://doi.org/10.1016/j.jdeveco.2020.102490"
 layout: single
 title: "Blessing or burden? Impacts of refugees on businesses and the informal economy"
 links:
