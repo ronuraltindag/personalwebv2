@@ -17,4 +17,8 @@
   <!-- headroom.js -->
   {{ $mainJs := resources.Get "js/main.js" | js.Build "main.js" | minify | fingerprint }}
   <script src="{{ $mainJs.RelPermalink }}" type="text/javascript"></script>
+
+  <script src="https://cdn.lr-ingest.com/LogRocket.min.js"></script>
+  <script>window.LogRocket && window.LogRocket.init('efvbgu/personal_web');</script>
+  
 </head>
