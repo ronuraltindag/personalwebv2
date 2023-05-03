@@ -14,7 +14,7 @@ layout: list-sidebar
 show_author_byline: false
 show_button_links: false
 show_post_date: true
-show_post_thumbnail: true
+show_post_thumbnail: false
 sidebar:
   author: 
   description: "I'll run the Sugarloaf Marathon on May 14, 2023 to honor the victims and fundraise for the survivors of the devastating earthquakes in southern Turkey. 
