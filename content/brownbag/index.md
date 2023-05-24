@@ -17,6 +17,12 @@ td, th {
 |---	|---	|
 |  	|   **Bentley University Economics Department Brown Bag Seminar Series**	|
 |  	|   **Wednesday, May 31 2023** - **SMI 203**	|
+|  	|   	|
+|  	|   	|
+|  	|   *In person*: **SMI 203**	|
+|  	|   *Zoom*: https://bentley.zoom.us/j/6857316344	|
+|  	|   	|
+|  	|   	|
 |  	|   **Program**	|
 |  	|   	|
 |  	|   	|
@@ -60,7 +66,6 @@ td, th {
 |  	|   	|
 |  	|   	|
 |  3:45 pm	|    *Closing Remarks and Adjourn*    	|
-
 
 
 
