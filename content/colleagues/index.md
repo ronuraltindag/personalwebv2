@@ -6,7 +6,7 @@ show_title_as_headline: false
 title: Research Community 
 ---
 
-My heartfelt appreciation goes out to all my co-authors who have shared their intellectual, technical, and creative skills in support of our past and ongoing projects:
+My appreciation goes out to all my co-authors who have shared their ideas in support of our past and ongoing projects:
 
 -   [Matvei Andersen](https://www.vive.dk/da/medarbejdere/matvei-andersen-1859/?limit=20&offset=0)
 -   [Jennifer Lyn Baker](https://research.regionh.dk/en/persons/jennifer-lyn-baker)
