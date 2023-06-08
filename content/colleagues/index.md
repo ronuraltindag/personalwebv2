@@ -1,5 +1,5 @@
 ---
-description: Thank you to all colleagues!
+description: Acknowledgement 
 draft: false
 layout: standard
 show_title_as_headline: false
