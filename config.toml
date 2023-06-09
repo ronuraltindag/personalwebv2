@@ -30,10 +30,10 @@ enableEmoji = true
 [params]
   orgName = " "
   orgLocal = "Anywhere"
-  description = "Hi!"
+  description = "OA"
   favicon = "/img/favicon.ico"
   logo = "/img/home1.png"
-  mainSections = ["research"]
+  mainSections = ["research", "about", "blog", "project", "jobs", "contact"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
