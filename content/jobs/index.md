@@ -4,6 +4,8 @@ date: "2023-06-05"
 draft: false
 layout: single
 title: Research Assistant 
+description: "Field research assistant"
+show_post_thumbnail: true
 ---
 
 <img align="right" src="featured.png" width="30%" hspace="10" vspace="10"/>
