@@ -6,7 +6,7 @@ layout: single
 title: Research Assistant 
 ---
 
-<img align="right" src="featured.png" width="45%" hspace="10" vspace="10"/>
+<img align="right" src="featured.png" width="30%" hspace="10" vspace="10"/>
 
 
 ### Job Description 
@@ -19,7 +19,7 @@ The research assistant will work closely with [Ceren Baysan](https://sites.googl
 
 - Completed or ongoing master’s degree or an ongoing PhD degree in economics or a related field.
 - Training and expertise in quantitative research methods.
-- Proficiency/competency in STATA and/or R.
+- Proficiency/competency in STATA and/or R. Knowledge of other computer languages (e.g. Python) is a plus 
 - Ability to manage multiple tasks.
 - Ability to work independently.
 - Strong interpersonal and communication skills.
