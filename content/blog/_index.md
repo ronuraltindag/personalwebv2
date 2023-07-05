@@ -4,26 +4,13 @@ cascade:
   author: Onur 
   show_author_byline: false
   show_comments: false
-  show_post_date: true
-  sidebar:
-    show_sidebar_adunit: true
-    text_link_label: View recent posts
-    text_link_url: /blog/
+  show_post_date: false
 description: " "
-layout: list-sidebar
+layout: list
 show_author_byline: false
 show_button_links: false
 show_post_date: true
 show_post_thumbnail: false
-sidebar:
-  author: 
-  description: "I'll run the Sugarloaf Marathon on May 14, 2023 to honor the victims and fundraise for the survivors of the devastating earthquakes in southern Turkey. 
-Please consider supporting."
-  show_sidebar_adunit: true
-  text_link_label: Donate through Turkish Philanthropy Funds
-  text_link_url: https://donate.tpfund.org/fundraiser/4447715
-  title: "What's going on?" 
-thumbnail_left: true
 title: Blog Posts 
 ---
 

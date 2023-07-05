@@ -8,7 +8,7 @@ images:
   - img/beirut.jpg
 show_action_link: true
 show_social_links: false
-subtitle: Assistant Professor at Bentley University
+subtitle: Associate Professor at Bentley University
 text_align_left: true
 title: Onur Altındağ
 type: home

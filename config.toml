@@ -33,7 +33,7 @@ enableEmoji = true
   description = "OA"
   favicon = "/img/favicon.ico"
   logo = "/img/home1.png"
-  mainSections = ["research", "about", "blog", "project", "jobs", "contact"]
+  mainSections = ["research", "about", "blog", "project", "jobs", "contact","announcements"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -94,7 +94,7 @@ enableEmoji = true
   [[params.social]]
       icon = "cv"
       icon_pack = "ai"
-      url       = "/pdfs/vita/CV_Apr_6th_2023.pdf"    
+      url       = "/pdfs/vita/CV_July_4th_2023.pdf"    
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
@@ -123,7 +123,7 @@ enableEmoji = true
     weight = 1
   [[menu.header]]
     name = "Research"
-    title = "Ongoing and completed research projects"
+    title = "Compeleted work"
     url = "/research/"
     weight = 2
   [[menu.header]]
@@ -136,6 +136,11 @@ enableEmoji = true
     title = "Ongoing Projects"
     url = "/project/"
     weight = 5
+  [[menu.header]]
+    name = "Announcements"
+    title = "Announcements"
+    url = "/announcements/"
+    weight = 6
     
   # Configure footer  
   # [[menu.footer]]
