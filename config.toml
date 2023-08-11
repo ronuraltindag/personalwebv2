@@ -94,7 +94,7 @@ enableEmoji = true
   [[params.social]]
       icon = "cv"
       icon_pack = "ai"
-      url       = "/pdfs/vita/CV_July_4th_2023.pdf"    
+      url       = "/pdfs/vita/OA_CV_Aug_11_2023.pdf"    
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
@@ -132,15 +132,10 @@ enableEmoji = true
     url = "/blog/"
     weight = 3
   [[menu.header]]
-    name = "Ongoing Projects"
-    title = "Ongoing Projects"
-    url = "/project/"
-    weight = 5
-  [[menu.header]]
     name = "Announcements"
     title = "Announcements"
     url = "/announcements/"
-    weight = 6
+    weight = 5
     
   # Configure footer  
   # [[menu.footer]]

@@ -1,9 +1,6 @@
 ---
-author: 
-- Health Economics
-- United States
-- Regression Discontinuity Design
-date: "2022-06-26"
+author: Onur Altindag & Theodore Joyce
+date:
 draft: false
 excerpt: "Onur Altındağ, Theodore Joyce,
 Another day, another visit: Impact of Arkansas’ mandatory waiting period for women seeking an abortion by demographic groups,
