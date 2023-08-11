@@ -30,7 +30,7 @@ Funded by [HEADS Center at Johns Hopkins University](https://publichealth.jhu.ed
 
 Diversity, Integration, and Business Productivity  
 with Lydia Assouad and Ceren Baysan  
-Funded by [JPAL & IPA's Displaced Livelihoods Initiative](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli)  
+Funded by [IPA](https://poverty-action.org/) 
 *Pilot stage*
 
 
