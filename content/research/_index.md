@@ -19,7 +19,7 @@ title:
 ## ONGOING WORK 
 Does targeting matter for the effectiveness of scaled cash transfer programs? Evidence from a natural field experiment.  
 [AEA Registry RCT ID: AEARCTR-0009725.](https://www.socialscienceregistry.org/trials/9725).  
-with Stephen O'Connell and Rim Achour.     
+with Stephen O'Connell.     
 Joint project with WFP and UNHCR Lebanon.    
 *Draft available upon request* 
 
