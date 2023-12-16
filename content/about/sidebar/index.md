@@ -13,9 +13,7 @@ link_list:
 - name: People  I run with 
   url: https://www.srr.org/ 
 - name: People  I dive with  
-  url: https://www.dragoman-turkey.com/  
-- name: My better half
-  url: https://www.bu.edu/sph/profile/kiersten-strombotne/
+  url: https://www.dragoman-turkey.com/
 ---
 
 ** index doesn't contain a body, just front matter above.

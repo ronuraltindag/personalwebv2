@@ -45,7 +45,7 @@ Joint project with ILO Jordan.
 
 Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery. 
 Altindag O., Andersen M., Baker J., Greve J., Tekin E.†  
-*Manuscript under review* 
+Revisions requested at **Scandinavian Journal of Public Health** 
 
 [Another Day, Another Visit: Impact of Arkansas’ Mandatory Waiting.  
 Period for Women Seeking an Abortion by Demographic Groups](arkansas_abortion/).  
