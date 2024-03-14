@@ -38,8 +38,8 @@ Joint project with ILO Jordan.
 
 ###  POPULATION HEALTH
 
-Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery. 
-Altindag O., Andersen M., Baker J., Greve J., Tekin E.†  
+Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery.     
+Altindag O., Andersen M., Baker J., Greve J., Tekin E.†      
 Revisions requested at **Scandinavian Journal of Public Health** 
 
 [Another Day, Another Visit: Impact of Arkansas’ Mandatory Waiting.  
@@ -47,8 +47,8 @@ Period for Women Seeking an Abortion by Demographic Groups](arkansas_abortion/).
 Altindag, O., Joyce, T. (2022).  
 **Journal of Public Economics**, 213, 104715.†
  
-[Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark](denmark_sids/).  
-Altindag, O., Greve, J., Tekin, E. (2022).  
+[Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark](denmark_sids/).      
+Altindag, O., Greve, J., Tekin, E. (2022).     
 **Review of Economics and Statistics**, 1:36.†   
 
 [Mental Health Costs of Lockdowns: Evidence from Age-specific Curfews in Turkey](turkey_curfew/).  
@@ -77,18 +77,15 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).
 
 ### MIGRATION & ECONOMIC DEVELOPMENT 
 
-[Efficiency versus Effectiveness in Targeting Scaled Social Assistance Programs: Evidence
-from a Nationwide Policy Experiment.](Lebanon_UCT_effectiveness/).   
-[AEA Registry RCT ID: AEARCTR-0009725.](https://www.socialscienceregistry.org/trials/9725).  
-with Stephen O'Connell.     
-Joint project with WFP and UNHCR Lebanon.    
-*Draft available upon request* 
+[Efficiency versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment](lebanon_geographic/).   
+Altindag, O., O'Connell S.D., (2024).
 
-[The short-lived effects of unconditional cash transfers to refugees](lebanon_uct_rd/). 
-Altindag, O., O'Connell S.D. (2023).  
+
+[The short-lived effects of unconditional cash transfers to refugees](lebanon_uct_rd/).     
+Altindag, O., O'Connell S.D. (2023).     
 **Journal of Development Economics**, 160, 102942.† 
 
-[Do Refugees Impact Voting Behavior in the Host Country? Evidence from Syrian Refugee Inflows in Turkey](turkey_refugees_voting/). 
+[Do Refugees Impact Voting Behavior in the Host Country? Evidence from Syrian Refugee Inflows in Turkey](turkey_refugees_voting/).    
 Altindag, O., Kaushal, N. (2021).  
 **Public Choice**, 186, 149–178.†  
 
