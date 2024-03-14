@@ -78,7 +78,7 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).
 ### Forced Migration & Humanitarian Policy
 
 [Efficiency versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment](lebanon_geographic/).   
-Altindag, O., O'Connell S.D., (2024).
+Altindag, O., O'Connell S.D., (2024).†
 
 
 [The short-lived effects of unconditional cash transfers to refugees](lebanon_uct_rd/).     
