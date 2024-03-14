@@ -36,7 +36,7 @@ Joint project with ILO Jordan.
 
 ## RESEARCH PAPERS  <font size="2"> (†: equal co-authorship) </font>
 
-###  POPULATION HEALTH
+###  Population Health \& Public Health Policy 
 
 Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery.     
 Altindag O., Andersen M., Baker J., Greve J., Tekin E.†      
@@ -75,7 +75,7 @@ Altindag, O. (2016).
 Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).  
 **Pediatrics**, 134, e700-e709.  
 
-### MIGRATION & ECONOMIC DEVELOPMENT 
+### Forced Migration & Humanitarian Policy
 
 [Efficiency versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment](lebanon_geographic/).   
 Altindag, O., O'Connell S.D., (2024).
