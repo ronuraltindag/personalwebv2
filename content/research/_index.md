@@ -14,14 +14,9 @@ title:
 ---
 
 ## FIELDS OF INTEREST
-### Population Health, Migration, Economic Development
+### Population Health, Public Policy, Forced Migration 
 
 ## ONGOING WORK 
-Does targeting matter for the effectiveness of scaled cash transfer programs? Evidence from a natural field experiment.  
-[AEA Registry RCT ID: AEARCTR-0009725.](https://www.socialscienceregistry.org/trials/9725).  
-with Stephen O'Connell.     
-Joint project with WFP and UNHCR Lebanon.    
-*Draft available upon request* 
 
 ADRD, Family Caregiving and Children’s Labor Supply in Denmark.   
 with Matvei Andersen, Jane Greve, and Yulya Truskinovsky.    
@@ -81,6 +76,13 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).
 **Pediatrics**, 134, e700-e709.  
 
 ### MIGRATION & ECONOMIC DEVELOPMENT 
+
+[Efficiency versus Effectiveness in Targeting Scaled Social Assistance Programs: Evidence
+from a Nationwide Policy Experiment.](Lebanon_UCT_effectiveness/).   
+[AEA Registry RCT ID: AEARCTR-0009725.](https://www.socialscienceregistry.org/trials/9725).  
+with Stephen O'Connell.     
+Joint project with WFP and UNHCR Lebanon.    
+*Draft available upon request* 
 
 [The short-lived effects of unconditional cash transfers to refugees](lebanon_uct_rd/). 
 Altindag, O., O'Connell S.D. (2023).  
