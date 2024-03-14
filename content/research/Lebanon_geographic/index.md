@@ -16,7 +16,7 @@ links:
 - icon: file-pdf
   icon_pack: far
   name: Full study  
-  url: /pdfs/papers/AO_Efficiency_Effectiveness_2024.pdf
+  url: /pdfs/papers/AO_Efficiency_Effectiveness_2024TK.pdf
 
 - icon: file-code
   icon_pack: fas
