@@ -9,7 +9,7 @@ intro: |
 
 
 
- I'm an Associate Professor of Economics at [Bentley University](https://www.bentley.edu/). My research intrest is in designing and evaluating public policies within health and humanitarian contexts. I frequently collaborate with local institutions, either by partnering to collect data for designing effective interventions or using their administrative data to shape and inform these policies. My work primarily addresses the challenges policymakers face in these specific domains. 
+ I'm an Associate Professor of Economics at [Bentley University](https://www.bentley.edu/). My research interests lie in designing and evaluating public policies within health and humanitarian contexts. I frequently collaborate with local institutions, either by partnering to collect data for designing effective interventions or using their administrative data to shape and inform these policies. My work primarily addresses the challenges policymakers face in these specific domains. 
  
  I'm affiliated with the [Institute for the Study of Labor (IZA)](https://www.iza.org/), [Households in Conflict Network (HiCN)](https://hicn.org/), and [Economic Research Forum (ERF)](https://erf.org.eg/). Additionally, I am an invited researcher at [J-PAL & IPA’s Displaced Livelihoods Initiative (DLI)](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli) and the [Humanitarian Protection Initiative (HPI)](https://poverty-action.org/humanitarian-protection-initiative).
  
