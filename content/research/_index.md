@@ -31,14 +31,14 @@ Funded by [JPAL DLI](https://www.povertyactionlab.org/initiative/displaced-livel
 Economic Incentives and Informational Approaches: Broadening Social Safety Net among Jordan's SMEs.     
 with Diloá Jacob Bailey Athias, Shea McClanahan, Nada Rostom, Jade Siu, Olivier Sterck.   
 Joint project with ILO Jordan.   
-*Field experiment in pilot stage*
+*Ongoing data collection*
 
 
 ## RESEARCH PAPERS  <font size="2"> (†: equal co-authorship) </font>
 
 ###  Population Health \& Public Health Policy 
 
-Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery.     
+[Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery.](denmark_sjph/).    
 Altindag O., Andersen M., Baker J., Greve J., Tekin E.† (2024)  
 **Scandinavian Journal of Public Health** 
 
