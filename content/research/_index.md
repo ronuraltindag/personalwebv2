@@ -39,8 +39,8 @@ Joint project with ILO Jordan.
 ###  Population Health \& Public Health Policy 
 
 Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery.     
-Altindag O., Andersen M., Baker J., Greve J., Tekin E.†      
-Revisions requested at **Scandinavian Journal of Public Health** 
+Altindag O., Andersen M., Baker J., Greve J., Tekin E.† (2024)  
+**Scandinavian Journal of Public Health** 
 
 [Another Day, Another Visit: Impact of Arkansas’ Mandatory Waiting.  
 Period for Women Seeking an Abortion by Demographic Groups](arkansas_abortion/).  
@@ -78,7 +78,7 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).
 ### Forced Migration & Humanitarian Policy
 
 [Efficiency versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment](lebanon_geographic/).   
-Altindag, O., O'Connell S.D., (2024).†
+Altindag, O., O'Connell S.D., Achour R. (2024).
 
 
 [The short-lived effects of unconditional cash transfers to refugees](lebanon_uct_rd/).     

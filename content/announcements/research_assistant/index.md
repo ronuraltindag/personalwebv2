@@ -1,46 +1,45 @@
 ---
 author: Onur Altindag 
-date: "2023-04-05"
+date: "2024-05-30"
 draft: false
 layout: single
 title: Research Assistant 
-description: "Research Assistant"
+description: "Field research assistant"
 show_post_thumbnail: true
 ---
 
-<img align="right" src="featured.png" width="30%" hspace="10" vspace="10"/>
-
-We are seeking a Research Assistant to join our team. 
+<img align="right" src="featured.png" width="35%" hspace="10" vspace="10"/>
 
 ### Job Description 
 
-The research assistant will work closely with [Ceren Baysan](https://sites.google.com/site/cerenbaysan/)  (University of Toronto), [Onur Altındağ](/about/) (Bentley University), and [Lydia Assouad](https://sites.google.com/view/lydiaassouad/home) (London School of Economics) to implement a field experiment on business development and social integration in Turkey. The responsibilities include, but are not limited to frequent field visits, coordination of the local research team, monitoring data collection and intervention, and cleaning and analyzing data. The research assistant will need to spend substantial time in Gaziantep.
+The research assistant will work closely with [Onur Altındağ](/about/) (Bentley University), [Ceren Baysan](https://sites.google.com/site/cerenbaysan/) (University of Toronto), and [Lydia Assouad](https://sites.google.com/view/lydiaassouad/home) (London School of Economics) to implement a field experiment on business development and social integration in Turkey. Responsibilities include, but are not limited to, frequent field visits, coordinating the local research team, monitoring data collection and intervention, and cleaning and analyzing data. The research assistant will need to spend substantial time in Gaziantep.
 
 <br clear="right"/>
 
-###  Qualifications
+### Qualifications
 
-- Completed or ongoing master’s degree or an ongoing PhD degree in economics or a related field.
+- Completed or ongoing master’s degree or an ongoing PhD in economics or a related field.
 - Training and expertise in quantitative research methods.
-- Proficiency/competency in STATA and/or R. Knowledge of other computer languages (e.g. Python) is a plus 
+- Proficiency in STATA and/or R. Knowledge of other programming languages (e.g., Python) is a plus.
 - Ability to manage multiple tasks.
 - Ability to work independently.
 - Strong interpersonal and communication skills.
 - Interest in applied microeconomic research.
 - Fluency in Turkish and English. Fluency in Arabic is a plus.
 
-###  Details
+### Details
 
-- Both the recruitment date and duration of the position are negotiable. The earliest start date is July 2023.
-- Term: 6 months, subject to renewal for up to at least 2 years based on mutual agreement. A shorter term may be possible.
-- Salary: Competitive with Turkish private university research assistant salaries, including benefits. Negotiable based on experience and professional background.
+- Both the recruitment date and the duration of the position are negotiable. The earliest start date is July 2024.
+- Term: 6 months, subject to renewal for up to 2 years based on mutual agreement. A shorter term may be possible.
+- Salary: Competitive with Turkish private university research assistant salaries. Negotiable based on experience and professional background.
 
-Please note that the research team is available to provide mentorship and assistance in career development. This is a position that is valuable for pursuing graduate school in economics or a related field. 
+Please note that the research team is available to provide mentorship and assistance in career development. This position is valuable for those pursuing graduate school in economics or a related field in Europe or the United States.
 
 ### Application
-Please provide a CV, short cover letter, transcript, and contact information for two references. We will start reviewing applications as they come in.
 
-### Contact emails 
+Please provide a CV, a short cover letter, a transcript, and contact information for two references. We will start reviewing applications as they come in.
+
+### Contact Emails 
 
 - oaltindag@bentley.edu
 - ceren.baysan@utoronto.ca
