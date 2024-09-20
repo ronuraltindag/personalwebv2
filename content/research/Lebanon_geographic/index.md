@@ -11,7 +11,7 @@ excerpt: "Onur Altındağ, Stephen D. O’Connell,
 Efficiency Versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment, 
 **Working Paper**"
 layout: single
-title: Efficiency Versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment
+title: Geographic Targeting in Social Protection Programs Nationwide Evidence from a Policy Experiment
 links:
 - icon: file-pdf
   icon_pack: far

@@ -14,24 +14,29 @@ title:
 ---
 
 ## FIELDS OF INTEREST
-### Population Health, Public Policy, Forced Migration 
+### Population Health, Public Policy, Social Protection 
 
 ## ONGOING WORK 
 
-ADRD, Family Caregiving and Children’s Labor Supply in Denmark.   
+Impact of MMR Vaccination on Human Capital: Evidence from Copenhagen School Health Records. 
+with Jane Greve and Erdal Tekin.   
+*Funded by Novo Nordisk Foundation.* 
+
+Impact of Parental and Spousal Alzheimer’s Disease on Mental Health: A Nation-
+wide Study in Denmark.   
 with Matvei Andersen, Jane Greve, and Yulya Truskinovsky.    
 Funded by [HEADS Center at Johns Hopkins University](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center).   
-*Draft available upon request*
+
 
 Diversity, Integration, and Business Productivity.  
 with Lydia Assouad and Ceren Baysan.  
-Funded by [JPAL DLI](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli).   
-*Field experiment in pilot stage*
+*Randomized field experiment funded by [JPAL DLI](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli).*   
+
 
 Economic Incentives and Informational Approaches: Broadening Social Safety Net among Jordan's SMEs.     
 with Diloá Jacob Bailey Athias, Shea McClanahan, Nada Rostom, Jade Siu, Olivier Sterck.   
-Joint project with ILO Jordan.   
-*Ongoing data collection*
+*Randomized field experiment funded by ILO Jordan.* 
+
 
 
 ## RESEARCH PAPERS  <font size="2"> (†: equal co-authorship) </font>
@@ -75,9 +80,9 @@ Altindag, O. (2016).
 Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).  
 **Pediatrics**, 134, e700-e709.  
 
-### Forced Migration & Humanitarian Policy
+### Social Protection and Humanitarian Public Policy
 
-[Efficiency versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment](lebanon_geographic/).   
+[Geographic Targeting in Social Protection Programs: Nationwide Evidence from a Policy Experiment](lebanon_geographic/).   
 Altindag, O., O'Connell S.D., Achour R. (2024).
 
 

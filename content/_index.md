@@ -2,7 +2,7 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description: I am an applied economist with interests in population health, public policy, and forced migration. 
+description: I am an applied economist with interests in population health, public policy, and social protection. 
 image_left: false
 images:
   - img/beirut.jpg
