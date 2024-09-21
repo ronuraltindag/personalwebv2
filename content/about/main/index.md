@@ -8,7 +8,7 @@ show_intro: true
 intro: |
 
 
- *I am currently on sabbatical for the academic year 2024-2025 at the [Harvard Center for Population Studies](https://www.hsph.harvard.edu/population-development/) as a Visiting Scholar.*
+ *I am currently on sabbatical for the academic year 2024-2025 at the [Harvard Center for Population and Development Studies](https://www.hsph.harvard.edu/population-development/) as a Visiting Scholar.*
 
  I'm an **Associate Professor of Economics at [Bentley University](https://www.bentley.edu/)**. My research focuses on population health, public policy, and social protection, particularly in designing and evaluating effective policies within these domains. I frequently collaborate with local institutions, either by partnering to collect data for designing effective interventions or using their administrative data to shape and inform these policies. My work primarily addresses the challenges policymakers face in these specific domains.
  
