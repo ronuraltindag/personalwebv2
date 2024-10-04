@@ -18,13 +18,17 @@ title:
 
 ## ONGOING WORK 
 
+[Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment](lebanon_geographic/).   
+Altindag, O., O'Connell S.D., Achour R. (2024).
+
+
 Impact of MMR Vaccination on Human Capital: Evidence from Copenhagen School Health Records. 
 with Jane Greve and Erdal Tekin.   
 *Funded by Novo Nordisk Foundation.* 
 
 Impact of Parental and Spousal Alzheimer’s Disease on Mental Health: A Nation-
 wide Study in Denmark.   
-with Matvei Andersen, Jane Greve, and Yulya Truskinovsky.    
+with Jane Greve, and Yulya Truskinovsky.    
 Funded by [HEADS Center at Johns Hopkins University](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center).   
 
 
@@ -81,9 +85,6 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).
 **Pediatrics**, 134, e700-e709.  
 
 ### Social Protection and Humanitarian Public Policy
-
-[Geographic Targeting in Social Protection Programs: Nationwide Evidence from a Policy Experiment](lebanon_geographic/).   
-Altindag, O., O'Connell S.D., Achour R. (2024).
 
 
 [The short-lived effects of unconditional cash transfers to refugees](lebanon_uct_rd/).     

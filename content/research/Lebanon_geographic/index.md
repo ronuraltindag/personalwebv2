@@ -7,16 +7,15 @@ categories:
 - Refugees 
 date: "2024-03-12"
 draft: false
-excerpt: "Onur Altındağ, Stephen D. O’Connell,
-Efficiency Versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment, 
-**Working Paper**"
+excerpt: "Onur Altındağ, Stephen D. O’Connell, Geographic poverty targeting in social protection programs: 
+Evidence from a nationwide policy experiment, Working Paper."
 layout: single
-title: Geographic Targeting in Social Protection Programs Nationwide Evidence from a Policy Experiment
+title: "Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment"
 links:
 - icon: file-pdf
   icon_pack: far
   name: Full study  
-  url: /pdfs/papers/AOC_EfficiencyVsEffectiveness.pdf
+  url: /pdfs/papers/AOA_Geographic_Targeting.pdf
 
 - icon: file-code
   icon_pack: fas
@@ -24,16 +23,21 @@ links:
   url: https://www.socialscienceregistry.org/trials/9725
 
 
-  
+
   
 ---
 
 ### Abstract 
 
-Aid agencies and their donors are highly attuned to simultaneous goals of targeting efficiency and program impact. We analyze the relationship between these two aspects of program design through a high-value unconditional cash transfer program that tested the implications of targeting different types of deprivation in a nationwide randomized field experiment. Changing the targeted deprivation results in prioritizing assistance for households with distinct demographics and economic constraints. Despite these differences, targeting efficiency does not necessarily lead to program effectiveness, even when the program’s success is narrowly defined as alleviating the specific type of deprivation it aims to address.  There is modest heterogeneity in program effectiveness related to targeting choices, but more substantial heterogeneity across locations -- highlighting the primacy of local market conditions for program effectiveness.  Data typically available to program designers can be used effectively to prioritize specific populations, but  this does not necessarily lead to an allocation of resources where the program will be more effective. 
+We examine how allocating a fixed social assistance budget across localities using different prioritization rules 
+affects both beneficiary selection and program effectiveness. By simulating each rule, we estimate program effects among 
+marginal beneficiaries—those whose assistance varies across targeting strategies. The program reduces economic deprivation, 
+with effect sizes ranging from 0.02 to 0.21 standard deviations. There are marked differences in the demographic backgrounds and economic 
+constraints among marginal beneficiary populations, but program effects do not change substantially across targeting arms. 
+We document sizable geographic variation in program effects, but limited ability to predict effectiveness using data typically available to implementers.
 
 **Citation:** Onur Altındağ, Stephen D. O’Connell, Rim Achour. 
-Efficiency Versus Effectiveness in Targeting Scaled Social Assistance Programs Evidence from a Nationwide Policy Experiment,
+Geographic Poverty Targeting in Social Protection Programs: Evidence from a Nationwide Policy Experiment, 
 Working Paper, 2024. 
 
 
