@@ -14,26 +14,26 @@ title:
 ---
 
 ## FIELDS OF INTEREST
-### Population Health, Public Policy, Social Protection 
+### Population Health, Public Policy, Social Protection, Firms  
 
 ## ONGOING WORK 
 
 [Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment](lebanon_geographic/).   
 Altindag, O., O'Connell S.D., Achour R. (2024).
-
+*Randomized Field Experiment funded by UNHCR Lebanon* 
 
 Impact of MMR Vaccination on Human Capital: Evidence from Copenhagen School Health Records. 
 with Jane Greve and Erdal Tekin.   
 *Funded by Novo Nordisk Foundation.* 
 
-Impact of Parental and Spousal Alzheimer’s Disease on Mental Health: A Nation-
+Impact of Parental Alzheimer’s Disease on Mental Health: A Nation-
 wide Study in Denmark.   
 with Jane Greve, and Yulya Truskinovsky.    
 Funded by [HEADS Center at Johns Hopkins University](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center).   
 
 
 Diversity, Integration, and Business Productivity.  
-with Lydia Assouad and Ceren Baysan.  
+with Lydia Assouad, Ceren Baysan, Carlos Molina, and Miray Omurtak.  
 *Randomized field experiment funded by [JPAL DLI](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli).*   
 
 
