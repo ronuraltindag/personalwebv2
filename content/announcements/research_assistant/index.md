@@ -12,7 +12,7 @@ show_post_thumbnail: true
 
 ### Job Description 
 
-The research assistant will work closely with [Onur Altındağ](/about/) (Bentley University), [Ceren Baysan](https://sites.google.com/site/cerenbaysan/) (University of Toronto), and [Lydia Assouad](https://sites.google.com/view/lydiaassouad/home) (London School of Economics) to implement a field experiment on business development and social integration in Turkey. Responsibilities include, but are not limited to, frequent field visits, coordinating the local research team, monitoring data collection and intervention, and cleaning and analyzing data. The research assistant will need to either live or spend substantial time in Gaziantep.
+The research assistant will work closely with [Onur Altındağ](/about/) (Bentley University), [Lydia Assouad](https://sites.google.com/view/lydiaassouad/home) (London School of Economics), [Ceren Baysan](https://sites.google.com/site/cerenbaysan/),  (University of Toronto), [Carlos Molina](https://sites.google.com/view/carlosmolinaguerra/home) (University of South Carolina), and [Miray Omurtak](https://economics.yale.edu/people/miray-zeynep-omurtak) (Yale University) to implement a field experiment on business development and social integration in Turkey. Responsibilities include, but are not limited to, frequent field visits, coordinating the local research team, monitoring data collection and intervention, and cleaning and analyzing data. The research assistant will need to either live or spend substantial time in Gaziantep.
 
 <br clear="right"/>
 
@@ -29,7 +29,7 @@ The research assistant will work closely with [Onur Altındağ](/about/) (Bentle
 
 ### Details
 
-- Both the recruitment date and the duration of the position are negotiable. The earliest start date is April 2025.
+- The **latest** start date is mid-March 2025.
 - Term: 6 months, subject to renewal for up to 2 years based on mutual agreement. A shorter term may be possible.
 - Salary: Competitive with Turkish private university research assistant salaries. Negotiable based on experience and professional background.
 
@@ -45,3 +45,4 @@ Please provide a CV, a short cover letter, a transcript, and contact information
 - ceren.baysan@utoronto.ca
 - l.assouad@lse.ac.uk
 
+<img align="center" src="announcement_qrcode.png" width="40%" hspace="10" vspace="10"/>
