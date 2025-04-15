@@ -23,10 +23,7 @@ Altindag, O., O'Connell S.D., Achour R. (2024).
 *Randomized Field Experiment funded by [UNHCR Lebanon](https://www.unhcr.org/us/countries/lebanon)*    
 (Under Review)   
 
-Impact of MMR Vaccination on Human Capital: Evidence from Copenhagen School Health Records. 
-with Jane Greve and Erdal Tekin.   
-*Funded by [Novo Nordisk Foundation](https://novonordiskfonden.dk/en/).*  
-(Revise and Resubmit, *Vaccines*) 
+
 
 
 Impact of Parental Alzheimer’s Disease on Mental Health: A Nation-
@@ -80,6 +77,10 @@ Joyce, T., Crockett, S., Jaeger, D.A., Altindag, O., O'Connell, S.D. (2015).
 **Economics of Education Review**, 46, 64-77.
 
 ### OTHER DISCIPLINES
+
+Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery.  
+Altindag O., Jane Greve, Erdal Tekin (2025).     
+**Vaccines** 
 
 [Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Registery.](denmark_sjph/).    
 Altindag O., Andersen M., Baker J., Greve J., Tekin E. (2024)  

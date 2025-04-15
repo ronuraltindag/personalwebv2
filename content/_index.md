@@ -5,7 +5,7 @@ action_type: text
 description: I am an applied economist with interests in population health, public policy, and social protection. 
 image_left: false
 images:
-  - img/beirut.jpg
+  - img/Onur_14.jpeg
 show_action_link: true
 show_social_links: false
 subtitle: Associate Professor at Bentley University
