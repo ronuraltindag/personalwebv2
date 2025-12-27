@@ -26,20 +26,23 @@ Altindag, O., O'Connell S.D., Achour R. (2024).
 
 
 
-Impact of Parental Alzheimer’s Disease on Mental Health: A Nation-
-wide Study in Denmark.   
+Family Spillovers of Dementia.   
 with Jane Greve, and Yulya Truskinovsky.    
-Funded by [HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) and [Independent Research Fund Denmark](https://dff.dk/en) .   
+*NBER Working Paper*  
+Seed funding: [HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) and Bentley Research Council.  
+Full funding: [Independent Research Fund Denmark](https://dff.dk/en).   
 
 
-Diversity, Integration, and Business Productivity.  
+Business Networking and Social Cohesion: Experimental Evidence from Türkiye.  
 with Lydia Assouad, Ceren Baysan, Carlos Molina, and Miray Omurtak.  
-*Randomized field experiment funded by [JPAL DLI](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli) and [SSHRC](https://www.sshrc-crsh.gc.ca/home-accueil-eng.aspx)*   
+*Randomized field experiment funded by [JPAL DLI](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli) and [SSHRC](https://www.sshrc-crsh.gc.ca/home-accueil-eng.aspx)*  
+(Endline data collection in progress)   
 
 
-Economic Incentives and Informational Approaches: Broadening Social Safety Net among Jordan's SMEs.     
-with Diloá Jacob Bailey Athias, Jade Siu, and Olivier Sterck.   
-*Randomized field experiment funded by [ILO Jordan](https://www.ilo.org/jordan).* 
+Encouraging Formal Work: Experimental Evidence from Administrative Data in Jordan.     
+with Jade Siu, Diloá Athias, Aya Haidar, Monica Moughabghab, Silvia Nastasi, and Olivier Sterck.   
+*Two randomized field experiments funded by [ILO Jordan](https://www.ilo.org/jordan), conducted in collaboration with Social Security Corporation Jordan.*  
+(Endline data collection in progress) 
 
 
 

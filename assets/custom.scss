@@ -62,3 +62,14 @@
 .blocks:last-child .decorator {
  margin-bottom:0.25in
 }
+
+/* Make bold text bolder */
+strong, b, .b {
+  font-weight: 700;
+}
+
+/* Headings with DM Sans - lighter weight */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}

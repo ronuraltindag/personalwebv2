@@ -12,11 +12,11 @@ cascade:
     text_link_label: View recent announcements
     text_link_url: /announcements/
 description: " "
-layout: list-sidebar
+layout: list-grid
 show_author_byline: false
 show_button_links: false
 show_post_date: true
-show_post_thumbnail: false
+show_post_thumbnail: true
 sidebar:
   author: 
   description: " "

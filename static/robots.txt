@@ -1,0 +1,14 @@
+# robots.txt for onuraltindag.info
+User-agent: *
+Allow: /
+
+# Allow all image crawlers
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://onuraltindag.info/sitemap.xml
+
