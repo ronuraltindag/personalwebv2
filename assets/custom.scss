@@ -106,3 +106,12 @@ details,
 .sidebar-section details {
   display: none !important;
 }
+
+/* Make site logo larger */
+.site-brand img,
+.site-logo img,
+header .logo img {
+  max-height: 70px !important;
+  height: auto !important;
+  width: auto !important;
+}

@@ -32,7 +32,7 @@ enableEmoji = true
   orgLocal = "Anywhere"
   description = "OA"
   favicon = "/img/favicon.ico"
-  logo = "/img/home1.png"
+  logo = "/img/bentley-logos/dept-econ.png"
   mainSections = ["research", "about", "project", "jobs", "contact","announcements"]
   navallcaps = true
   # show/hide social icons in site header & footer
@@ -41,7 +41,7 @@ enableEmoji = true
   socialInFooter = true
   # Default image for social sharing and search engines. 
   # Place image file in `static` folder and specify image name here.
-  sharing_image = "/img/onur-altindag-economist.png"
+  sharing_image = "/img/head_shot.png"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   twitter = "ronuraltindag"
   
@@ -106,7 +106,11 @@ enableEmoji = true
    [[params.social]]
     icon = "envelope"
     icon_pack = "fas"
-    url = "/contact/" # For a direct email link, use "mailto:test@example.org".    
+    url = "/contact/" # For a direct email link, use "mailto:test@example.org".
+  [[params.social]]
+    icon = "university"
+    icon_pack = "fas"
+    url = "https://faculty.bentley.edu/profile/oaltindag"
       
 
 [taxonomies]
