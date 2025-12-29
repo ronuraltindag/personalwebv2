@@ -35,7 +35,7 @@ Full funding: [Independent Research Fund Denmark](https://dff.dk/en).
 
 Business Networking and Social Cohesion: Experimental Evidence from Türkiye.  
 with Lydia Assouad, Ceren Baysan, Carlos Molina, and Miray Omurtak.  
-*Randomized field experiment funded by [JPAL DLI](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli) and [SSHRC](https://www.sshrc-crsh.gc.ca/home-accueil-eng.aspx)*  
+*Randomized field experiment funded by [JPAL DLI](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative-dli) and [SSHRC](https://www.sshrc-crsh.gc.ca/home-accueil-eng.aspx)*   
 (Endline data collection in progress)   
 
 

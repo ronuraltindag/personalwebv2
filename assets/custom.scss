@@ -107,11 +107,79 @@ details,
   display: none !important;
 }
 
-/* Make site logo larger */
+/* Make site logo larger - desktop only */
 .site-brand img,
 .site-logo img,
 header .logo img {
   max-height: 70px !important;
   height: auto !important;
   width: auto !important;
+}
+
+/* Hide logo on mobile */
+@media screen and (max-width: 60em) {
+  .site-brand img,
+  .site-logo img,
+  .site-brand,
+  header .logo img,
+  header img[src*="dept-econ"],
+  header img[src*="bentley"] {
+    display: none !important;
+  }
+}
+
+/* Hide copyright on all pages except homepage */
+.grid-container:not(.home) .site-footer .site-copyright {
+  display: none !important;
+}
+
+/* Hide footer menu on homepage (only show on other pages) */
+.grid-container.home .site-footer nav {
+  display: none !important;
+}
+
+/* Style the footer home link */
+.site-footer nav {
+  text-align: center;
+  padding: 1rem 0;
+}
+.site-footer nav a {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+.site-footer nav a:hover {
+  opacity: 1;
+}
+
+/* Mobile homepage: image first, centered */
+@media screen and (max-width: 60em) {
+  /* Reorder: image first on mobile using flexbox */
+  .home .f-headline-ns,
+  .home .flex-ns {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+  .home .intro-image,
+  .home .home-image,
+  .home figure,
+  .home .w-50-ns {
+    order: 2 !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .home img:not(header img):not(.site-brand img) {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 80% !important;
+  }
+  .home .intro-text,
+  .home .w-50-ns:first-child {
+    text-align: center !important;
+    order: 1 !important;
+    width: 100% !important;
+  }
 }
