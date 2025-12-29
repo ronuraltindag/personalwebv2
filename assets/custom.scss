@@ -65,11 +65,44 @@
 
 /* Make bold text bolder */
 strong, b, .b {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* Headings with DM Sans - lighter weight */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+/* Fix mobile sidebar spacing - reduce grey box height */
+@media screen and (max-width: 60em) {
+  .page-sidebar {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  .page-sidebar .sidebar-about {
+    padding-bottom: 1rem !important;
+  }
+  .page-sidebar .blog-info {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .page-sidebar img {
+    max-height: 250px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+  .page-main {
+    padding-top: 1rem !important;
+  }
+}
+
+/* Hide post details (Posted on, Length, See Also) */
+details,
+.post-details,
+.page-sidebar details,
+.sidebar-section details {
+  display: none !important;
 }
