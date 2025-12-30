@@ -1,0 +1,19 @@
+{{ with site.Data.scholar }}
+<div class="scholar-stats ph4 pv3 bt b--moon-gray">
+  <h4 class="f6 ttu tracked gray mb2">Google Scholar</h4>
+  <div class="flex justify-between items-center mb2">
+    <span class="f6 gray">Citations</span>
+    <span class="f5 fw6">{{ .citations }}</span>
+  </div>
+  <div class="flex justify-between items-center mb2">
+    <span class="f6 gray">h-index</span>
+    <span class="f5 fw6">{{ .h_index }}</span>
+  </div>
+  <div class="flex justify-between items-center mb2">
+    <span class="f6 gray">i10-index</span>
+    <span class="f5 fw6">{{ .i10_index }}</span>
+  </div>
+  <p class="f7 gray mt2 mb0">Updated: {{ .last_updated }}</p>
+</div>
+{{ end }}
+
