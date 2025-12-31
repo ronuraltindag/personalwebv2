@@ -31,8 +31,8 @@ links:
 
 ### Abstract 
 
-We develop and assess the performance of an econometric prediction model that relies on administrative data held by international agencies to target over $380 million annually in unconditional cash transfers to Syrian refugees in Lebanon. Standard metrics of prediction accuracy suggest targeting using administrative data is comparable to a short-form Proxy Means Test, which requires a survey of the entire target population. We show that small differences in accuracy across approaches are largely attributable to a few data fields. These results are robust to a blind validation test performed on a random sample collected after the model derivation, as well as the type of estimator used for prediction. We discuss relative costs, which are likely to feature prominently when alternative approaches are considered in practice.
+We randomized 1948 pregnant women who intended to breastfeed to receive either standard WIC breastfeeding support or standard support plus telephone peer counseling. We estimated the effect of peer counseling on any and exclusive breastfeeding at 1, 3, and 6 months. At 3 months postpartum, 50.5% of women in the treatment group were still breastfeeding versus 44.1% in the control (P = .01). The effect was driven entirely by an improvement in exclusive breastfeeding, where rates in the treatment group at 3 months (27.3%) exceeded those in the control group (20.2%) by 7.1 percentage points (P < .01). We found no effect of peer counseling at 1 or 6 months. Telephone peer counseling improved exclusive breastfeeding at 3 months postpartum among WIC participants.
 
-**Citation:** Altindag, O., Joyce, T. J., & Reeder, J. A. (2019). Can Nonexperimental Methods Provide Unbiased Estimates of a Breastfeeding Intervention? A Within-Study Comparison of Peer Counseling in Oregon. Evaluation review, 43(3-4), 152–188. https://doi.org/10.1177/0193841X19865963. 
+**Citation:** Reeder JA, Joyce T, Sibley K, Arnold D, Altindag O. Telephone peer counseling of breastfeeding among WIC participants: a randomized controlled trial. Pediatrics. 2014 Sep;134(3):e700-9. doi: 10.1542/peds.2013-2666. 
 
 

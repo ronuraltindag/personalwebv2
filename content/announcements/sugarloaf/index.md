@@ -4,7 +4,7 @@ date: "2023-02-14"
 draft: false
 layout: single
 title: Sugarloaf Marathon  
-description: "Research Assistant"
+description: "Sugarloaf Marathon"
 show_post_thumbnail: true
 ---
 
@@ -13,4 +13,4 @@ show_post_thumbnail: true
 I'll run the Sugarloaf Marathon on May 14, 2023 to honor the victims and fundraise for the survivors of the devastating earthquakes in southern Turkey. 
 Please consider supporting.
 
-You can donate through through [Turkish Philanthropy Funds](https://donate.tpfund.org/fundraiser/4447715)
+You can donate through [Turkish Philanthropy Funds](https://donate.tpfund.org/fundraiser/4447715)

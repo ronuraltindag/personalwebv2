@@ -1,0 +1,392 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{tabularx, booktabs}
+\usepackage{array,multirow,graphicx}
+\usepackage{changepage}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{mathptmx}
+\usepackage[usenames, dvipsnames]{xcolor}
+\usepackage{amssymb, latexsym}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{natbib}
+\usepackage{bbm}
+\usepackage{colortbl}
+\usepackage{xfrac}
+\usepackage{arydshln}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage[capposition=top]{floatrow}
+\usepackage[titletoc,title]{appendix}
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{lipsum}
+\usepackage{filecontents}
+% \usepackage{newpxtext,newpxmath} % Commented out - use standard fonts
+\usepackage{titling}
+\usepackage{xurl}
+\usepackage{tabularx,ragged2e}
+\newcolumntype{C}{>{\Centering\arraybackslash}X} % centered "X" column
+\usepackage{ltablex}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage[
+    paper=letterpaper, % Change to letterpaper for US letter
+    inner=1.5cm, % Inner margin
+    outer=1.5cm, % Outer margin
+    bindingoffset=0cm, % Binding offset
+    top=2cm, % Top margin
+    bottom=2.5cm, % Bottom margin
+    marginpar=0cm,
+]{geometry}
+\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage{cleveref}
+
+\definecolor{ao}{rgb}{0.0, 0.0, 1.0}
+\definecolor{bulgarianrose}{rgb}{0.28, 0.02, 0.03}
+
+\newcommand\myshade{85}
+\colorlet{mylinkcolor}{ao}
+\colorlet{mycitecolor}{bulgarianrose}
+\colorlet{myurlcolor}{black}
+
+\hypersetup{
+  linkcolor  = mylinkcolor!\myshade!black,
+  citecolor  = mycitecolor!\myshade!black,
+  urlcolor   = myurlcolor!\myshade!black,
+  colorlinks = true,
+  breaklinks = true,
+}
+\urlstyle{same}
+
+% Define first page header
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+\fancypagestyle{firstpage}{
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \lhead{\Huge{ONUR ALTINDA\u{G}}}
+  \rhead{\footnotesize{Last update: \today}}
+  \fancyfoot[C]{\thepage}
+}
+
+% Reduce the space between the header and the regular text
+\setlength{\headsep}{1cm}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\setlength{\tabcolsep}{0pt}
+
+\begin{document}
+
+\thispagestyle{firstpage}
+
+\begin{tabular}{p{13.5cm}p{10cm}}
+Department of Economics, Bentley University &  \href{https://onuraltindag.info/}{https://onuraltindag.info/} \\
+175 Forest St, Waltham, MA 02452. & oaltindag@bentley.edu  \\
+Citizen of Turkey and the United States. \\
+\end{tabular}
+
+\begin{tabular}{p{4cm}p{15cm}}
+\multicolumn{2}{l}{\textbf{\uppercase{Professional Experience}}} \\[5pt]
+2023 --  &  Bentley University, Associate Professor of Economics (with tenure).  \\ 
+& \textit{Parental leaves in 2023 and 2025.} \\
+2024 -- 2025 & On leave visiting Harvard Center for Population and Development Studies. \\ 
+2017 -- 2023  & Bentley University, Assistant Professor of Economics.  \\
+2016 -- 2017 &  Harvard University, David E. Bell Postdoctoral Fellow. \\ 
+2012 -- 2016 & National Bureau of Economic Research (NBER), Research Assistant. \\ 
+\end{tabular}
+
+\begin{tabular}{p{4cm}p{15cm}}
+\textbf{\uppercase{Education}} \\[5pt]
+2010 -- 2016 &  City University of New York, Ph.D. in Economics.  \\ 
+2007 -- 2008 & University Paris 1 Panth\'{e}on - Sorbonne, M.A. in Economics.  \\
+2001 -- 2007 & Galatasaray University, B.A. in Economics. \\ 
+\end{tabular}
+
+\begin{tabular}{p{4cm}p{15cm}}
+\multicolumn{2}{l}{\textbf{\uppercase{Affiliations}}} \\[5pt]  
+
+
+2025 -- & IZA Institute of Labor Economics, Research Fellow.  \\ 
+2024 -- & Bah\c{c}e\c{s}ehir University, Adjunct Professor. \\
+2024 -- & JPAL/IPA Humanitarian Protection Initiative, Invited Researcher. \\
+2023 -- & JPAL/IPA Displaced Livelihoods Initiative, Invited Researcher. \\
+2023 -- & Hopkins Economics of Alzheimer's Disease \& Services Center, Research Affiliate. \\ 
+2021 -- 2024 & IZA Institute of Labor Economics, Research Affiliate.  \\ 
+2020 -- & Households in Conflict Network (HiCN), Research Affiliate. \\ 
+2019 --  & ERF Economic Research Forum, Research Fellow. \\ 
+2017 -- 2020 & Visiting Scholar, Harvard Center for Population and Development Studies.   \\ 
+\end{tabular}
+
+\begin{tabular}{p{18cm}}
+\multicolumn{1}{l}{\textbf{\uppercase{Fields of Interest}}} \\[5pt]
+\multicolumn{1}{l}{Economics of Health and Aging \textperiodcentered\ Social Protection and Economic Security \textperiodcentered\ Public Policy}  \\ 
+\end{tabular}
+
+\begin{tabular}{p{15cm}}
+\multicolumn{1}{l}{\textbf{\uppercase{Ongoing Projects}}} \\[5pt]
+
+
+Geographic Targeting in Social Protection Programs: Evidence from a Nationwide Policy Experiment. \\ 
+with Stephen O'Connell. \\ 
+\textit{(Under review, RCT funded by UNHCR Lebanon.)} \\
+
+
+\\
+Family Spillovers of Dementia.  \\ 
+Altindag, O., Greve, J., Truskinovsky, Y. (2025).\\
+NBER Working Paper No. 34635. \\
+\\
+
+Business Networking and Social Cohesion: Experimental Evidence from T\"{u}rkiye. \\
+with Lydia Assouad, Ceren Baysan, Carlos Molina, and Miray Omurtak. \\
+\textit{(In the endline data-collection stage, RCT funded by JPAL DLI and SSHRC.)} \\
+
+
+\end{tabular}
+
+\begin{tabular}{p{15cm}}
+\multicolumn{1}{l}{\textbf{\uppercase{Ongoing Projects}} (cont'd)} \\[5pt]
+
+
+
+
+
+Encouraging Formal Work: Experimental Evidence from Administrative Data in Jordan. \\
+with Jade Siu, Dilo\'{a} Athias, Aya Haidar, Monica Moughabghab, Silvia Nastasi, and Olivier Sterck. \\
+\textit{(Two RCTs in endline data-collection stage, funded by ILO Jordan, in collaboration with Social Security Corporation Jordan.)} \\
+
+\\
+
+
+\multicolumn{1}{l}{\textbf{\uppercase{Published Papers}}} \\[10 pt]
+
+Impact of Measles, Mumps, and Rubella Vaccination on Hospitalizations and Human Capital: Evidence from Copenhagen School Health Records. \\ 
+Altindag, O., Greve, J., Tekin, E. (2025) \\ 
+\textbf{Vaccines}, 13(3), 302. \\
+\\
+
+Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark. \\
+Altindag, O., Greve, J., Tekin, E. (2024) \\
+\textbf{Review of Economics and Statistics}, 106(3), 882-893. \\ 
+\\
+
+Information on Measles, Mumps, and Rubella Vaccine in the Copenhagen School Health Records Register. \\
+Altindag, O., Andersen, M., Baker, J., Greve, J., Tekin, E. (2024)  \\
+\textbf{Scandinavian Journal of Public Health}, 53(4), 383-390. \\ 
+\\
+
+The Short-lived Effects of Unconditional Cash Transfers to Refugees.  \\
+Altindag, O., O'Connell, S.D. (2023) \\
+\textbf{Journal of Development Economics}, 160, 102942. \\
+\\
+
+Mental Health Costs of Lockdowns: Evidence from Age-specific Curfews in Turkey. \\
+Altindag, O., Erten, B., Keskin, P. (2022)\\
+\textbf{American Economic Journal: Applied Economics}, 14(2), 320-343.  \\
+\\
+
+Another Day, Another Visit: Impact of Arkansas' Mandatory Waiting Period for Women Seeking an Abortion by Demographic Groups.\\
+Altindag, O., Joyce, T. (2022)\\
+\textbf{Journal of Public Economics}, 213, 104715. \\
+\\
+
+Targeting Humanitarian Aid Using Administrative Data: Model Design and Validation.\\
+Altindag, O., O'Connell, S.D., Sasmaz, A., Balcioglu, Z., Jerneck, M., Foong, A.K. (2021) \\ 
+\textbf{Journal of Development Economics}, 148, 102564. \\
+\\
+
+Do Refugees Impact Voting Behavior in the Host Country? Evidence from Syrian Refugee Inflows in Turkey. \\
+Altindag, O., Kaushal, N. (2021) \\
+\textbf{Public Choice}, 186, 149-178. \\
+\\
+
+\end{tabular}
+
+
+\begin{tabular}{p{18cm}}
+
+\multicolumn{1}{l}{\textbf{\uppercase{Published Papers}} (cont'd)} \\[10 pt]
+
+Blessing or Burden? The Impact of Refugees on Businesses and the Informal Economy. \\
+Altindag, O., Bakis, O., Rozo, S. (2020) \\ 
+\textbf{Journal of Development Economics}, 146, 102490.  \\
+\\
+
+Effects of the Affordable Care Act Medicaid Expansion on Subjective Well-Being in the US Adult Population, 2010--2016. \\ 
+Kobayashi, L., Altindag, O., Truskinovsky, Y., Berkman, L. (2019) \\ 
+\textbf{American Journal of Public Health}, 109(9), 1236-1242. \\
+\\
+
+Can Nonexperimental Methods Provide Unbiased Estimates of a Breastfeeding Intervention?: A Within-Study Comparison of Peer Counseling in Oregon. \\
+Altindag, O., Joyce, T., Reeder, J.A. (2019) \\
+\textbf{Evaluation Review}, 43(3-4), 152-188. \\
+\\
+
+On Measuring and Reducing Selection Bias With a Quasi-Doubly Randomized Preference Trial. \\ 
+Joyce, T., Remler, D.K., Jaeger, D.A., Altindag, O., O'Connell, S.D., Crockett, S. (2017) \\ 
+\textbf{Journal of Policy Analysis and Management}, 36(2), 438-459.  \\
+\\
+
+Judicial Bypass for Minors Seeking Abortions in Arkansas Versus Other States. \\ 
+Altindag, O., Joyce, T. (2017) \\
+\textbf{American Journal of Public Health}, 107(8), 1266-1271. \\ 
+\\
+
+Son Preference, Fertility Decline, and the Nonmissing Girls of Turkey. \\ 
+Altindag, O. (2016) \\ 
+\textbf{Demography}, 53, 541-566. \\ 
+\\
+
+Does Classroom Time Matter? \\ 
+Joyce, T., Crockett, S., Jaeger, D.A., Altindag, O., O'Connell, S.D. (2015) \\ 
+\textbf{Economics of Education Review}, 46, 64-77. \\ 
+\\ 
+
+Telephone Peer Counseling of Breastfeeding Among WIC Participants: A Randomized Controlled Trial. \\
+Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014) \\ 
+\textbf{Pediatrics}, 134, e700-e709. \\
+
+\end{tabular}
+
+\vspace{0.5em}
+
+\begin{tabular}{p{4cm}p{15cm}}
+\multicolumn{2}{l}{\textbf{\uppercase{Grants and Competitive Contracts}}} \\[5pt]
+\multicolumn{2}{l}{\textbf{Total funding as PI or Co-PI between 2018 -- 2027: \$3,088,712}} \\[10pt]
+2025 -- 2027 & Independent Research Fund Denmark.  \\
+& Award amount: \$417,631. Role: Co-PI. \\[3pt]
+2024 -- 2027 & Social Sciences and Humanities Research Council (SSHRC), Insight Grants. \\ 
+& Award amount: \$195,503. Role: Co-PI. \\[3pt] 
+
+2023 -- 2025 & Abdul Latif Jameel Poverty Action Lab (JPAL), Displaced Livelihoods Initiative. \\ 
+& Award amount: \$153,505. Role: Co-PI. \\[3pt] 
+
+
+\end{tabular}
+
+\vspace{0.5em}
+
+\begin{tabular}{p{4cm}p{15cm}}
+
+ \multicolumn{2}{l}{\textbf{\uppercase{Grants and Competitive Contracts}} (cont'd)} \\[5pt]
+
+2019 -- 2024 & Innovation for Poverty Action (IPA), Peace and Recovery Program. \\
+& Award amount: \$29,766. Role: Co-PI. \\[3pt] 
+
+2018 -- 2023 & UNHCR \& WFP. Design and Evaluation of Targeted Humanitarian Assistance. \\ 
+& Competitive contract \$693,655. Role: Co-PI. \\[3pt] 
+
+2022 -- 2023 & Bentley University, Health Thought Leadership Network. \\ 
+& Award amount: \$5,000. Role: PI. \\[3pt] 
+
+2022 -- 2023 & Hopkins' Economics of Alzheimer's Disease \& Services (HEADS) Center. \\ 
+& Award amount: \$24,152. Role: PI. \\[3pt] 
+
+2021 -- 2022 & Bentley University, Research Council. \\ 
+& Award amount: \$7,000. Role: PI. \\[3pt] 
+
+2020 -- 2021 & Northeastern University, The College of Social Sciences and Humanities Research Development Initiative. \\ 
+& Award amount: \$8,000. Role: Co-PI.  \\[3pt] 
+
+2019 -- 2020 & Bentley University, Research Council. \\
+& Award amount: \$7,000. Role: PI. \\[3pt] 
+
+2018 -- 2024 & Novo Nordisk Foundation. \\
+& Award amount: \$1,543,500. Role: Co-PI.  \\[3pt] 
+
+2018 -- 2019 & Bentley University, Faculty Affairs Committee. \\ 
+& Award amount: \$2,500. Role: PI. \\[3pt] 
+
+2018 -- 2019 & Bentley University, Health Thought Leadership Network. \\
+& Award amount: \$1,500. Role: PI. \\[3pt] 
+
+\end{tabular}
+
+\vspace{0.5em}
+
+\begin{tabular}{p{4cm}p{15cm}}
+
+\multicolumn{2}{l}{\textbf{\uppercase{Awards and Fellowships}}} \\[5pt]
+
+2025 & Graduate of the Last Decade Award. \\ 
+& City University of New York, The Graduate Center. \\[3pt]
+
+2016 -- 2017 & David E. Bell Postdoctoral Fellowship. \\
+& Harvard University, T.H. Chan School of Public Health. \\[3pt] 
+
+2014 -- 2016 & Zicklin's Online Learning and Evaluation Initiative Fellowship. \\
+& City University of New York, Baruch College.  \\[3pt]  
+
+2010 -- 2014 &  Enhanced Chancellor's Fellowship. \\
+& City University of New York, The Graduate Center. \\[3pt] 
+
+
+\\
+
+\multicolumn{2}{l}{\textbf{\uppercase{Teaching Experience}}} \\[5pt]
+2017 -- & Bentley University \\ 
+& Introduction to Econometrics \\ 
+& Intermediate Price Theory \\ 
+& Mathematical Statistics \\ 
+& Principles of Microeconomics \\[3pt]
+
+2011 -- 2014 & Baruch College, City University of New York \\ 
+& Statistical Analysis for Economics and Finance \\
+
+\end{tabular}
+
+
+\begin{tabular}{p{4cm}p{15cm}}
+
+
+
+\multicolumn{2}{l}{\textbf{\uppercase{Consulting Experience}}} \\[5pt]
+2024 -- & United Nations High Commissioner for Refugees (UNHCR), Jordan. \\
+2023 -- & International Labour Organization (ILO), Jordan. \\ 
+2018 -- 2024 & United Nations High Commissioner for Refugees (UNHCR), Lebanon. \\ 
+2018 -- 2024 & UN World Food Programme (WFP), Lebanon. \\ 
+
+\\
+
+\multicolumn{2}{l}{\textbf{\uppercase{Languages}}} \\[3pt] 
+Human  & Turkish (native), English, French. \\ 
+Computer & \textsf{\textcolor{blue}{R}}, {\sffamily Stata} \\
+
+\end{tabular}
+
+\begin{tabular}{p{15cm}} 
+
+\multicolumn{1}{l}{\textbf{\uppercase{Non-Academic Interests}}} \\[5pt] 
+CMAS Divemaster ($\star\star\star$), NAUI Nitrox Diver \\
+Marathoner, proud member of the Somerville Road Runners \\
+
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{\uppercase{Presentations and Seminars}}\\[5pt]
+\noindent\textbf{2025:} Harvard CPDS, Northeastern, Tufts, Wellesley, Brandeis, Forced Displacement Working Group.\\[3pt]
+\textbf{2024:} VIVE Workshop on Health Innovations, Brown, CUNY Graduate Center, Advances in Field Experiments at LSE, World Bank, UVA Batten.\\[3pt]
+\textbf{2023:} WFP Impact Evaluation Forum, VoVRN, Hopkins HEADS Center, ASHEcon, Tufts, Northeastern, World Food Programme, Deakin, Ohio State.\\[3pt]
+\textbf{2022:} Southern Economic Association, APPAM, UNHCR Lebanon, Galatasaray, UMass Amherst, Research Conference on Forced Displacement.\\[3pt]
+\textbf{2021:} Georgia Tech, American University, Istanbul Metropolitan Municipality, EEA Congress, Erasmus, ERF, BREAD, Bentley, TOBB.\\[3pt]
+\textbf{2020:} PHS Workshop, NBER Health Economics, Bentley, MEAA, UConn, UNHCR, Bo\u{g}azi\c{c}i-TOBB-Hacettepe Joint Seminar, PAA, Emory, Joint Data Center on Forced Displacement.\\[3pt]
+\textbf{2019:} RIEME, Harvard CPDS, PAA, iHEA, IZA Annual Migration Meeting.\\[3pt]
+\textbf{2018:} RIEME, USC Marshall, Bo\u{g}azi\c{c}i, Rockwool Foundation, VIVE, Midwest Economics Association (SOLE).\\[3pt]
+\textbf{2017:} RIEME, Harvard CPDS, Bentley, EEA, PAA, Ko\c{c}, iHEA.\\[3pt]
+\textbf{2016:} Galatasaray, Bo\u{g}azi\c{c}i, Sabanc{\i}, Ko\c{c}, Bilgi, TOBB, Auckland, Bentley.
+
+\end{document}
+

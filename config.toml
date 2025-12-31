@@ -94,7 +94,7 @@ enableEmoji = true
   [[params.social]]
       icon = "cv"
       icon_pack = "ai"
-      url       = "/pdfs/vita/OA_CV_Dec_19_2025.pdf"    
+      url       = "/pdfs/vita/OA_CV_2025_12_30.pdf"    
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
