@@ -21,9 +21,15 @@ You can donate through [Turkish Philanthropy Funds](https://donate.tpfund.org/fu
 
 **Post-Race Update:**
 
-<img align="right" src="/img/Mdi_Marathon23_3.jpg" width="35%" hspace="10" vspace="10"/>
-<img align="left" src="/img/Mdi_Marathon23_4.jpg" width="35%" hspace="10" vspace="10"/>
+Thank you to everyone who supported the fundraising effort for the earthquake victims in Turkey. I finished the Sugarloaf Marathon in 3:21 on a tough, mountainous course with truly incredible views. 
 
-Thank you to everyone who supported the fundraising effort for the earthquake victims in Turkey. I finished the Sugarloaf Marathon in 3:21 on a tough, mountainous course with truly incredible views. Running this race with such a meaningful cause in mind made the experience even more special. Together, we raised $5,165 to support those affected by the earthquake.
+<br clear="both"/>
+
+<img align="right" src="/img/Mdi_Marathon23_3.jpg" width="45%" hspace="10" vspace="10"/>
+<img align="left" src="/img/Mdi_Marathon23_4.jpg" width="45%" hspace="10" vspace="10"/>
+
+<br clear="both"/>
+
+Running this race with such a meaningful cause in mind made the experience even more special. Together, we raised $5,165 to support those affected by the earthquake.
 
 <br clear="both"/>
