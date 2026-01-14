@@ -9,6 +9,8 @@ on:
 jobs:
   update-scholar:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
       - name: Checkout repository
@@ -62,6 +64,8 @@ jobs:
               
           except Exception as e:
               print(f"Error fetching scholar data: {e}")
+              import traceback
+              traceback.print_exc()
               exit(1)
           EOF
 
