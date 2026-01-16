@@ -1,0 +1,60 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw8 center">
+
+    <!-- Password form (shown by default) -->
+    <div id="password-form" class="tc" style="max-width: 400px; margin: 80px auto;">
+      <h1 class="f2 fw6 mb4">{{ .Title }}</h1>
+      <p class="f5 gray mb4">Enter password to access.</p>
+      <div class="mb3">
+        <input type="password" id="password-input" placeholder="Enter password"
+               class="pa3 ba b--gray br2 f5" style="width: 250px;"
+               onkeypress="if(event.keyCode==13) checkPassword()">
+      </div>
+      <button onclick="checkPassword()"
+              class="pointer ph4 pv2 bg-dark-gray white bn br2 f5 grow">
+        Enter
+      </button>
+      <p id="error-message" class="red mt3" style="display: none;">Incorrect password. Please try again.</p>
+    </div>
+
+    <!-- Protected content (hidden by default) -->
+    <div id="protected-content" style="display: none;">
+      <article class="teaching-content pa0 ph4-l">
+        <header class="mb4">
+          <h1 class="f1 lh-solid measure mb3 fw4">{{ .Title }}</h1>
+        </header>
+        <section class="post-body">
+          {{ .Content }}
+        </section>
+      </article>
+    </div>
+
+  </section>
+</main>
+
+<script>
+const correctPassword = "GoFalcons!";
+const storageKey = "teaching_access";
+
+function checkPassword() {
+  const input = document.getElementById("password-input").value;
+  if (input === correctPassword) {
+    sessionStorage.setItem(storageKey, "granted");
+    showContent();
+  } else {
+    document.getElementById("error-message").style.display = "block";
+    document.getElementById("password-input").value = "";
+  }
+}
+
+function showContent() {
+  document.getElementById("password-form").style.display = "none";
+  document.getElementById("protected-content").style.display = "block";
+}
+
+if (sessionStorage.getItem(storageKey) === "granted") {
+  showContent();
+}
+</script>
+{{ end }}

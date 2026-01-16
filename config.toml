@@ -131,6 +131,11 @@ enableEmoji = true
     url = "/research/"
     weight = 2
   [[menu.header]]
+    name = "Teaching"
+    title = "Course Materials"
+    url = "/teaching/"
+    weight = 3
+  [[menu.header]]
     name = "Announcements"
     title = "Announcements"
     url = "/announcements/"
