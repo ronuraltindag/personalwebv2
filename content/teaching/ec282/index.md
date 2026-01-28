@@ -59,12 +59,10 @@ Access the course textbook, homework assignments, and videos through [MindTap](h
 <details>
 <summary><strong>In-Class Handouts</strong></summary>
 
-*Handouts will be posted here throughout the semester.*
-
-<!-- Add handouts as the semester progresses:
-- [Week 1: Introduction to R](/pdfs/teaching/handouts/week1.pdf)
-- [Week 2: Data Visualization](/pdfs/teaching/handouts/week2.pdf)
--->
+### Handout 1
+- [Questions (PDF)](/pdfs/teaching/EC282_handouts/classroom_handout1/handout1_questions.pdf)
+- [Answers (PDF)](/pdfs/teaching/EC282_handouts/classroom_handout1/handout1_answers.pdf)
+- [R Code](/pdfs/teaching/EC282_handouts/classroom_handout1/handout1_code.R)
 
 </details>
 
