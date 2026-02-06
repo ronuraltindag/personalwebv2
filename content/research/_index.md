@@ -48,7 +48,7 @@ with Jade Siu, Diloá Athias, Aya Haidar, Monica Moughabghab, Silvia Nastasi, an
 
 ## PUBLISHED PAPERS
 
-Impact of Measles, Mumps, and Rubella Vaccination on Hospitalizations and Human Capital: Evidence from Copenhagen School Health Records.  
+[Impact of Measles, Mumps, and Rubella Vaccination on Hospitalizations and Human Capital: Evidence from Copenhagen School Health Records](denmark_mmr/).   
 Altindag, O., Greve, J., Tekin, E. (2025).     
 **Vaccines**, 13(3), 302.
 

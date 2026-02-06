@@ -75,6 +75,15 @@
        url('#{$font-path}/Commissioner-LightItalic.woff2') format('woff2');
 }
 
+/* commissioner-medium - latin */
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('#{$font-path}/Commissioner-Medium.woff2') format('woff2');
+}
+
 /* eb-garamond-regular - latin */
 @font-face {
   font-family: 'EB Garamond';

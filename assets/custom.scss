@@ -65,7 +65,7 @@
 
 /* Make bold text bolder */
 strong, b, .b {
-  font-weight: 800;
+  font-weight: 500;
 }
 
 /* Headings with DM Sans - lighter weight */
@@ -298,4 +298,18 @@ header .logo img {
 }
 .teaching-content tr:hover {
   background: #fafafa;
+}
+
+/* Clean link styling: no underlines, underline on hover */
+.page-main a:not(.link):not(.btn-links):not(.book-btn) {
+  text-decoration: none;
+}
+.page-main a:not(.link):not(.btn-links):not(.book-btn):hover {
+  text-decoration: underline;
+}
+.page-sidebar a:not(.link) {
+  text-decoration: none;
+}
+.page-sidebar a:not(.link):hover {
+  text-decoration: underline;
 }
