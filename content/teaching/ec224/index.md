@@ -46,7 +46,8 @@ This intermediate microeconomics course provides an analytical approach to econo
 
 - [Syllabus (PDF)](/pdfs/teaching/EC224_SP2026_Syllabus.pdf) - Full course details & policies
 - [Course Notes (PDF)](/pdfs/teaching/EC224_SP2020_Notes.pdf) - My handwritten lecture notes. These are supplementary materials to help you follow along, not a replacement for the textbook. They may contain gaps or errors, so use at your own discretion.
-- [Handouts (PDF)](/pdfs/teaching/EC224_Handouts.pdf) - In-class handouts and exercises
+- [Handouts (PDF)](/pdfs/teaching/EC224_handouts/EC224_Handouts.pdf) - In-class handouts and exercises
+- [Substitution & Income Effects Handout (PDF)](/pdfs/teaching/EC224_handouts/Substitution_Income_Effects_Handout.pdf)
 
 ### MindTap (Required)
 
