@@ -64,6 +64,10 @@ Access the course textbook, homework assignments, and videos through [MindTap](h
 - [Answers (PDF)](/pdfs/teaching/EC282_handouts/classroom_handout1/handout1_answers.pdf)
 - [R Code](/pdfs/teaching/EC282_handouts/classroom_handout1/handout1_code.R)
 
+### Handout 2
+- [Questions (PDF)](/pdfs/teaching/EC282_handouts/classroom_handout2/handout2_questions.pdf)
+- [Answers (PDF)](/pdfs/teaching/EC282_handouts/classroom_handout2/handout2_answers.pdf)
+
 </details>
 
 ---
