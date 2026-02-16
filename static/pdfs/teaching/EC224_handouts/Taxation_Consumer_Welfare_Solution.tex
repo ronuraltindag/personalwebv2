@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{parskip}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Problem 1: Taxation and Consumer Welfare}} \\[6pt]
+{\large EC 224 -- Intermediate Microeconomics}
+\end{center}
+
+\bigskip
+
+\textbf{Setup:} Kate consumes chips ($C$) and soda ($S$) with utility function $U = \sqrt{C \times S}$. Both goods cost \$1 per unit ($P_C = P_S = 1$) and her income is $M = 150$. The marginal rate of substitution is $MRS = S/C$.
+
+\bigskip
+
+\begin{enumerate}[label=\textbf{(\roman*)}, leftmargin=*, itemsep=12pt]
+
+\item \textbf{Find equilibrium demand and utility (no tax).}
+
+At the consumer's optimum, $MRS = P_C / P_S$:
+\[
+\frac{S}{C} = \frac{1}{1} \implies S = C
+\]
+
+Substitute into the budget constraint $C + S = 150$:
+\[
+2C = 150 \implies C^* = 75, \quad S^* = 75
+\]
+
+Utility:
+\[
+U = \sqrt{75 \times 75} = 75
+\]
+
+\item \textbf{A \$0.60 per-unit tax is imposed on soda. Find new demands, utility, and government revenue.}
+
+The new price of soda is $P_S = 1 + 0.60 = 1.60$.
+
+Optimality condition:
+\[
+\frac{S}{C} = \frac{P_C}{P_S} = \frac{1}{1.6} \implies C = 1.6\,S
+\]
+
+Substitute into the new budget constraint $C + 1.6\,S = 150$:
+\[
+1.6\,S + 1.6\,S = 150 \implies 3.2\,S = 150 \implies S^* = 46.875
+\]
+\[
+C^* = 1.6 \times 46.875 = 75
+\]
+
+Utility:
+\[
+U = \sqrt{75 \times 46.875} = \sqrt{3515.625} \approx 59.29
+\]
+
+Government revenue:
+\[
+R = 0.60 \times 46.875 = \$28.125
+\]
+
+\item \textbf{An income tax raises the same revenue (\$28.125). Find new demands and utility.}
+
+New income after the lump-sum tax: $M = 150 - 28.125 = 121.875$.
+
+Prices are unchanged ($P_C = P_S = 1$), so the optimality condition is the same as part (i):
+\[
+S = C
+\]
+
+Budget constraint:
+\[
+C + S = 121.875 \implies C^* = S^* = 60.9375
+\]
+
+Utility:
+\[
+U = \sqrt{60.9375 \times 60.9375} = 60.9375
+\]
+
+\end{enumerate}
+
+\bigskip
+
+\noindent\textbf{Key Takeaway:} For the same government revenue of \$28.125, Kate's utility is \textbf{higher under the income tax} (60.94) than under the per-unit tax on soda (59.29). The excise tax distorts relative prices, creating a deadweight loss that makes the consumer worse off compared to a lump-sum tax that raises the same revenue.
+
+\end{document}
