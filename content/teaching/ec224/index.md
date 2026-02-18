@@ -49,6 +49,7 @@ This intermediate microeconomics course provides an analytical approach to econo
 - [Handouts (PDF)](/pdfs/teaching/EC224_handouts/EC224_Handouts.pdf) - In-class handouts and exercises
 - [Substitution & Income Effects Handout (PDF)](/pdfs/teaching/EC224_handouts/Substitution_Income_Effects_Handout.pdf)
 - [Taxation & Consumer Welfare Solution (PDF)](/pdfs/teaching/EC224_handouts/Taxation_Consumer_Welfare_Solution.pdf)
+- [Midterm 1 Mock Exam (PDF)](/pdfs/teaching/EC224_handouts/EC224_MT1_Exam.pdf)
 
 ### MindTap (Required)
 

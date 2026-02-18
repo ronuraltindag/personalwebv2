@@ -78,6 +78,10 @@ Access the course textbook, homework assignments, and videos through [MindTap](h
 - [Answers (PDF)](/pdfs/teaching/EC282_handouts/classroom_handout4/handout4_answers.pdf)
 - [R Code](/pdfs/teaching/EC282_handouts/classroom_handout4/handout4_code.R)
 
+### Midterm 1 Mock Exam
+- [Questions (PDF)](/pdfs/teaching/EC282_handouts/mock_exam/EC282_MT1_Mock_Questions.pdf)
+- [Answers (PDF)](/pdfs/teaching/EC282_handouts/mock_exam/EC282_MT1_Mock_Answers.pdf)
+
 </details>
 
 ---

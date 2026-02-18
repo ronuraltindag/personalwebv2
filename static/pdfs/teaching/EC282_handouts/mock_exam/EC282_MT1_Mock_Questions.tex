@@ -1,0 +1,419 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{array}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{EC 282: Introduction to Econometrics}
+\rhead{Spring 2026}
+\cfoot{\thepage}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{EC 282 --- Midterm 1 Mock Exam}} \\[6pt]
+{\large Introduction to Econometrics} \\[4pt]
+Spring 2026 \\[4pt]
+Professor Altindag \\[12pt]
+\end{center}
+
+\noindent \textbf{Instructions:}
+\begin{itemize}[nosep]
+\item You have 80 minutes to complete this exam.
+\item The exam consists of 15 multiple choice questions and 3 short answer problems.
+\item You may round all calculations to 2 decimal places.
+\item Show your work on short answer problems for partial credit.
+\item You may use a calculator. A formula sheet is provided at the end.
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\begin{center}
+\textbf{NAME:} \underline{\hspace{8cm}}
+\end{center}
+
+\vspace{0.5cm}
+
+%=====================================================================
+\section*{Part I: Multiple Choice (3 points each, 45 points total)}
+\noindent Circle the best answer for each question.
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+
+%--- Q1 ---
+\item A \textbf{random variable} is best described as:
+\begin{enumerate}[label=(\alph*)]
+\item A variable whose value is always unknown
+\item A numerical summary of a random outcome
+\item A variable that follows a normal distribution
+\item A sample statistic computed from data
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q2 ---
+\item Let $Y$ be a Bernoulli random variable with $\Pr(Y=1) = 0.3$. What is $\text{Var}(Y)$?
+\begin{enumerate}[label=(\alph*)]
+\item $0.30$
+\item $0.09$
+\item $0.21$
+\item $0.49$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q3 ---
+\item Two random variables $X$ and $Y$ are \textbf{independent} if and only if:
+\begin{enumerate}[label=(\alph*)]
+\item $\text{Cov}(X,Y) = 0$
+\item $\Pr(X = x, Y = y) = \Pr(X = x) \cdot \Pr(Y = y)$ for all $x, y$
+\item $E[X] = E[Y]$
+\item $\text{Corr}(X,Y) = 1$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q4 ---
+\item If $\text{Cov}(X,Y) = 0$, which of the following is true?
+\begin{enumerate}[label=(\alph*)]
+\item $X$ and $Y$ are independent
+\item $X$ and $Y$ have no linear relationship, but may have a nonlinear one
+\item $X$ and $Y$ have no relationship of any kind
+\item $\text{Corr}(X,Y) = 1$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q5 ---
+\item The \textbf{correlation} between $X$ and $Y$ is defined as $\rho_{XY} = \sigma_{XY}/(\sigma_X \sigma_Y)$. Which of the following is \textbf{NOT} a property of correlation?
+\begin{enumerate}[label=(\alph*)]
+\item $-1 \leq \rho_{XY} \leq 1$
+\item Correlation is unitless
+\item $\rho_{XY} = 0$ implies $X$ and $Y$ are independent
+\item $\rho_{XY} = 1$ implies a perfect positive linear relationship
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q6 ---
+\item If $Y_1, Y_2, \ldots, Y_n$ are i.i.d.\ with $E[Y_i] = \mu_Y$ and $\text{Var}(Y_i) = \sigma_Y^2$, then $\text{Var}(\bar{Y})$ equals:
+\begin{enumerate}[label=(\alph*)]
+\item $\sigma_Y^2$
+\item $\sigma_Y^2 / n^2$
+\item $\sigma_Y^2 / n$
+\item $\sigma_Y / \sqrt{n}$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q7 ---
+\item The \textbf{Central Limit Theorem} states that:
+\begin{enumerate}[label=(\alph*)]
+\item The population distribution is approximately normal for large $n$
+\item The sample mean $\bar{Y}$ is always exactly normally distributed
+\item For large $n$, $\bar{Y}$ is approximately normally distributed regardless of the population distribution
+\item The sample variance converges to $\sigma_Y^2$ as $n \to \infty$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q8 ---
+\item The \textbf{Law of Large Numbers} tells us that:
+\begin{enumerate}[label=(\alph*)]
+\item Large samples always have larger variance
+\item $\bar{Y} \xrightarrow{p} \mu_Y$ as $n \to \infty$
+\item The sample mean equals the population mean when $n > 30$
+\item The sampling distribution of $\bar{Y}$ is normal for large $n$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q9 ---
+\item An estimator $\hat{\mu}_Y$ is \textbf{unbiased} if:
+\begin{enumerate}[label=(\alph*)]
+\item $\hat{\mu}_Y = \mu_Y$ for every sample
+\item $E[\hat{\mu}_Y] = \mu_Y$
+\item $\text{Var}(\hat{\mu}_Y) = 0$
+\item $\hat{\mu}_Y \xrightarrow{p} \mu_Y$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q10 ---
+\item The sample variance formula uses $n-1$ in the denominator (instead of $n$) because:
+\begin{enumerate}[label=(\alph*)]
+\item It makes the variance smaller
+\item It produces an unbiased estimator of the population variance (Bessel's correction)
+\item It is required by the Central Limit Theorem
+\item It ensures the sample variance is always positive
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q11 ---
+\item The \textbf{conditional expected value} $E[Y \mid X = x]$ is:
+\begin{enumerate}[label=(\alph*)]
+\item The expected value of $Y$ ignoring $X$
+\item The expected value of $Y$ calculated using the conditional distribution of $Y$ given $X = x$
+\item Always equal to $E[Y]$
+\item Only defined when $X$ and $Y$ are independent
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q12 ---
+\item Suppose $X$ and $Y$ are independent. Which of the following must be true?
+\begin{enumerate}[label=(\alph*)]
+\item $E[X] = E[Y]$
+\item $\text{Cov}(X,Y) = 0$
+\item $\text{Var}(X) = \text{Var}(Y)$
+\item $\Pr(X = x) = \Pr(Y = y)$ for all $x,y$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q13 ---
+\item A population has mean $\mu_Y = 200$ and variance $\sigma_Y^2 = 400$. If you draw a random sample of $n = 100$, then by the CLT the sampling distribution of $\bar{Y}$ is approximately:
+\begin{enumerate}[label=(\alph*)]
+\item $N(200, 400)$
+\item $N(200, 4)$
+\item $N(200, 2)$
+\item $N(200, 20)$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q14 ---
+\item Among two unbiased estimators of $\mu_Y$, the one with \textbf{smaller variance} is said to be:
+\begin{enumerate}[label=(\alph*)]
+\item More consistent
+\item More efficient
+\item Less biased
+\item More robust
+\end{enumerate}
+
+\vspace{0.3cm}
+
+%--- Q15 ---
+\item A researcher surveys students only from their own lecture section to estimate the average GPA of all students at the university. This is an example of:
+\begin{enumerate}[label=(\alph*)]
+\item Random sampling
+\item The Central Limit Theorem in action
+\item Selection bias (non-random sampling)
+\item An efficient estimator
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+%=====================================================================
+\section*{Part II: Short Answer Problems}
+
+\subsection*{Problem 1. Joint Distribution, Conditional Probability, and Covariance (25 points)}
+
+A university surveys students about their \textbf{housing type} ($X$) and \textbf{GPA category} ($Y$). Define:
+\begin{itemize}[nosep]
+\item $X \in \{0, 1\}$ where $X = 0$ is off-campus and $X = 1$ is on-campus
+\item $Y \in \{0, 1\}$ where $Y = 0$ is GPA below 3.0 and $Y = 1$ is GPA 3.0 or above
+\end{itemize}
+
+The \textbf{joint distribution} is given below:
+
+\begin{center}
+\begin{tabular}{l|cc|c}
+\toprule
+ & $Y = 0$ (GPA $< 3.0$) & $Y = 1$ (GPA $\geq 3.0$) & Marginal of $X$ \\
+\midrule
+$X = 0$ (Off-campus) & 0.20 & 0.25 & \\
+$X = 1$ (On-campus) & 0.15 & 0.40 & \\
+\midrule
+Marginal of $Y$ & & & 1.00 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item (5 points) Compute the marginal distributions of $X$ and $Y$. Fill in the missing values in the table.
+
+\vspace{3cm}
+
+\item (5 points) Calculate $E[X]$, $E[Y]$, $\text{Var}(X)$, and $\text{Var}(Y)$.
+
+\vspace{4cm}
+
+\item (5 points) Calculate the following conditional probabilities:
+\begin{itemize}
+\item $\Pr(Y = 1 \mid X = 1)$ --- the probability of a high GPA given on-campus housing.
+\item $\Pr(Y = 1 \mid X = 0)$ --- the probability of a high GPA given off-campus housing.
+\end{itemize}
+
+\vspace{4cm}
+
+\item (5 points) Based on your answers, are $X$ and $Y$ independent? Justify your answer using the definition of independence.
+
+\vspace{3cm}
+
+\item (5 points) Calculate $\text{Cov}(X,Y)$ and $\text{Corr}(X,Y)$. Interpret the sign of the correlation.
+\end{enumerate}
+
+\newpage
+%=====================================================================
+\subsection*{Problem 2. Sampling Distribution and Estimation (15 points)}
+
+A large population of monthly apartment rents has mean $\mu_Y = 950$ and standard deviation $\sigma_Y = 300$. A researcher draws a random sample of $n = 225$ apartments.
+
+\begin{enumerate}[label=(\alph*)]
+\item (3 points) What is the expected value of the sample mean $\bar{Y}$? Is the sample mean an unbiased estimator of $\mu_Y$? Explain.
+
+\vspace{3cm}
+
+\item (3 points) Calculate the standard deviation of $\bar{Y}$ (i.e., the standard error $\sigma_{\bar{Y}}$).
+
+\vspace{3cm}
+
+\item (3 points) Using the Central Limit Theorem, write down the approximate sampling distribution of $\bar{Y}$.
+
+\vspace{3cm}
+
+\item (3 points) Calculate $\Pr(\bar{Y} > 960)$. Show your work by standardizing.
+
+\textit{Hint:} $\Phi(0.50) = 0.691$.
+
+\vspace{4cm}
+
+\item (3 points) If the researcher instead drew a sample of $n = 900$, would $\Pr(\bar{Y} > 960)$ be larger or smaller? Explain without doing the full calculation.
+\end{enumerate}
+
+\newpage
+%=====================================================================
+\subsection*{Problem 3. Conditional Expectation and the Law of Iterated Expectations (15 points)}
+
+An insurance company classifies drivers into two risk groups based on age:
+\begin{itemize}[nosep]
+\item $X = 0$: drivers aged 25 and older (70\% of all drivers, i.e., $\Pr(X = 0) = 0.70$)
+\item $X = 1$: drivers under 25 (30\% of all drivers, i.e., $\Pr(X = 1) = 0.30$)
+\end{itemize}
+
+Let $Y$ denote the number of accidents per year. The conditional distributions are:
+
+\begin{center}
+\begin{tabular}{l|ccc}
+\toprule
+& $Y = 0$ & $Y = 1$ & $Y = 2$ \\
+\midrule
+$\Pr(Y = y \mid X = 0)$ \text{ (age $\geq$ 25)} & 0.80 & 0.15 & 0.05 \\
+$\Pr(Y = y \mid X = 1)$ \text{ (age $<$ 25)} & 0.50 & 0.35 & 0.15 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item (4 points) Calculate $E[Y \mid X = 0]$ and $E[Y \mid X = 1]$. Interpret these values in plain language.
+
+\vspace{4cm}
+
+\item (4 points) Use the \textbf{Law of Iterated Expectations} to compute $E[Y]$, the overall expected number of accidents per year:
+\[
+E[Y] = E[Y \mid X = 0] \cdot \Pr(X = 0) + E[Y \mid X = 1] \cdot \Pr(X = 1)
+\]
+
+\vspace{4cm}
+
+\item (3 points) Calculate $\text{Var}(Y \mid X = 1)$.
+
+\vspace{4cm}
+
+\item (4 points) Can we conclude from this data that being under 25 \textit{causes} more accidents? What other factors might explain the difference in $E[Y \mid X = 0]$ and $E[Y \mid X = 1]$?
+\end{enumerate}
+
+
+\newpage
+%=====================================================================
+\section*{Formula Sheet}
+
+\subsection*{Probability \& Random Variables}
+
+\textbf{Expected Value:}
+\[
+E[Y] = \mu_Y = \sum_{i} y_i \cdot \Pr(Y = y_i)
+\]
+
+\textbf{Variance and Standard Deviation:}
+\[
+\text{Var}(Y) = \sigma_Y^2 = E[(Y - \mu_Y)^2] = \sum_{i} (y_i - \mu_Y)^2 \cdot \Pr(Y = y_i)
+\qquad
+\sigma_Y = \sqrt{\sigma_Y^2}
+\]
+
+\textbf{Bernoulli Random Variable} ($Y \in \{0,1\}$, $\Pr(Y=1) = p$):
+\[
+E[Y] = p \qquad \text{Var}(Y) = p(1-p)
+\]
+
+\textbf{Conditional Probability:}
+\[
+\Pr(Y = y \mid X = x) = \frac{\Pr(X = x, Y = y)}{\Pr(X = x)}
+\]
+
+\textbf{Conditional Expected Value:}
+\[
+E[Y \mid X = x] = \sum_i y_i \cdot \Pr(Y = y_i \mid X = x)
+\]
+
+\textbf{Law of Iterated Expectations:}
+\[
+E[Y] = E\big[E[Y \mid X]\big] = \sum_i E[Y \mid X = x_i] \cdot \Pr(X = x_i)
+\]
+
+\textbf{Covariance and Correlation:}
+\[
+\text{Cov}(X,Y) = \sigma_{XY} = E[(X - \mu_X)(Y - \mu_Y)]
+\qquad
+\text{Corr}(X,Y) = \rho_{XY} = \frac{\sigma_{XY}}{\sigma_X \sigma_Y}
+\]
+
+\textbf{Independence:} $X$ and $Y$ are independent if $\Pr(X = x, Y = y) = \Pr(X = x) \cdot \Pr(Y = y)$ for all $x, y$.
+
+If $X$ and $Y$ are independent, then $\text{Cov}(X,Y) = 0$. The converse is \textbf{not} true.
+
+\subsection*{Sampling \& Estimation}
+
+\textbf{Sample Mean:}
+\[
+\bar{Y} = \frac{1}{n}\sum_{i=1}^{n} Y_i
+\qquad
+E[\bar{Y}] = \mu_Y
+\qquad
+\text{Var}(\bar{Y}) = \frac{\sigma_Y^2}{n}
+\qquad
+\sigma_{\bar{Y}} = \frac{\sigma_Y}{\sqrt{n}}
+\]
+
+\textbf{Sample Variance and Standard Error:}
+\[
+S_Y^2 = \frac{1}{n-1}\sum_{i=1}^{n}(Y_i - \bar{Y})^2
+\qquad
+SE[\bar{Y}] = \frac{S_Y}{\sqrt{n}}
+\]
+
+\textbf{Central Limit Theorem:} For large $n$, $\bar{Y} \stackrel{a}{\sim} N\!\left(\mu_Y,\; \dfrac{\sigma_Y^2}{n}\right)$
+
+\textbf{Law of Large Numbers:} $\bar{Y} \xrightarrow{p} \mu_Y$ as $n \to \infty$
+
+\textbf{Standardization:} If $Y \sim N(\mu_Y, \sigma_Y^2)$, then $Z = \dfrac{Y - \mu_Y}{\sigma_Y} \sim N(0,1)$
+
+\subsection*{Estimator Properties}
+\begin{itemize}[nosep]
+\item \textbf{Unbiased:} $E[\hat{\mu}_Y] = \mu_Y$
+\item \textbf{Consistent:} $\hat{\mu}_Y \xrightarrow{p} \mu_Y$ as $n \to \infty$
+\item \textbf{Efficient:} Smallest variance among all unbiased estimators
+\item \textbf{BLUE:} The sample mean is the Best Linear Unbiased Estimator of $\mu_Y$
+\end{itemize}
+
+\end{document}
