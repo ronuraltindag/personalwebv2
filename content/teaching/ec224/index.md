@@ -34,7 +34,7 @@ This intermediate microeconomics course provides an analytical approach to econo
 |-----------|------|--------|
 | Weekly assignments + participation | Throughout semester | 25% |
 | **Midterm 1** | Monday, Feb 23, 2026 | 20% |
-| **Midterm 2** | Wednesday, Apr 1, 2026 | 25% |
+| **Midterm 2** | Monday, Apr 6, 2026 | 25% |
 | **Final Exam** | Fri, May 1, 5:00-7:00 PM | 30% |
 
 </details>

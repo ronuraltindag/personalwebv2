@@ -34,7 +34,7 @@ This course equips you with foundational econometric skills to analyze data crit
 |-----------|------|--------|
 | Homework (10 assignments) | Throughout semester | 20% |
 | **Midterm 1** | Monday, Feb 23, 2026 | 20% |
-| **Midterm 2** | Wednesday, Apr 1, 2026 | 25% |
+| **Midterm 2** | Wednesday, Apr 8, 2026 | 25% |
 | **Final Exam** | Wed, May 6, 3:00-5:00 PM | 30% |
 | Participation | - | 5% |
 

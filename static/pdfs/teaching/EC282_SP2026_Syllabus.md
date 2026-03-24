@@ -61,7 +61,7 @@ Office hours are held on Mondays and Wednesdays by appointment. Please [book a t
 
 - Homework assignments (due dates on MindTap)  (20%)
 - **Monday, February 23, 2026** - First Midterm  (20%)
-- **Wednesday, April 1, 2026** -  Second Midterm (25%)
+- **Wednesday, April 8, 2026** -  Second Midterm (25%)
 - **Wednesday, May 6, 2026, 3:00 PM - 5:00 PM** -  Final Exam (30%)
 - Classroom participation (5%)
 
