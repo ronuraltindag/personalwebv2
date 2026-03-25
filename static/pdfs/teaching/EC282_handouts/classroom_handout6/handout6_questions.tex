@@ -1,0 +1,373 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{minted}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{EC 282: Introduction to Econometrics}
+\rhead{Spring 2026}
+\cfoot{\thepage}
+
+\setminted{
+  bgcolor=gray!5,
+  fontsize=\small,
+  linenos,
+  frame=single,
+  framesep=2mm,
+  breaklines
+}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Handout 6: Inference and Binary Regressors}} \\[8pt]
+{\large EC 282: Introduction to Econometrics} \\[4pt]
+Spring 2026
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Instructions:} Run the provided R code and answer the questions. Show your work for calculations. This handout builds directly on Handout~5---make sure you have that code loaded first.
+
+\section{Setup: Continuing with the Gapminder Data}
+
+We continue with the same Gapminder 2007 cross-section from Handout~5. Run the code below to reload the data and re-estimate the regression.
+
+\begin{minted}{r}
+library(ggplot2)
+
+options(scipen = 999)
+
+# Reload the Gapminder 2007 data
+gapminder_full <- read.csv(
+  "https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/
+   master/data/gapminder-FiveYearData.csv"
+)
+gap07 <- gapminder_full[gapminder_full$year == 2007, ]
+
+# Re-estimate the simple regression from Handout 5
+reg <- lm(lifeExp ~ gdpPercap, data = gap07)
+\end{minted}
+
+\section{Reading the Regression Output}
+
+\textbf{Question 2.1:} Run \texttt{summary(reg)} and examine the output carefully.
+
+\begin{minted}{r}
+summary(reg)
+\end{minted}
+
+\vspace{0.5cm}
+
+Identify and write down the following from the output:
+
+\begin{enumerate}[label=(\alph*)]
+\item The estimated slope $\hat{\beta}_1$ and intercept $\hat{\beta}_0$
+\item The standard error of $\hat{\beta}_1$, denoted $SE(\hat{\beta}_1)$
+\item The t-statistic for $\hat{\beta}_1$
+\item The p-value for $\hat{\beta}_1$
+\item The $R^2$
+\end{enumerate}
+
+\vspace{2cm}
+
+\textbf{Question 2.2:} The standard error measures the \textit{precision} of our estimate. In your own words, what does a small standard error tell you? What does a large one tell you?
+
+\vspace{3cm}
+
+\textbf{Question 2.3:} What affects the precision of $\hat{\beta}_1$? Three factors determine $SE(\hat{\beta}_1)$: the sample size $n$, the spread of $X$ (i.e., $\text{Var}(X_i)$), and the amount of noise in the regression (i.e., $\text{Var}(u_i)$). For each factor, explain whether \textit{increasing} it makes $SE(\hat{\beta}_1)$ larger or smaller, and why.
+
+\vspace{4cm}
+
+\section{Hypothesis Testing}
+
+We want to test whether GDP per capita has a \textit{statistically significant} relationship with life expectancy. This means testing whether the true slope $\beta_1$ could be zero.
+
+\textbf{Question 3.1:} Write down the null and alternative hypotheses for a two-sided test of whether GDP per capita is related to life expectancy.
+
+\vspace{2cm}
+
+\textbf{Question 3.2:} The t-statistic is computed as:
+\[
+t\text{-stat} = \frac{\hat{\beta}_1 - \beta_{1,0}}{SE(\hat{\beta}_1)}
+\]
+where $\beta_{1,0}$ is the hypothesized value under $H_0$. Using the values from the regression output, compute the t-statistic by hand. Verify it matches the output.
+
+\begin{minted}{r}
+# Extract coefficients and standard errors
+beta1_hat <- coef(reg)["gdpPercap"]
+se_beta1  <- summary(reg)$coefficients["gdpPercap", "Std. Error"]
+
+cat("beta1_hat:", beta1_hat, "\n")
+cat("SE(beta1_hat):", se_beta1, "\n")
+
+# Compute t-statistic by hand
+t_stat <- beta1_hat / se_beta1
+cat("t-statistic (by hand):", t_stat, "\n")
+\end{minted}
+
+\vspace{2cm}
+
+\textbf{Question 3.3:} To make a decision, we compare the t-statistic to critical values. For a two-sided test at the 5\% significance level, we reject $H_0$ if $|t| > 1.96$.
+
+\begin{enumerate}[label=(\alph*)]
+\item Is the slope on GDP per capita statistically significant at the 5\% level?
+\item Is it significant at the 1\% level? (Critical value: 2.576)
+\end{enumerate}
+
+\vspace{2cm}
+
+\textbf{Question 3.4:} The p-value gives the probability of observing a t-statistic at least as extreme as ours, \textit{assuming $H_0$ is true}. Compute the p-value in R and verify it matches the regression output.
+
+\begin{minted}{r}
+# Compute p-value for two-sided test
+p_value <- 2 * pnorm(-abs(t_stat))
+cat("p-value (by hand):", p_value, "\n")
+cat("p-value (from summary):",
+    summary(reg)$coefficients["gdpPercap", "Pr(>|t|)"], "\n")
+\end{minted}
+
+\vspace{1cm}
+
+Interpret the p-value in a sentence. What does it tell us about the relationship between GDP per capita and life expectancy?
+
+\vspace{2cm}
+
+\textbf{Question 3.5:} Suppose instead we wanted to test whether GDP per capita has a \textit{positive} effect on life expectancy (a one-sided test):
+\[
+H_0: \beta_1 = 0 \qquad H_A: \beta_1 > 0
+\]
+
+\begin{minted}{r}
+# One-sided p-value (right tail)
+p_value_one <- pnorm(-abs(t_stat))
+cat("One-sided p-value:", p_value_one, "\n")
+\end{minted}
+
+How does the one-sided p-value compare to the two-sided p-value? Why?
+
+\vspace{2cm}
+
+\section{Confidence Intervals}
+
+A confidence interval provides a range of plausible values for the true population parameter $\beta_1$.
+
+\textbf{Question 4.1:} A 95\% confidence interval for $\beta_1$ is:
+\[
+\hat{\beta}_1 \pm 1.96 \times SE(\hat{\beta}_1)
+\]
+
+Compute this by hand using the values from the regression output.
+
+\begin{minted}{r}
+# 95% confidence interval by hand
+ci_lower <- beta1_hat - 1.96 * se_beta1
+ci_upper <- beta1_hat + 1.96 * se_beta1
+
+cat("95% CI: [", round(ci_lower, 7), ",", round(ci_upper, 7), "]\n")
+\end{minted}
+
+\vspace{1cm}
+
+Verify with R's built-in function:
+
+\begin{minted}{r}
+confint(reg, "gdpPercap", level = 0.95)
+\end{minted}
+
+\vspace{1cm}
+
+\textbf{Question 4.2:} Interpret the 95\% confidence interval in a sentence. Does the interval include zero? What does this tell you?
+
+\vspace{3cm}
+
+\textbf{Question 4.3:} Now construct a 99\% confidence interval. Is it wider or narrower than the 95\% CI? Why?
+
+\begin{minted}{r}
+# 99% confidence interval
+ci99_lower <- beta1_hat - 2.576 * se_beta1
+ci99_upper <- beta1_hat + 2.576 * se_beta1
+
+cat("99% CI: [", round(ci99_lower, 7), ",", round(ci99_upper, 7), "]\n")
+confint(reg, "gdpPercap", level = 0.99)
+\end{minted}
+
+\vspace{2cm}
+
+\textbf{Question 4.4:} The connection between confidence intervals and hypothesis testing: if the 95\% CI does not include a hypothesized value $\beta_{1,0}$, then we would reject $H_0: \beta_1 = \beta_{1,0}$ at the 5\% level. Explain in your own words why this equivalence holds.
+
+\vspace{3cm}
+
+\textbf{Question 4.5:} Suppose we want a confidence interval for the \textit{predicted change} in life expectancy when GDP per capita increases by \$10,000. Compute a 95\% CI for $\Delta Y = \beta_1 \times 10{,}000$.
+
+\begin{minted}{r}
+# CI for predicted change when X increases by $10,000
+delta_X <- 10000
+pred_change <- beta1_hat * delta_X
+ci_change_lower <- ci_lower * delta_X
+ci_change_upper <- ci_upper * delta_X
+
+cat("Predicted change:", round(pred_change, 2), "years\n")
+cat("95% CI for change: [", round(ci_change_lower, 2), ",",
+    round(ci_change_upper, 2), "] years\n")
+\end{minted}
+
+\vspace{1cm}
+
+Interpret this result in a sentence.
+
+\vspace{2cm}
+
+\section{Regression with Binary Variables}
+
+So far, our regressor (GDP per capita) has been continuous. Now we explore what happens when the independent variable is \textbf{binary} (taking only values 0 or 1).
+
+\textbf{Question 5.1:} Create a binary variable \texttt{africa} that equals 1 if a country is in Africa and 0 otherwise.
+
+\begin{minted}{r}
+# Create binary variable
+gap07$africa <- ifelse(gap07$continent == "Africa", 1, 0)
+
+cat("Number of African countries:", sum(gap07$africa), "\n")
+cat("Number of non-African countries:", sum(1 - gap07$africa), "\n")
+\end{minted}
+
+\vspace{1cm}
+
+\textbf{Question 5.2:} Compute the average life expectancy separately for African and non-African countries.
+
+\begin{minted}{r}
+# Group means
+mean_africa     <- mean(gap07$lifeExp[gap07$africa == 1])
+mean_non_africa <- mean(gap07$lifeExp[gap07$africa == 0])
+
+cat("Mean life exp (Africa):", round(mean_africa, 2), "years\n")
+cat("Mean life exp (non-Africa):", round(mean_non_africa, 2), "years\n")
+cat("Difference:", round(mean_africa - mean_non_africa, 2), "years\n")
+\end{minted}
+
+\vspace{2cm}
+
+\textbf{Question 5.3:} Now run a regression of life expectancy on the \texttt{africa} dummy:
+\[
+\widehat{\text{LifeExp}}_i = \hat{\beta}_0 + \hat{\beta}_1 \times \text{Africa}_i
+\]
+
+\begin{minted}{r}
+reg_binary <- lm(lifeExp ~ africa, data = gap07)
+summary(reg_binary)
+\end{minted}
+
+\begin{enumerate}[label=(\alph*)]
+\item What does $\hat{\beta}_0$ represent? Compare it to one of the group means you computed above.
+\item What does $\hat{\beta}_1$ represent? Compare it to the difference in group means.
+\item Is the difference statistically significant at the 5\% level? How do you know?
+\end{enumerate}
+
+\vspace{4cm}
+
+\textbf{Question 5.4:} This is a key insight: \textbf{regression with a binary regressor is the same as a two-sample comparison of means}. Verify this by running a t-test and comparing the results.
+
+\begin{minted}{r}
+# Two-sample t-test
+t.test(lifeExp ~ africa, data = gap07, var.equal = FALSE)
+\end{minted}
+
+Compare the difference in means and p-value from the t-test to the regression output. What do you notice?
+
+\vspace{3cm}
+
+\textbf{Question 5.5:} Construct a 95\% confidence interval for $\hat{\beta}_1$ from the binary regression. What does this interval tell us about the life expectancy gap between African and non-African countries?
+
+\begin{minted}{r}
+confint(reg_binary, "africa", level = 0.95)
+\end{minted}
+
+\vspace{3cm}
+
+\textbf{Question 5.6:} Create a visualization comparing the two groups.
+
+\begin{minted}{r}
+ggplot(gap07, aes(x = factor(africa, labels = c("Non-Africa", "Africa")),
+                  y = lifeExp)) +
+  geom_boxplot(fill = c("steelblue", "coral"), alpha = 0.7) +
+  geom_jitter(width = 0.2, alpha = 0.4, size = 1.5) +
+  labs(title = "Life Expectancy: Africa vs. Rest of World (2007)",
+       x = "", y = "Life Expectancy (years)") +
+  theme_minimal()
+\end{minted}
+
+What patterns do you notice in the data? Is there overlap between the two groups?
+
+\vspace{3cm}
+
+\section{Bringing It Together}
+
+\textbf{Question 6.1:} We've seen that the relationship between GDP per capita and life expectancy is not perfectly linear (Handout~5 showed curvature in the residual plot). One concern is \textbf{omitted variable bias}. What variables might be in the error term $u_i$ that are both:
+\begin{enumerate}
+\item Correlated with GDP per capita, AND
+\item Affect life expectancy?
+\end{enumerate}
+
+Name at least two such variables and explain why they create bias.
+
+\vspace{4cm}
+
+\textbf{Question 6.2:} Compare the two regressions we've run in this handout. Fill in the table:
+
+\begin{center}
+\begin{tabular}{l|c|c}
+\toprule
+ & GDP per capita regression & Africa dummy regression \\
+\midrule
+$\hat{\beta}_0$ & & \\[6pt]
+$\hat{\beta}_1$ & & \\[6pt]
+$SE(\hat{\beta}_1)$ & & \\[6pt]
+t-statistic & & \\[6pt]
+$R^2$ & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{minted}{r}
+# Side-by-side comparison
+cat("=== GDP per Capita Regression ===\n")
+cat("beta0:", round(coef(reg)[1], 4), "\n")
+cat("beta1:", round(coef(reg)[2], 7), "\n")
+cat("SE(beta1):", round(summary(reg)$coefficients[2, 2], 7), "\n")
+cat("t-stat:", round(summary(reg)$coefficients[2, 3], 3), "\n")
+cat("R-squared:", round(summary(reg)$r.squared, 4), "\n\n")
+
+cat("=== Africa Dummy Regression ===\n")
+cat("beta0:", round(coef(reg_binary)[1], 4), "\n")
+cat("beta1:", round(coef(reg_binary)[2], 4), "\n")
+cat("SE(beta1):", round(summary(reg_binary)$coefficients[2, 2], 4), "\n")
+cat("t-stat:", round(summary(reg_binary)$coefficients[2, 3], 3), "\n")
+cat("R-squared:", round(summary(reg_binary)$r.squared, 4), "\n")
+\end{minted}
+
+\vspace{1cm}
+
+Which regression has a higher $R^2$? Does this mean it is a ``better'' model? Discuss.
+
+\vspace{3cm}
+
+\textbf{Question 6.3:} Reflect on what we've learned across Handouts 5 and 6. We can now:
+\begin{itemize}
+\item Estimate a regression line (Handout 5)
+\item Assess how well it fits (Handout 5)
+\item Test whether the relationship is statistically significant (Handout 6)
+\item Construct confidence intervals for the true effect (Handout 6)
+\item Use binary variables to compare group means within a regression framework (Handout 6)
+\end{itemize}
+
+What is one important thing we still \textit{cannot} do with simple regression? (Hint: Think about why the coefficient on GDP per capita might not represent a causal effect.)
+
+\vspace{3cm}
+
+\end{document}

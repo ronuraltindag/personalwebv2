@@ -1,0 +1,339 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{EC 282: Introduction to Econometrics}
+\rhead{Spring 2026}
+\cfoot{\thepage}
+
+\setminted{
+  bgcolor=gray!5,
+  fontsize=\small,
+  linenos,
+  frame=single,
+  framesep=2mm,
+  breaklines
+}
+
+\newtcolorbox{answer}{
+  colback=green!5!white,
+  colframe=green!40!black,
+  arc=2mm,
+  boxrule=0.5pt,
+  left=4pt, right=4pt, top=4pt, bottom=4pt
+}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Handout 6: Inference and Binary Regressors}} \\[4pt]
+{\LARGE \textcolor{cyan}{\textbf{ANSWER KEY}}} \\[8pt]
+{\large EC 282: Introduction to Econometrics} \\[4pt]
+Spring 2026
+\end{center}
+
+\section{Setup: Continuing with the Gapminder Data}
+
+No questions in this section---just run the setup code from the questions handout to reload the data and re-estimate the regression.
+
+\section{Reading the Regression Output}
+
+\textbf{Question 2.1:} Identify values from the regression output.
+
+\begin{answer}
+Run \texttt{summary(reg)} to obtain:
+
+\begin{enumerate}[label=(\alph*)]
+\item $\hat{\beta}_0 \approx 59.57$ (intercept), $\hat{\beta}_1 \approx 0.000637$ (slope on GDP per capita)
+\item $SE(\hat{\beta}_1) \approx 0.0000653$
+\item t-statistic for $\hat{\beta}_1$: $t \approx 9.75$
+\item p-value for $\hat{\beta}_1$: $p < 0.0001$ (essentially zero)
+\item $R^2 \approx 0.4636$
+\end{enumerate}
+
+The key insight: all of these numbers are reported in the \texttt{Coefficients:} table of the summary output. The columns are \texttt{Estimate}, \texttt{Std. Error}, \texttt{t value}, and \texttt{Pr(>|t|)}.
+\end{answer}
+
+\textbf{Question 2.2:} What does the standard error tell you?
+
+\begin{answer}
+The standard error measures the \textbf{uncertainty} (or imprecision) in our estimate of $\hat{\beta}_1$.
+
+\begin{itemize}
+\item A \textbf{small} standard error means our estimate is precise---if we drew a new random sample, we'd likely get a similar value of $\hat{\beta}_1$.
+\item A \textbf{large} standard error means our estimate is imprecise---different samples could give quite different estimates.
+\end{itemize}
+
+Think of it this way: $\hat{\beta}_1$ is our best guess for the true slope $\beta_1$, and $SE(\hat{\beta}_1)$ tells us roughly how far off that guess might be.
+\end{answer}
+
+\textbf{Question 2.3:} What affects precision?
+
+\begin{answer}
+Three factors determine the precision of $\hat{\beta}_1$:
+
+\begin{enumerate}
+\item \textbf{Sample size ($n$):} Increasing $n$ makes $SE(\hat{\beta}_1)$ \textit{smaller} (more precise). More data $=$ more information $=$ better estimates. This is analogous to the standard error of the sample mean shrinking as $n$ grows.
+
+\item \textbf{Spread of $X$ ($\text{Var}(X_i)$):} Increasing the spread of $X$ makes $SE(\hat{\beta}_1)$ \textit{smaller}. If all countries had similar GDP per capita, it would be hard to trace out how life expectancy changes with income. You need variation in $X$ to estimate the slope precisely.
+
+\item \textbf{Noise in the regression ($\text{Var}(u_i)$):} Increasing the noise makes $SE(\hat{\beta}_1)$ \textit{larger} (less precise). When there are many other factors affecting $Y$ that aren't captured by $X$, the data points are more scattered around the line, making it harder to pin down the slope.
+\end{enumerate}
+\end{answer}
+
+\section{Hypothesis Testing}
+
+\textbf{Question 3.1:} Hypotheses.
+
+\begin{answer}
+\[
+H_0: \beta_1 = 0 \qquad \text{(GDP per capita has no relationship with life expectancy)}
+\]
+\[
+H_A: \beta_1 \neq 0 \qquad \text{(GDP per capita is related to life expectancy)}
+\]
+
+This is a \textbf{two-sided} test because we are looking for a relationship in either direction.
+\end{answer}
+
+\textbf{Question 3.2:} Compute the t-statistic by hand.
+
+\begin{answer}
+Under $H_0$, $\beta_{1,0} = 0$, so:
+\[
+t\text{-stat} = \frac{\hat{\beta}_1 - 0}{SE(\hat{\beta}_1)} = \frac{0.000637}{0.0000653} \approx 9.75
+\]
+
+This matches the t-statistic in the \texttt{summary()} output. The t-statistic tells us that $\hat{\beta}_1$ is about 9.75 standard errors away from zero. This is very far from zero, suggesting $H_0$ is unlikely.
+\end{answer}
+
+\textbf{Question 3.3:} Statistical significance.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item At the 5\% level: $|t| = 9.75 > 1.96$. \textbf{Yes}, the slope is statistically significant at the 5\% level. We reject $H_0$.
+
+\item At the 1\% level: $|t| = 9.75 > 2.576$. \textbf{Yes}, the slope is also statistically significant at the 1\% level. The evidence against $H_0$ is overwhelming.
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 3.4:} P-value interpretation.
+
+\begin{answer}
+The p-value is essentially 0 (far less than 0.01). This means: \textbf{if there were truly no relationship between GDP per capita and life expectancy ($\beta_1 = 0$), the probability of observing a slope estimate as large as ours (or larger) by pure chance is essentially zero.}
+
+In plain language: the data provide overwhelming evidence that GDP per capita and life expectancy are related. It would be virtually impossible to see this strong a pattern in a sample of 142 countries if the two variables were truly unrelated in the population.
+\end{answer}
+
+\textbf{Question 3.5:} One-sided vs.\ two-sided p-value.
+
+\begin{answer}
+The one-sided p-value is exactly \textbf{half} the two-sided p-value. This is because the two-sided test looks for extreme values in both tails (both very positive and very negative t-statistics), while the one-sided test only looks in one tail.
+
+Since we have strong evidence that $\hat{\beta}_1 > 0$ (the t-statistic is positive and very large), the one-sided test is even more decisive. But in this case, both p-values are so tiny that the distinction is irrelevant---we reject $H_0$ either way.
+\end{answer}
+
+\section{Confidence Intervals}
+
+\textbf{Question 4.1:} 95\% CI by hand.
+
+\begin{answer}
+\[
+\hat{\beta}_1 \pm 1.96 \times SE(\hat{\beta}_1) = 0.000637 \pm 1.96 \times 0.0000653
+\]
+\[
+= 0.000637 \pm 0.000128 = [0.000509,\; 0.000765]
+\]
+
+The R output from \texttt{confint()} will be very similar (slight differences due to R using the t-distribution rather than the normal approximation, but they are negligible with $n = 142$).
+\end{answer}
+
+\textbf{Question 4.2:} Interpret the 95\% CI.
+
+\begin{answer}
+We are 95\% confident that the true effect of a one-dollar increase in GDP per capita on life expectancy lies between 0.000509 and 0.000765 years.
+
+The interval does \textbf{not include zero}. This is consistent with rejecting $H_0: \beta_1 = 0$ at the 5\% significance level. If zero were a plausible value for $\beta_1$, it would be inside the confidence interval.
+
+In more practical terms: a \$10,000 increase in GDP per capita is associated with an increase in life expectancy of between 5.1 and 7.7 years (multiply the CI bounds by 10,000).
+\end{answer}
+
+\textbf{Question 4.3:} 99\% CI.
+
+\begin{answer}
+\[
+\hat{\beta}_1 \pm 2.576 \times SE(\hat{\beta}_1) = 0.000637 \pm 2.576 \times 0.0000653
+\]
+\[
+= 0.000637 \pm 0.000168 = [0.000469,\; 0.000805]
+\]
+
+The 99\% CI is \textbf{wider} than the 95\% CI. This makes intuitive sense: if we want to be \textit{more confident} that our interval contains the true value, we need to cast a wider net. There is a tradeoff between confidence level and precision.
+\end{answer}
+
+\textbf{Question 4.4:} Connection between CIs and hypothesis testing.
+
+\begin{answer}
+A 95\% confidence interval contains all the values of $\beta_{1,0}$ that we would \textit{fail to reject} in a two-sided test at the 5\% level. Conversely, any value \textit{outside} the CI would be rejected.
+
+This works because the CI is constructed as $\hat{\beta}_1 \pm 1.96 \times SE(\hat{\beta}_1)$, and the hypothesis test rejects when $|\hat{\beta}_1 - \beta_{1,0}| / SE(\hat{\beta}_1) > 1.96$. These are algebraically the same condition.
+
+So checking whether $\beta_{1,0} = 0$ falls inside the 95\% CI is equivalent to running the two-sided t-test at $\alpha = 0.05$.
+\end{answer}
+
+\textbf{Question 4.5:} CI for predicted change.
+
+\begin{answer}
+When GDP per capita increases by \$10,000:
+
+\textbf{Point estimate:} $\Delta \hat{Y} = 0.000637 \times 10{,}000 \approx 6.37$ years
+
+\textbf{95\% CI:} $[0.000509 \times 10{,}000,\; 0.000765 \times 10{,}000] = [5.09,\; 7.65]$ years
+
+\textbf{Interpretation:} We are 95\% confident that a \$10,000 increase in GDP per capita is associated with an increase in life expectancy of between 5.1 and 7.7 years. This is a meaningful range---even the lower bound suggests a substantial association between national income and longevity.
+\end{answer}
+
+\section{Regression with Binary Variables}
+
+\textbf{Question 5.1:} Create the binary variable.
+
+\begin{answer}
+Run the code to create the \texttt{africa} dummy. You should find 52 African countries and 90 non-African countries in the 2007 cross-section.
+\end{answer}
+
+\textbf{Question 5.2:} Group means.
+
+\begin{answer}
+\begin{itemize}
+\item Mean life expectancy in Africa: $\approx 54.81$ years
+\item Mean life expectancy outside Africa: $\approx 74.07$ years
+\item Difference: $\approx 54.81 - 74.07 = -19.26$ years
+\end{itemize}
+
+African countries have, on average, about 19 fewer years of life expectancy than non-African countries. This is a very large gap.
+\end{answer}
+
+\textbf{Question 5.3:} Binary regression results.
+
+\begin{answer}
+The regression $\widehat{\text{LifeExp}}_i = \hat{\beta}_0 + \hat{\beta}_1 \times \text{Africa}_i$ yields:
+
+\begin{enumerate}[label=(\alph*)]
+\item $\hat{\beta}_0 \approx 74.07$ --- this is the \textbf{average life expectancy of non-African countries} (the group where Africa $= 0$). The intercept equals the sample mean of the omitted group.
+
+\item $\hat{\beta}_1 \approx -19.26$ --- this is the \textbf{difference in average life expectancy} between African and non-African countries (Africa minus non-Africa). It matches exactly the difference in group means computed above.
+
+\item The t-statistic on $\hat{\beta}_1$ is very large in absolute value (approximately $-10.1$), and the p-value is essentially zero. \textbf{Yes}, the difference is statistically significant at the 5\% level (and at any conventional level). We can reject the hypothesis that African and non-African countries have the same average life expectancy.
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 5.4:} Comparison with t-test.
+
+\begin{answer}
+The t-test and the regression produce the same key results:
+\begin{itemize}
+\item The difference in means is identical ($\approx -19.26$ years)
+\item The p-values are essentially the same (both $\approx 0$)
+\end{itemize}
+
+This demonstrates a fundamental insight: \textbf{a two-sample t-test is just a regression with a binary independent variable}. The regression framework generalizes the t-test---it can accommodate continuous regressors, multiple regressors, and more complex specifications, while the t-test is limited to comparing two groups.
+
+Note: The p-values may differ very slightly because the regression uses homoskedastic standard errors by default, while \texttt{t.test()} uses the Welch correction (heteroskedastic). This distinction is minor in practice.
+\end{answer}
+
+\textbf{Question 5.5:} 95\% CI for binary coefficient.
+
+\begin{answer}
+The 95\% CI for $\hat{\beta}_1$ is approximately $[-23.05,\; -15.47]$ years.
+
+\textbf{Interpretation:} We are 95\% confident that the true difference in average life expectancy between African and non-African countries is between 15.5 and 23.1 years (with Africa being lower). The entire interval is negative, confirming that the gap is statistically significant. Even the most conservative estimate suggests a gap of more than 15 years.
+\end{answer}
+
+\textbf{Question 5.6:} Visualization.
+
+\begin{answer}
+The boxplot reveals several patterns:
+\begin{itemize}
+\item The \textbf{median} life expectancy is much lower in Africa than elsewhere
+\item There is \textbf{some overlap}---a few African countries have life expectancy comparable to non-African countries, and some non-African countries (particularly in Asia) have relatively low life expectancy
+\item The \textbf{spread} within Africa is notable---some countries (like Tunisia, Libya) have much higher life expectancy than others (like Swaziland, Sierra Leone), reflecting the devastating impact of HIV/AIDS in parts of sub-Saharan Africa
+\item The non-Africa group also has considerable spread, reflecting the diversity of this group (it includes both wealthy European countries and lower-income Asian countries)
+\end{itemize}
+\end{answer}
+
+\section{Bringing It Together}
+
+\textbf{Question 6.1:} Omitted variable bias.
+
+\begin{answer}
+Several variables could create omitted variable bias:
+
+\textbf{1. Healthcare spending / quality of health systems:}
+\begin{itemize}
+\item Correlated with GDP per capita: Richer countries spend more on healthcare
+\item Affects life expectancy: Better healthcare directly improves health outcomes
+\item Bias direction: Positive (we attribute some of the healthcare effect to GDP)
+\end{itemize}
+
+\textbf{2. Education levels:}
+\begin{itemize}
+\item Correlated with GDP per capita: Richer countries have more educated populations
+\item Affects life expectancy: Education improves health behaviors and access to care
+\item Bias direction: Positive (the GDP coefficient picks up education effects too)
+\end{itemize}
+
+Other examples: clean water access, sanitation infrastructure, political stability, inequality, disease environment (e.g., malaria, HIV prevalence).
+
+Because these omitted variables are positively correlated with both GDP per capita and life expectancy, our estimated $\hat{\beta}_1$ likely \textbf{overstates} the causal effect of income on longevity. Part of what we attribute to ``income'' is really driven by these other factors. This is why we need multiple regression (coming next!).
+\end{answer}
+
+\textbf{Question 6.2:} Comparison table.
+
+\begin{answer}
+\begin{center}
+\begin{tabular}{l|c|c}
+\toprule
+ & GDP per capita regression & Africa dummy regression \\
+\midrule
+$\hat{\beta}_0$ & $\approx 59.57$ & $\approx 74.07$ \\[4pt]
+$\hat{\beta}_1$ & $\approx 0.000637$ & $\approx -19.26$ \\[4pt]
+$SE(\hat{\beta}_1)$ & $\approx 0.0000653$ & $\approx 1.91$ \\[4pt]
+t-statistic & $\approx 9.75$ & $\approx -10.1$ \\[4pt]
+$R^2$ & $\approx 0.46$ & $\approx 0.42$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The GDP per capita regression has a slightly higher $R^2$ (0.46 vs.\ 0.42), meaning it explains a bit more of the variation in life expectancy. However, a higher $R^2$ does \textbf{not} automatically mean a ``better'' model. The two regressions answer different questions:
+
+\begin{itemize}
+\item The GDP regression asks: ``How does life expectancy change with income?''
+\item The Africa regression asks: ``Is there a life expectancy gap between Africa and the rest of the world?''
+\end{itemize}
+
+Both are valid and informative. The ``right'' model depends on the question you are trying to answer, not just which has the higher $R^2$.
+\end{answer}
+
+\textbf{Question 6.3:} What can't we do yet?
+
+\begin{answer}
+The main limitation is that we cannot make \textbf{causal claims}. Simple regression gives us \textit{associations}, not \textit{causal effects}.
+
+We cannot say that increasing a country's GDP per capita by \$10,000 would \textit{cause} life expectancy to rise by 6.4 years, because of \textbf{omitted variable bias}. Many unobserved factors (healthcare, education, institutions) are correlated with both GDP per capita and life expectancy, so our slope estimate captures the combined effect of all these variables, not just income.
+
+To move toward causal inference, we need:
+\begin{itemize}
+\item \textbf{Multiple regression}: Include control variables to reduce omitted variable bias (we will cover this in the next handout)
+\item \textbf{Research design}: Use natural experiments, instrumental variables, or randomized controlled trials to isolate causal effects
+\end{itemize}
+\end{answer}
+
+\end{document}
