@@ -1,0 +1,581 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{framed}
+
+% Page setup
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{EC 282: Introduction to Econometrics}
+\fancyhead[R]{Spring 2026}
+\fancyfoot[C]{\thepage}
+
+% Colors
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{defcolor}{RGB}{0,100,150}
+
+% Code listing style
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single
+}
+\lstset{style=mystyle}
+
+% Title formatting
+\titleformat{\section}{\Large\bfseries\color{defcolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+%----------------------------------------------------------
+% TITLE
+%----------------------------------------------------------
+\begin{center}
+{\LARGE\bfseries Handout 7: Multiple Regression}\\[0.5cm]
+{\large EC 282: Introduction to Econometrics}\\[0.3cm]
+{\large Spring 2026}
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{Instructions:} Run the provided R code and answer the questions. Show your work for calculations. This handout introduces a \textbf{new dataset}---we move from cross-country comparisons to individual-level U.S.\ wage data.
+
+\vspace{0.5cm}
+
+%----------------------------------------------------------
+% PART 1: SETUP
+%----------------------------------------------------------
+\section{Setup: The Current Population Survey (CPS) Wage Data}
+
+How much does an extra year of education increase your hourly wage? The answer seems simple---until you realize that education is correlated with experience, gender, and many other factors. We use data from the 1976 Current Population Survey (CPS) to explore these issues.
+
+\begin{lstlisting}[language=R]
+# Install the wooldridge package (run once)
+# install.packages("wooldridge")
+
+library(wooldridge)
+library(ggplot2)
+
+options(scipen = 999)
+
+# Load the wage data
+data(wage1)
+
+cat("Number of workers:", nrow(wage1), "\n")
+cat("Variables:", paste(names(wage1)[1:12], collapse = ", "), "\n")
+
+# Key variables:
+# wage    = average hourly earnings ($)
+# educ    = years of education
+# exper   = years of potential experience
+# tenure  = years with current employer
+# female  = 1 if female, 0 if male
+# nonwhite = 1 if nonwhite, 0 if white
+# married = 1 if married
+# northcen, south, west = region dummies (northeast is omitted)
+
+summary(wage1[, c("wage", "educ", "exper", "tenure",
+                  "female", "nonwhite", "married")])
+\end{lstlisting}
+
+\vspace{0.5cm}
+
+\textbf{Question 1.1:} Examine the summary statistics. What is the average hourly wage? What is the average education level? What fraction of the sample is female?
+
+\vspace{2cm}
+
+\textbf{Question 1.2:} Create a scatterplot of wages against education. What pattern do you see?
+
+\begin{lstlisting}[language=R]
+ggplot(wage1, aes(x = educ, y = wage)) +
+  geom_jitter(color = "steelblue", alpha = 0.5, width = 0.3) +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "Hourly Wage vs. Years of Education",
+       x = "Years of Education",
+       y = "Hourly Wage ($)") +
+  theme_minimal()
+\end{lstlisting}
+
+\vspace{2cm}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 2: SIMPLE REGRESSION (STARTING POINT)
+%----------------------------------------------------------
+\section{Starting Point: Simple Regression}
+
+We begin with a simple regression of wages on education---the ``naive'' estimate of the return to schooling.
+
+\textbf{Question 2.1:} Run the simple regression and examine the output.
+
+\begin{lstlisting}[language=R]
+reg1 <- lm(wage ~ educ, data = wage1)
+summary(reg1)
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item Write down the estimated equation: $\widehat{\text{Wage}}_i = \hat{\beta}_0 + \hat{\beta}_1 \times \text{Educ}_i$
+\item Interpret $\hat{\beta}_1$ in a sentence. What does it mean economically?
+\item Is $\hat{\beta}_1$ statistically significant? At what level?
+\item What is the $R^2$? What fraction of wage variation is explained by education alone?
+\end{enumerate}
+
+\vspace{4cm}
+
+\textbf{Question 2.2:} Think about what is in the error term $u_i$. Name at least two variables that are:
+\begin{enumerate}
+\item Correlated with education, AND
+\item Likely affect wages
+\end{enumerate}
+For each, predict the \textit{direction} of the omitted variable bias. Does it make $\hat{\beta}_1$ too large or too small?
+
+\vspace{4cm}
+
+%----------------------------------------------------------
+% PART 3: MULTIPLE REGRESSION AND PARTIAL EFFECTS
+%----------------------------------------------------------
+\section{Multiple Regression and Partial Effects}
+
+Now we add control variables to address omitted variable bias. The key idea: $\hat{\beta}_1$ in a multiple regression measures the effect of education on wages \textbf{holding other variables constant}.
+
+\textbf{Question 3.1:} Add experience and tenure to the regression.
+
+\begin{lstlisting}[language=R]
+reg2 <- lm(wage ~ educ + exper + tenure, data = wage1)
+summary(reg2)
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item Write down the estimated equation.
+\item Interpret the coefficient on \texttt{educ}. How does the interpretation differ from the simple regression?
+\item Interpret the coefficient on \texttt{tenure}. What does ``holding education and experience constant'' mean in practice?
+\item Compare the education coefficient to Model~1. Did it go up or down? Were you expecting this direction?
+\end{enumerate}
+
+\vspace{4cm}
+
+\newpage
+
+\textbf{Question 3.2:} The coefficient on education \textit{increased} when we added controls (from $\approx 0.54$ to $\approx 0.60$). This is surprising---usually we expect omitted variable bias to make the simple regression coefficient too large. Verify the omitted variable bias formula for the two-variable case:
+\[
+\tilde{\beta}_1 = \hat{\beta}_1 + \hat{\beta}_2 \times \hat{\alpha}_1
+\]
+where $\hat{\alpha}_1$ is the slope from regressing \texttt{exper} on \texttt{educ}.
+
+\begin{lstlisting}[language=R]
+# Step 1: Run the auxiliary regression
+aux_reg <- lm(exper ~ educ, data = wage1)
+alpha1_hat <- coef(aux_reg)["educ"]
+cat("alpha1_hat (exper ~ educ):", round(alpha1_hat, 4), "\n")
+
+# Step 2: Check the correlation
+cat("Correlation(educ, exper):", round(cor(wage1$educ,
+    wage1$exper), 4), "\n")
+
+# Step 3: Verify the OVB formula (for the 2-variable case)
+# Simple regression: wage ~ educ
+beta1_tilde <- coef(reg1)["educ"]
+
+# Two-variable regression: wage ~ educ + exper
+reg_two <- lm(wage ~ educ + exper, data = wage1)
+beta1_hat <- coef(reg_two)["educ"]
+beta2_hat <- coef(reg_two)["exper"]
+
+cat("\nbeta1_tilde (simple):", round(beta1_tilde, 4), "\n")
+cat("beta1_hat (multiple):", round(beta1_hat, 4), "\n")
+cat("beta2_hat * alpha1_hat:", round(beta2_hat * alpha1_hat, 4),
+    "\n")
+cat("beta1_hat + beta2_hat * alpha1_hat:",
+    round(beta1_hat + beta2_hat * alpha1_hat, 4), "\n")
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item What is the sign of $\hat{\alpha}_1$? What does this tell you about the relationship between education and experience?
+\item What is the sign of $\hat{\beta}_2$ (the effect of experience on wages)?
+\item Using the OVB formula, explain \textit{why} the simple regression \textit{underestimates} the return to education.
+\item Does the formula hold exactly? Verify numerically.
+\end{enumerate}
+
+\vspace{4cm}
+
+\textbf{Question 3.3:} Now add demographic controls.
+
+\begin{lstlisting}[language=R]
+reg3 <- lm(wage ~ educ + exper + tenure + female + nonwhite,
+           data = wage1)
+summary(reg3)
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item Interpret the coefficient on \texttt{female}. What does it mean in economic terms?
+\item Is the coefficient on \texttt{nonwhite} statistically significant? What does this tell us?
+\item How did the education coefficient change compared to Model~2? Why might this be?
+\end{enumerate}
+
+\vspace{3cm}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 4: MEASURES OF FIT
+%----------------------------------------------------------
+\section{Measures of Fit: SER, RMSE, and Adjusted $R^2$}
+
+As we add variables, we need better tools to evaluate model fit than $R^2$ alone.
+
+\textbf{Question 4.1:} Compute measures of fit for each model.
+
+\begin{lstlisting}[language=R]
+models <- list(reg1, reg2, reg3)
+model_names <- c("(1) Educ only", "(2) + Exper, Tenure",
+                 "(3) + Female, Nonwhite")
+
+cat("Model Comparison:\n")
+cat(sprintf("%-25s %8s %8s %8s %8s\n",
+    "Model", "R2", "Adj R2", "SER", "RMSE"))
+cat(paste(rep("-", 60), collapse = ""), "\n")
+
+for (i in 1:3) {
+  s <- summary(models[[i]])
+  n <- nrow(models[[i]]$model)
+  k <- length(coef(models[[i]])) - 1
+  RSS <- sum(residuals(models[[i]])^2)
+  SER <- sqrt(RSS / (n - k - 1))
+  RMSE <- sqrt(RSS / n)
+  cat(sprintf("%-25s %8.4f %8.4f %8.4f %8.4f\n",
+      model_names[i], s$r.squared, s$adj.r.squared, SER, RMSE))
+}
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item As we add variables, $R^2$ always increases. Verify this from the table.
+\item Does Adjusted $R^2$ also always increase? Why is Adjusted $R^2$ a better measure than $R^2$ for comparing models with different numbers of regressors?
+\item The SER tells you the typical size of prediction errors, in the same units as $Y$ (dollars per hour). How large is it in Model~3?
+\end{enumerate}
+
+\vspace{3cm}
+
+\textbf{Question 4.2:} Now add an irrelevant variable (\texttt{numdep} = number of dependents) that shouldn't affect wages directly.
+
+\begin{lstlisting}[language=R]
+reg_irrel <- lm(wage ~ educ + exper + tenure + numdep,
+                data = wage1)
+
+cat("Model 2:     R2 =", round(summary(reg2)$r.squared, 4),
+    "  Adj R2 =", round(summary(reg2)$adj.r.squared, 4), "\n")
+cat("+ numdep:    R2 =",
+    round(summary(reg_irrel)$r.squared, 4),
+    "  Adj R2 =",
+    round(summary(reg_irrel)$adj.r.squared, 4), "\n")
+\end{lstlisting}
+
+What happens to $R^2$ vs.\ Adjusted $R^2$ when you add a variable that doesn't belong? Why does this demonstrate the advantage of Adjusted $R^2$?
+
+\vspace{3cm}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 5: DUMMY VARIABLES AND THE DUMMY VARIABLE TRAP
+%----------------------------------------------------------
+\section{Dummy Variables and the Dummy Variable Trap}
+
+\textbf{Question 5.1:} Create a \texttt{male} dummy and try to include both \texttt{female} and \texttt{male} in the regression.
+
+\begin{lstlisting}[language=R]
+# Create male dummy
+wage1$male <- 1 - wage1$female
+
+# Try to include both
+reg_trap <- lm(wage ~ educ + exper + female + male, data = wage1)
+summary(reg_trap)
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item What does R report for the coefficient on \texttt{male}? Why?
+\item Write down the mathematical reason: if $\text{Female}_i + \text{Male}_i = 1$ for all $i$, show algebraically why this creates a problem.
+\item What is the general rule for including dummy variables for a categorical variable with $k$ categories?
+\end{enumerate}
+
+\vspace{4cm}
+
+\textbf{Question 5.2:} The dataset has region indicators: \texttt{northcen}, \texttt{south}, and \texttt{west} (the omitted category is Northeast). Run the full model with region dummies.
+
+\begin{lstlisting}[language=R]
+reg4 <- lm(wage ~ educ + exper + tenure + female + nonwhite +
+           married + northcen + south + west, data = wage1)
+summary(reg4)
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item Which region is the \textbf{reference category}? How do you know?
+\item Interpret the coefficient on \texttt{south}. What comparison is being made?
+\item Are any of the region dummies individually statistically significant at the 5\% level?
+\end{enumerate}
+
+\vspace{3cm}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 6: MULTICOLLINEARITY
+%----------------------------------------------------------
+\section{Multicollinearity}
+
+What happens when regressors are highly correlated with each other? Let's explore with two experiments.
+
+\textbf{Question 6.1: Perfect multicollinearity.} In this dataset, a worker's age is approximately: $\text{Age} = \text{Educ} + 6 + \text{Exper}$ (assuming school starts at age 6). Create this variable and try to include it in the regression.
+
+\begin{lstlisting}[language=R]
+# Construct age (exact linear function of educ and exper)
+wage1$age <- wage1$educ + 6 + wage1$exper
+
+# Try to include all three
+reg_perfect_mc <- lm(wage ~ educ + exper + age, data = wage1)
+summary(reg_perfect_mc)
+\end{lstlisting}
+
+What happens? Why can't R estimate all three coefficients?
+
+\vspace{3cm}
+
+\textbf{Question 6.2: Imperfect multicollinearity.} Now add random noise to age (simulating measurement error in age). This breaks the exact linear relationship but keeps the variables highly correlated.
+
+\begin{lstlisting}[language=R]
+set.seed(42)  # For reproducibility
+wage1$age_noisy <- wage1$age + rnorm(nrow(wage1), 0, 2)
+
+cat("Correlation(age_noisy, age):",
+    round(cor(wage1$age_noisy, wage1$age), 4), "\n\n")
+
+# Run the regression with the noisy age variable
+reg_noisy <- lm(wage ~ educ + exper + age_noisy, data = wage1)
+summary(reg_noisy)
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item R can now estimate all coefficients. But look at the standard errors on \texttt{educ} and \texttt{exper}---how do they compare to Model~2 (which had no multicollinearity)?
+\item Are the coefficients on \texttt{educ} and \texttt{exper} still statistically significant?
+\item What happened to the magnitudes of the coefficients? Are they reasonable?
+\end{enumerate}
+
+\vspace{3cm}
+
+\textbf{Question 6.3:} Compute the Variance Inflation Factor (VIF) to formally diagnose multicollinearity. Recall: $VIF(\hat{\beta}_j) = \frac{1}{1 - R_j^2}$, where $R_j^2$ is the $R^2$ from regressing $X_j$ on all other regressors.
+
+\begin{lstlisting}[language=R]
+# Manual VIF function
+compute_vif <- function(model) {
+  vars <- attr(terms(model), "term.labels")
+  dat  <- model$model
+  vifs <- numeric(length(vars))
+  names(vifs) <- vars
+  for (i in seq_along(vars)) {
+    f <- as.formula(paste(vars[i], "~",
+         paste(vars[-i], collapse = " + ")))
+    r2 <- summary(lm(f, data = dat))$r.squared
+    vifs[i] <- 1 / (1 - r2)
+  }
+  return(round(vifs, 2))
+}
+
+cat("VIF for Model 2 (no multicollinearity):\n")
+print(compute_vif(reg2))
+
+cat("\nVIF for noisy age model (severe multicollinearity):\n")
+print(compute_vif(reg_noisy))
+\end{lstlisting}
+
+Which variables have VIF $> 5$? What does this tell you? Would you keep \texttt{age\_noisy} in the model?
+
+\vspace{3cm}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 7: HYPOTHESIS TESTING AND F-TESTS
+%----------------------------------------------------------
+\section{Hypothesis Testing and F-Tests}
+
+\textbf{Question 7.1:} Using Model~4 (the full model), test whether the coefficient on education is statistically significant.
+
+\begin{lstlisting}[language=R]
+# Extract info for education coefficient
+beta_educ <- coef(reg4)["educ"]
+se_educ   <- summary(reg4)$coefficients["educ", "Std. Error"]
+t_stat    <- beta_educ / se_educ
+p_value   <- 2 * pnorm(-abs(t_stat))
+
+cat("beta_hat (educ):", round(beta_educ, 4), "\n")
+cat("SE:", round(se_educ, 4), "\n")
+cat("t-statistic:", round(t_stat, 3), "\n")
+cat("p-value:", p_value, "\n")
+cat("95% CI: [", round(beta_educ - 1.96 * se_educ, 4), ",",
+    round(beta_educ + 1.96 * se_educ, 4), "]\n")
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item State $H_0$ and $H_A$.
+\item Is education significant at the 5\% level? At the 1\% level?
+\item Interpret the 95\% confidence interval. Does it include zero?
+\end{enumerate}
+
+\vspace{3cm}
+
+\textbf{Question 7.2: The F-Test.} None of the three region dummies is individually significant at the 5\% level. But are they \textit{jointly} significant? That is, do we gain anything by including all three region dummies together?
+
+\[
+H_0: \beta_{\text{northcen}} = \beta_{\text{south}} = \beta_{\text{west}} = 0 \qquad (\text{regions don't matter})
+\]
+\[
+H_A: \text{At least one } \beta_j \neq 0 \qquad (\text{at least one region matters})
+\]
+
+\begin{lstlisting}[language=R]
+# Restricted model (without region dummies)
+reg_restricted <- lm(wage ~ educ + exper + tenure + female +
+                     nonwhite + married, data = wage1)
+
+# Unrestricted model (with region dummies)
+reg_unrestricted <- reg4  # already estimated above
+
+# R-squared values
+R2_unr <- summary(reg_unrestricted)$r.squared
+R2_res <- summary(reg_restricted)$r.squared
+
+cat("R2 (unrestricted):", round(R2_unr, 4), "\n")
+cat("R2 (restricted):", round(R2_res, 4), "\n")
+
+# F-test by hand
+q <- 3       # number of restrictions
+k <- 9       # regressors in unrestricted model
+n <- nrow(wage1)
+
+F_stat <- ((R2_unr - R2_res) / q) / ((1 - R2_unr) / (n - k - 1))
+p_value_F <- 1 - pf(F_stat, q, n - k - 1)
+
+cat("\nF-statistic (by hand):", round(F_stat, 4), "\n")
+cat("Critical value (5%, q=3):", round(qf(0.95, q, n-k-1), 4),
+    "\n")
+cat("p-value:", round(p_value_F, 4), "\n")
+
+# Verify with R's built-in anova()
+cat("\nanova() output:\n")
+print(anova(reg_restricted, reg_unrestricted))
+\end{lstlisting}
+
+\begin{enumerate}[label=(\alph*)]
+\item Compute the F-statistic by hand using the $R^2$ formula. Show your work.
+\item Compare it to the critical value. Do you reject $H_0$ at the 5\% level?
+\item Explain the paradox: no individual region dummy is significant at 5\%, yet the F-test rejects at 5\%. Why can individual t-tests miss joint significance?
+\end{enumerate}
+
+\vspace{3cm}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 8: PUTTING IT ALL TOGETHER
+%----------------------------------------------------------
+\section{Putting It All Together}
+
+\textbf{Question 8.1:} Fill in the comparison table for our four main models.
+
+\begin{center}
+\small
+\begin{tabular}{l|c|c|c|c}
+\toprule
+ & Model 1 & Model 2 & Model 3 & Model 4 \\
+ & Educ only & + Exper, Tenure & + Female, Nonwhite & Full \\
+\midrule
+$\hat{\beta}_{\text{educ}}$ & & & & \\[6pt]
+$SE(\hat{\beta}_{\text{educ}})$ & & & & \\[6pt]
+$R^2$ & & & & \\[6pt]
+Adjusted $R^2$ & & & & \\[6pt]
+SER & & & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{lstlisting}[language=R]
+cat("Side-by-side comparison:\n\n")
+models_all <- list(reg1, reg2, reg3, reg4)
+names_all <- c("(1) Educ", "(2)+Exp,Ten",
+               "(3)+Fem,NW", "(4) Full")
+
+for (i in 1:4) {
+  s <- summary(models_all[[i]])
+  n <- nrow(models_all[[i]]$model)
+  k <- length(coef(models_all[[i]])) - 1
+  RSS <- sum(residuals(models_all[[i]])^2)
+  cat(names_all[i], "\n")
+  cat("  educ coef:", round(coef(models_all[[i]])["educ"], 4),"\n")
+  cat("  SE(educ):",
+      round(s$coefficients["educ", "Std. Error"], 4), "\n")
+  cat("  R2:", round(s$r.squared, 4), "\n")
+  cat("  Adj R2:", round(s$adj.r.squared, 4), "\n")
+  cat("  SER:", round(sqrt(RSS / (n - k - 1)), 4), "\n\n")
+}
+\end{lstlisting}
+
+\vspace{0.5cm}
+
+\textbf{Question 8.2:} Based on the table, discuss:
+\begin{enumerate}[label=(\alph*)]
+\item How does the education coefficient change as we add controls? What does this tell you about omitted variable bias in the simple regression?
+\item Which model would you choose as your ``preferred'' specification? Why?
+\item Even with all these controls, can we claim that education \textit{causes} higher wages? What concerns remain?
+\end{enumerate}
+
+\vspace{4cm}
+
+\textbf{Question 8.3:} Visualize the gender wage gap, controlling for education.
+
+\begin{lstlisting}[language=R]
+ggplot(wage1, aes(x = educ, y = wage, color = factor(female,
+       labels = c("Male", "Female")))) +
+  geom_jitter(alpha = 0.4, width = 0.3) +
+  geom_smooth(method = "lm", se = FALSE, linewidth = 1.2) +
+  labs(title = "Wage vs. Education by Gender",
+       x = "Years of Education", y = "Hourly Wage ($)",
+       color = "Gender") +
+  theme_minimal()
+\end{lstlisting}
+
+What does this plot reveal about the gender wage gap? Is it constant across education levels, or does it change?
+
+\vspace{3cm}
+
+\end{document}

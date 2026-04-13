@@ -1,0 +1,474 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{mdframed}
+
+% Page setup
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{EC 282: Introduction to Econometrics}
+\fancyhead[R]{Spring 2026}
+\fancyfoot[C]{\thepage}
+
+% Colors
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{defcolor}{RGB}{0,100,150}
+\definecolor{answercolor}{RGB}{0,100,0}
+\definecolor{answerback}{RGB}{240,255,240}
+
+% Answer environment
+\newmdenv[
+  backgroundcolor=answerback,
+  linecolor=green!50!black,
+  linewidth=1pt,
+  topline=true,
+  bottomline=true,
+  leftline=true,
+  rightline=true,
+  innertopmargin=10pt,
+  innerbottommargin=10pt,
+  skipabove=10pt,
+  skipbelow=10pt
+]{answer}
+
+% Code listing style
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single
+}
+\lstset{style=mystyle}
+
+% Title formatting
+\titleformat{\section}{\Large\bfseries\color{defcolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+%----------------------------------------------------------
+% TITLE
+%----------------------------------------------------------
+\begin{center}
+{\LARGE\bfseries Handout 7: Multiple Regression}\\[0.3cm]
+{\Large\color{red}\bfseries ANSWER KEY}\\[0.5cm]
+{\large EC 282: Introduction to Econometrics}\\[0.3cm]
+{\large Spring 2026}
+\end{center}
+
+\vspace{0.5cm}
+
+%----------------------------------------------------------
+% PART 1
+%----------------------------------------------------------
+\section{Setup: The Current Population Survey (CPS) Wage Data}
+
+\textbf{Question 1.1:} Examine the summary statistics.
+
+\begin{answer}
+From \texttt{summary()}:
+\begin{itemize}[noitemsep]
+\item Average hourly wage: $\approx \$5.90$
+\item Average education: $\approx 12.56$ years (roughly a high school diploma plus some college)
+\item Fraction female: $\approx 47.9\%$ (\texttt{mean(female)} $= 0.4791$)
+\end{itemize}
+
+The sample has 526 workers. Note that these are 1976 wages, so they are much lower than today's wages. Adjusting for inflation, \$5.90 in 1976 is roughly \$30 in 2024 dollars.
+\end{answer}
+
+\textbf{Question 1.2:} Scatterplot.
+
+\begin{answer}
+The scatterplot shows a clear \textbf{positive relationship}: workers with more education tend to earn higher wages. However, there is substantial spread---at any given education level, wages vary considerably. The relationship appears roughly linear, though there is more spread at higher education levels (possible heteroskedasticity).
+\end{answer}
+
+%----------------------------------------------------------
+% PART 2
+%----------------------------------------------------------
+\section{Starting Point: Simple Regression}
+
+\textbf{Question 2.1:} Simple regression output.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item $\widehat{\text{Wage}}_i = -0.9049 + 0.5414 \times \text{Educ}_i$
+
+\item Each additional year of education is associated with a \$0.54 increase in hourly wages. A worker with 16 years of education (college graduate) earns, on average, about $0.54 \times 4 = \$2.16$ more per hour than a worker with 12 years (high school graduate).
+
+\item Yes, $\hat{\beta}_1$ is highly significant. The t-statistic is $\approx 10.17$ and the p-value is essentially zero ($< 0.0001$). It is significant at the 1\%, 5\%, and 10\% levels.
+
+\item $R^2 \approx 0.165$. Education alone explains about 16.5\% of the variation in wages. This means 83.5\% of wage variation is due to other factors---there is a lot of unexplained variation.
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 2.2:} Omitted variables.
+
+\begin{answer}
+Two important omitted variables:
+
+\textbf{1.\ Experience:}
+\begin{itemize}[noitemsep]
+\item Correlated with education? \textbf{Yes, negatively}. Workers who spend more years in school tend to have fewer years of labor market experience (for a given age, $\text{exper} \approx \text{age} - \text{educ} - 6$).
+\item Affects wages? \textbf{Yes, positively}. More experienced workers earn more.
+\item Bias direction: $\text{Corr}(\text{educ}, \text{exper}) < 0$ and $\beta_{\text{exper}} > 0$, so the bias is \textbf{negative} (downward). The simple regression \textit{underestimates} the return to education!
+\end{itemize}
+
+\textbf{2.\ Gender (female):}
+\begin{itemize}[noitemsep]
+\item Correlated with education? Slightly---in this sample the correlation is small.
+\item Affects wages? \textbf{Yes}. Women earn less on average (gender wage gap).
+\item Bias direction: Depends on the exact correlations, but typically small.
+\end{itemize}
+
+Other valid examples: innate ability, family background, quality of schooling, occupation, industry.
+\end{answer}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 3
+%----------------------------------------------------------
+\section{Multiple Regression and Partial Effects}
+
+\textbf{Question 3.1:} Multiple regression with experience and tenure.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item $\widehat{\text{Wage}}_i = -2.873 + 0.599 \times \text{Educ}_i + 0.022 \times \text{Exper}_i + 0.169 \times \text{Tenure}_i$
+
+\item Each additional year of education is associated with a \$0.60 increase in hourly wages, \textbf{holding experience and tenure constant}. This is the \textit{partial effect} or \textit{ceteris paribus} effect of education. Unlike the simple regression, we are now comparing workers with the same experience and tenure but different education levels.
+
+\item The coefficient on tenure ($\approx 0.169$) means that each additional year with the current employer is associated with about \$0.17 higher wages, \textit{holding education and experience constant}. In practice, this means we are comparing two workers with identical education and total experience, but one has been at their current job one year longer.
+
+\item The education coefficient \textbf{increased} from $\approx 0.541$ (Model~1) to $\approx 0.599$ (Model~2). This is surprising because we usually expect coefficients to shrink when adding controls. The reason is that the omitted variable bias was \textit{negative} (see Question~3.2).
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 3.2:} OVB verification.
+
+\begin{answer}
+The omitted variable bias formula (for the two-variable case) is:
+\[
+\tilde{\beta}_1 = \hat{\beta}_1 + \hat{\beta}_2 \times \hat{\alpha}_1
+\]
+
+\begin{enumerate}[label=(\alph*)]
+\item $\hat{\alpha}_1 \approx -1.47$ (from regressing experience on education). This is \textbf{negative}: more educated workers have \textit{less} experience. This makes sense---a person who spends 4 extra years in college has 4 fewer years of work experience, holding age constant.
+
+\item $\hat{\beta}_2 > 0$ (experience has a positive effect on wages). More experienced workers earn more.
+
+\item The bias is $\hat{\beta}_2 \times \hat{\alpha}_1 \approx (+)(-)  < 0$. The bias is \textbf{negative}, so the simple regression $\tilde{\beta}_1$ is \textit{smaller} than the true partial effect $\hat{\beta}_1$. In words: the simple regression underestimates the return to education because it doesn't account for the fact that more educated workers have less experience. Part of the ``education effect'' is offset by the ``lost experience'' penalty.
+
+\item The formula should hold exactly in the two-variable case:
+\[
+0.5414 \approx 0.6443 + 0.0701 \times (-1.4682) = 0.6443 - 0.1029 = 0.5414 \;\checkmark
+\]
+Note: These are the coefficients from \texttt{wage \~{} educ + exper} (two regressors), not from Model~2 which has three regressors. With three regressors, the formula is an approximation.
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 3.3:} Adding demographic controls.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item $\hat{\beta}_{\text{female}} \approx -1.81$: Women earn about \$1.81 less per hour than men, \textit{holding education, experience, tenure, and race constant}. This is a large gap---it means a woman with identical human capital characteristics to a man earns roughly \$1.81/hour less, which amounts to about \$3,770 per year (assuming 2,080 working hours).
+
+\item $\hat{\beta}_{\text{nonwhite}} \approx -0.12$ with a p-value of $\approx 0.79$. This is \textbf{not statistically significant}---we cannot reject the null that the wage gap between white and nonwhite workers is zero, after controlling for education, experience, tenure, and gender. This does not necessarily mean there is no racial wage gap---it may mean that racial differences in wages are largely explained by differences in education, experience, and tenure.
+
+\item The education coefficient decreased slightly from $\approx 0.599$ (Model~2) to $\approx 0.570$ (Model~3). Adding gender as a control absorbed some of what was previously attributed to education.
+\end{enumerate}
+\end{answer}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 4
+%----------------------------------------------------------
+\section{Measures of Fit: SER, RMSE, and Adjusted $R^2$}
+
+\textbf{Question 4.1:} Measures of fit comparison.
+
+\begin{answer}
+\begin{center}
+\begin{tabular}{l|cccc}
+\toprule
+Model & $R^2$ & Adj.\ $R^2$ & SER & RMSE \\
+\midrule
+(1) Educ only & 0.1648 & 0.1632 & 3.3784 & 3.3720 \\
+(2) + Exper, Tenure & 0.3064 & 0.3024 & 3.0845 & 3.0727 \\
+(3) + Female, Nonwhite & 0.3636 & 0.3575 & 2.9602 & 2.9433 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item $R^2$ increases with every added variable: $0.1648 \to 0.3064 \to 0.3636$. This is guaranteed---adding any variable can only increase (or maintain) $R^2$, because the OLS algorithm can always set the new coefficient to zero.
+
+\item Adjusted $R^2$ also increases here ($0.1632 \to 0.3024 \to 0.3575$), but it does \textbf{not} have to. Adjusted $R^2$ penalizes for adding regressors via the factor $\frac{n-1}{n-k-1}$. It only increases if the new variable improves fit enough to justify the penalty. This makes it better for model comparison because it prevents ``overfitting'' by adding irrelevant variables.
+
+\item The SER in Model~3 is $\approx \$2.96$. This means our typical prediction error is about \$2.96 per hour---if we predict a worker's wage using their education, experience, tenure, gender, and race, we'd typically be off by about \$3. Given the mean wage is \$5.90, this is still a large error (about 50\% of the mean).
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 4.2:} Irrelevant variable.
+
+\begin{answer}
+When we add \texttt{numdep} (number of dependents):
+\begin{itemize}[noitemsep]
+\item $R^2$ increases slightly: $0.3064 \to 0.3098$
+\item Adjusted $R^2$ barely changes: $0.3024 \to 0.3045$
+\end{itemize}
+
+$R^2$ went up because it \textit{always} goes up when you add a variable. But Adjusted $R^2$ hardly changed, correctly signaling that \texttt{numdep} adds very little explanatory power. If we added a truly irrelevant variable (like a column of random numbers), $R^2$ would still increase but Adjusted $R^2$ could actually \textit{decrease}. This demonstrates why Adjusted $R^2$ is preferred for model comparison: it doesn't reward you for adding noise.
+\end{answer}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 5
+%----------------------------------------------------------
+\section{Dummy Variables and the Dummy Variable Trap}
+
+\textbf{Question 5.1:} The dummy variable trap.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item R reports \texttt{NA} for the coefficient on \texttt{male}, with the message ``1 not defined because of singularities.'' R automatically detects the perfect multicollinearity and drops one of the redundant variables.
+
+\item Since $\text{Male}_i = 1 - \text{Female}_i$ for every observation, the model:
+\[
+Y_i = \beta_0 + \beta_1 \text{Educ}_i + \beta_2 \text{Exper}_i + \beta_3 \text{Female}_i + \beta_4 \text{Male}_i + u_i
+\]
+can be rewritten as:
+\[
+Y_i = \beta_0 + \beta_1 \text{Educ}_i + \beta_2 \text{Exper}_i + \beta_3 \text{Female}_i + \beta_4(1 - \text{Female}_i) + u_i
+\]
+\[
+= (\beta_0 + \beta_4) + \beta_1 \text{Educ}_i + \beta_2 \text{Exper}_i + (\beta_3 - \beta_4) \text{Female}_i + u_i
+\]
+We cannot separately identify $\beta_0$, $\beta_3$, and $\beta_4$---only the combinations $(\beta_0 + \beta_4)$ and $(\beta_3 - \beta_4)$. The system of equations is under-determined.
+
+\item \textbf{Rule:} For a categorical variable with $k$ categories, include $k - 1$ dummy variables. The omitted category becomes the \textbf{reference group} (baseline), and each included dummy measures the difference relative to that baseline.
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 5.2:} Region dummies.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item The \textbf{reference category is Northeast}. We know this because the three included dummies are \texttt{northcen}, \texttt{south}, and \texttt{west}---Northeast is the one that's missing. The intercept represents the expected wage for a Northeast worker (with all other variables at zero).
+
+\item $\hat{\beta}_{\text{south}} \approx -0.63$: Workers in the South earn about \$0.63 less per hour than workers in the Northeast, \textit{holding all other variables constant} (education, experience, tenure, gender, race, marital status). This is a comparison between otherwise identical workers who differ only in their region.
+
+\item At the 5\% level, \textbf{none} of the region dummies are individually significant:
+\begin{itemize}[noitemsep]
+\item \texttt{northcen}: $p \approx 0.087$
+\item \texttt{south}: $p \approx 0.073$
+\item \texttt{west}: $p \approx 0.181$
+\end{itemize}
+However, as we'll see in Question~7.2, they are \textit{jointly} significant according to the F-test!
+\end{enumerate}
+\end{answer}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 6
+%----------------------------------------------------------
+\section{Multicollinearity}
+
+\textbf{Question 6.1:} Perfect multicollinearity.
+
+\begin{answer}
+R reports \texttt{NA} for the coefficient on \texttt{age} with the message ``1 not defined because of singularities.'' This is \textbf{perfect multicollinearity}: since $\text{Age} = \text{Educ} + 6 + \text{Exper}$ exactly, age is a perfect linear function of the other two regressors. OLS cannot separate the individual effects of education, experience, and age because any change in education \textit{automatically} changes age (holding experience constant).
+
+Algebraically: $\text{Age}_i = 6 + \text{Educ}_i + \text{Exper}_i$, so including all three plus a constant creates a linear dependency among the columns of the $X$ matrix. The matrix $X'X$ is singular and cannot be inverted.
+\end{answer}
+
+\textbf{Question 6.2:} Imperfect multicollinearity.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item The standard errors are dramatically inflated:
+\begin{center}
+\begin{tabular}{l|cc}
+\toprule
+ & Model 2 (no MC) & Noisy age model \\
+\midrule
+SE(educ) & 0.0513 & 0.0925 \\
+SE(exper) & 0.0121 & 0.0731 \\
+\bottomrule
+\end{tabular}
+\end{center}
+The SE for education nearly doubled, and the SE for experience increased by a factor of 6! This is the hallmark of multicollinearity: the estimates become very \textbf{imprecise}.
+
+\item Education is still significant ($t \approx 8.37$), but the coefficient on experience, while still significant ($p \approx 0.008$), has a much larger standard error. With even slightly more noise or collinearity, experience could easily become insignificant.
+
+\item The coefficients are distorted: education jumps to $\approx 0.77$ (vs.\ $\approx 0.60$ in Model~2) and experience jumps to $\approx 0.19$ (vs.\ $\approx 0.02$), while \texttt{age\_noisy} gets a negative coefficient ($\approx -0.12$). These magnitudes are unreliable---multicollinearity means OLS can't reliably decompose the effects among highly correlated variables.
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 6.3:} VIF computation.
+
+\begin{answer}
+\begin{center}
+\begin{tabular}{l|cc}
+\toprule
+Variable & Model 2 VIF & Noisy age VIF \\
+\midrule
+educ & 1.11 & 3.26 \\
+exper & 1.48 & \textbf{48.83} \\
+tenure & 1.35 & --- \\
+age\_noisy & --- & \textbf{44.81} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In Model~2, all VIFs are below 2---no multicollinearity concern. In the noisy age model, \texttt{exper} and \texttt{age\_noisy} have VIFs of $\approx 49$ and $\approx 45$, far exceeding the threshold of 5 (or the more conservative threshold of 10). This confirms severe multicollinearity.
+
+We should \textbf{not} keep \texttt{age\_noisy} in the model. Since $\text{age} \approx \text{educ} + 6 + \text{exper}$, age is essentially redundant information. Including it adds no new information but massively inflates standard errors. The solution: drop the redundant variable.
+\end{answer}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 7
+%----------------------------------------------------------
+\section{Hypothesis Testing and F-Tests}
+
+\textbf{Question 7.1:} Testing education significance.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item $H_0: \beta_{\text{educ}} = 0$ (education has no effect on wages, holding all else constant)\\
+$H_A: \beta_{\text{educ}} \neq 0$ (education has some effect)
+
+\item $t = \hat{\beta}_{\text{educ}} / SE(\hat{\beta}_{\text{educ}}) = 0.5479 / 0.0499 \approx 10.98$
+
+$|t| = 10.98 > 1.96$ (5\% critical value) $\Rightarrow$ Reject $H_0$ at 5\% level.
+
+$|t| = 10.98 > 2.576$ (1\% critical value) $\Rightarrow$ Reject $H_0$ at 1\% level.
+
+Education is overwhelmingly statistically significant.
+
+\item 95\% CI: $0.5479 \pm 1.96 \times 0.0499 = [0.450,\; 0.646]$
+
+We are 95\% confident that the true partial effect of an additional year of education on hourly wages is between \$0.45 and \$0.65. The interval does not include zero, consistent with rejecting $H_0$ at 5\%.
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 7.2:} F-test for joint significance of region dummies.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item The F-statistic using the $R^2$ formula is:
+\[
+F = \frac{(R^2_{\text{unr}} - R^2_{\text{res}}) / q}{(1 - R^2_{\text{unr}}) / (n - k - 1)} = \frac{(0.3835 - 0.3682) / 3}{(1 - 0.3835) / (526 - 9 - 1)} = \frac{0.0153 / 3}{0.6165 / 516} = \frac{0.00510}{0.001195} \approx 4.27
+\]
+
+\item Critical value for $q = 3$ at 5\%: $F_{3,516}^* \approx 2.62$. Since $4.27 > 2.62$, we \textbf{reject $H_0$}. The p-value is $\approx 0.006$, which is less than 0.05. The region dummies are jointly statistically significant at the 5\% level.
+
+\item This is a key insight about joint testing:
+\begin{itemize}[noitemsep]
+\item Individual t-tests check each coefficient \textit{one at a time}
+\item The F-test checks all three \textit{simultaneously}
+\item Individual t-tests can miss joint significance for two reasons:
+  \begin{enumerate}
+  \item \textbf{Multiple testing problem}: With 3 tests at 5\%, the probability of incorrectly rejecting at least once is $\approx 14\%$, not 5\%. The F-test maintains the correct 5\% significance level.
+  \item \textbf{Correlated estimates}: The region dummies are correlated with each other, so their individual t-statistics don't capture the combined information. The F-test accounts for these correlations.
+  \end{enumerate}
+\item In this case, no single region is significantly different from Northeast, but taken together, regional location does matter for wages.
+\end{itemize}
+\end{enumerate}
+\end{answer}
+
+\newpage
+
+%----------------------------------------------------------
+% PART 8
+%----------------------------------------------------------
+\section{Putting It All Together}
+
+\textbf{Question 8.1:} Model comparison table.
+
+\begin{answer}
+\begin{center}
+\begin{tabular}{l|cccc}
+\toprule
+ & Model 1 & Model 2 & Model 3 & Model 4 \\
+ & Educ only & + Exp, Ten & + Fem, NW & Full \\
+\midrule
+$\hat{\beta}_{\text{educ}}$ & 0.5414 & 0.5990 & 0.5703 & 0.5479 \\[4pt]
+$SE(\hat{\beta}_{\text{educ}})$ & 0.0533 & 0.0513 & 0.0496 & 0.0499 \\[4pt]
+$R^2$ & 0.1648 & 0.3064 & 0.3636 & 0.3835 \\[4pt]
+Adj.\ $R^2$ & 0.1632 & 0.3024 & 0.3575 & 0.3727 \\[4pt]
+SER & 3.378 & 3.085 & 2.960 & 2.925 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{answer}
+
+\textbf{Question 8.2:} Discussion.
+
+\begin{answer}
+\begin{enumerate}[label=(\alph*)]
+\item The education coefficient follows an interesting pattern:
+\begin{itemize}[noitemsep]
+\item Model~1 $\to$ Model~2: \textbf{Increases} ($0.54 \to 0.60$). Adding experience revealed that the simple regression \textit{underestimated} the return to education (negative OVB from the negative education-experience correlation).
+\item Model~2 $\to$ Model~3: \textbf{Decreases} ($0.60 \to 0.57$). Adding gender absorbed some of the education effect.
+\item Model~3 $\to$ Model~4: \textbf{Decreases} slightly ($0.57 \to 0.55$). Adding marital status and region further adjusts the estimate.
+\end{itemize}
+The overall message: the simple regression gives a misleading estimate. Controlling for relevant variables changes the coefficient substantially and in both directions.
+
+\item Model~3 or Model~4 are reasonable ``preferred'' specifications. Model~4 has the highest Adjusted $R^2$ (0.3727 vs.\ 0.3575), and the region dummies are jointly significant. However, Model~3 is more parsimonious and the gain from adding regions is modest. A good argument can be made for either.
+
+\item \textbf{No, we cannot claim causation} even with all these controls. Remaining concerns include:
+\begin{itemize}[noitemsep]
+\item \textbf{Ability bias}: More able people get more education \textit{and} earn more. If we can't measure ability, $\hat{\beta}_{\text{educ}}$ captures both the education effect and the ability effect.
+\item \textbf{Family background}: Wealthier families invest more in education and provide better labor market connections.
+\item \textbf{School quality}: A year at a top university is not the same as a year at any institution.
+\item \textbf{Selection}: People choose education levels based on unobserved characteristics (motivation, career goals).
+\end{itemize}
+To establish causation, we would need a research design such as an instrumental variable (e.g., distance to college), a natural experiment, or a randomized experiment.
+\end{enumerate}
+\end{answer}
+
+\textbf{Question 8.3:} Gender wage gap visualization.
+
+\begin{answer}
+The plot shows two parallel (or nearly parallel) regression lines---one for men and one for women. The male line is \textbf{higher} at every education level, visually confirming the gender wage gap. The gap appears roughly constant across education levels (approximately \$1.80 per hour, matching our regression estimate of $\hat{\beta}_{\text{female}} \approx -1.81$), suggesting that the gender wage gap does not widen or narrow significantly with more education.
+
+This pattern is consistent with a model where gender shifts the intercept but not the slope---in other words, women's wages are lower by a roughly fixed amount regardless of their education level. To test whether the gap actually varies with education, one would need to add an interaction term (\texttt{educ $\times$ female}), which is a topic for future study.
+\end{answer}
+
+\end{document}
