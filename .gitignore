@@ -5,3 +5,9 @@
 blogdown
 .httr-oauth
 public
+.DS_Store
+.claude/
+resources/_gen/
+*.aux
+*.log
+*.out
