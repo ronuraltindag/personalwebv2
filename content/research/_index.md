@@ -18,19 +18,24 @@ title:
 
 ## ONGOING WORK 
 
-[Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment](lebanon_geographic/).   
-Altindag, O., O'Connell, S.D., Achour, R. (2024).   
-*Randomized Field Experiment funded by [UNHCR Lebanon](https://www.unhcr.org/us/countries/lebanon)*    
-*Working Paper*   
-
-
+Living with Dementia: Mental Health and Mortality Effects on Spouses.  
+Altindag, O., Barstad, A., Greve, J., Truskinovsky, Y.  
+*Manuscript in preparation.*  
+Seed funding: [HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center).  
+Full funding: [Independent Research Fund Denmark](https://dff.dk/en).  
 
 
 [Family Spillovers of Dementia](adrd_denmark/).   
 Altindag, O., Greve, J., Truskinovsky, Y. (2025).    
-*NBER Working Paper No. 34635.*  
+*NBER Working Paper No. 34635. Under review.*  
 Seed funding: [HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) and Bentley Research Council.  
 Full funding: [Independent Research Fund Denmark](https://dff.dk/en).   
+
+
+Friction at the Door: A Nationwide Experiment on Outreach Channels and Worker Formalization.  
+with Jade Siu, Diloá Athias, and Olivier Sterck.  
+*Two randomized field experiments funded by [ILO Jordan](https://www.ilo.org/jordan), conducted in collaboration with Social Security Corporation Jordan.*  
+(Endline data collection in progress)
 
 
 Business Networking and Social Cohesion: Experimental Evidence from Türkiye.  
@@ -39,10 +44,9 @@ with Lydia Assouad, Ceren Baysan, Carlos Molina, and Miray Omurtak.
 (Endline data collection in progress)   
 
 
-Encouraging Formal Work: Experimental Evidence from Administrative Data in Jordan.     
-with Jade Siu, Diloá Athias, Aya Haidar, Monica Moughabghab, Silvia Nastasi, and Olivier Sterck.   
-*Two randomized field experiments funded by [ILO Jordan](https://www.ilo.org/jordan), conducted in collaboration with Social Security Corporation Jordan.*  
-(Endline data collection in progress) 
+[Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment](lebanon_geographic/).   
+Altindag, O., O'Connell, S.D., Achour, R. (2024).   
+*Randomized Field Experiment funded by [UNHCR Lebanon](https://www.unhcr.org/us/countries/lebanon). Under review.*    
 
 
 
