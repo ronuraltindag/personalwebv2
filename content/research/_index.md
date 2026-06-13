@@ -21,14 +21,14 @@ title:
 Living with Dementia: Mental Health and Mortality Effects on Spouses.  
 Altindag, O., Barstad, A., Greve, J., Truskinovsky, Y.  
 *Manuscript in preparation.*  
-Seed funding: [HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center).  
+Seed funding: [Hopkins HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center).  
 Full funding: [Independent Research Fund Denmark](https://dff.dk/en).  
 
 
 [Family Spillovers of Dementia](adrd_denmark/).   
 Altindag, O., Greve, J., Truskinovsky, Y. (2025).    
 *NBER Working Paper No. 34635. Under review.*  
-Seed funding: [HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) and Bentley Research Council.  
+Seed funding: [Hopkins HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) and Bentley Research Council.  
 Full funding: [Independent Research Fund Denmark](https://dff.dk/en).   
 
 
@@ -45,8 +45,9 @@ with Lydia Assouad, Ceren Baysan, Carlos Molina, and Miray Omurtak.
 
 
 [Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment](lebanon_geographic/).   
-Altindag, O., O'Connell, S.D., Achour, R. (2024).   
-*Randomized Field Experiment funded by [UNHCR Lebanon](https://www.unhcr.org/us/countries/lebanon). Under review.*    
+Altindag, O., O'Connell, S.D., Achour, R. (2025).   
+*Randomized Field Experiment funded by [UNHCR Lebanon](https://www.unhcr.org/us/countries/lebanon).*  
+*Revise and resubmit requested,* **Journal of Political Economy: Microeconomics.**    
 
 
 
@@ -60,7 +61,7 @@ Altindag, O., Greve, J., Tekin, E. (2025).
 Altindag, O., Greve, J., Tekin, E. (2024).     
 **Review of Economics and Statistics**, 106(3), 882-893.
 
-[Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Register.](denmark_sjph/)    
+[Information on Measles, Mumps, and Rubella Vaccine in the Copenhagen School Health Records Register.](denmark_sjph/)    
 Altindag, O., Andersen, M., Baker, J., Greve, J., Tekin, E. (2024).  
 **Scandinavian Journal of Public Health**, 53(4), 383-390.  
 
