@@ -2,7 +2,7 @@
 cascade:
   headless: true
 description: |
- Onur Altındağ, PhD, Associate Professor of Economics
+ Onur Altındağ, PhD, Associate Professor of Economics, Gibbons Research Professor
 show_header: false
 sidebar_left: false
 title: About

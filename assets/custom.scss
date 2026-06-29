@@ -68,8 +68,14 @@ strong, b, .b {
   font-weight: 500;
 }
 
-/* Headings with DM Sans - lighter weight */
-h1, h2, h3, h4, h5, h6 {
+/* Display headings (name, section titles) in EB Garamond to match the body.
+   Small labels/meta (h4-h6, e.g. the uppercase role line) stay DM Sans for
+   a tasteful serif-display / sans-label contrast. */
+h1, h2, h3 {
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+}
+h4, h5, h6 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
 }
@@ -298,6 +304,58 @@ header .logo img {
 }
 .teaching-content tr:hover {
   background: #fafafa;
+}
+
+/* =========================================================================
+   Typography refinement (Butterick-inspired)
+   Serif reading text + sans headings/UI; off-black ink on warm off-white.
+   Scoped to prose only so nav, sidebar, and buttons stay DM Sans / sans.
+   ========================================================================= */
+
+/* Softer ink than pure black, warm off-white page — easier on the eyes */
+body {
+  color: #2b2b2b;
+  background-color: #fdfdfb;
+}
+
+/* Serif body copy in reading areas only (headings stay DM Sans, set above) */
+.page-main p,
+.page-main li,
+.page-main blockquote,
+.page-main dd,
+.post-content p,
+.post-content li,
+.post-content blockquote,
+.featured-content p {
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;     /* ~20px: generous, comfortable reading size */
+  line-height: 1.55;      /* airy leading in the Butterick spirit */
+}
+
+/* EB Garamond ships a 600 weight; use it for emphasis inside prose */
+.page-main p strong, .page-main li strong,
+.post-content p strong, .post-content li strong {
+  font-weight: 600;
+}
+
+/* Comfortable measure (~66 chars) for long-form reading: the about intro and
+   blog posts. Listing pages (research, jobs — layout:single) are excluded so
+   their entries don't wrap into many short lines. */
+.page-main .measure,
+.grid-container:not(.single) .post-content {
+  max-width: 34em;
+}
+
+/* Listing/single pages get a wider column for paper titles & entries */
+.grid-container.single .page-content {
+  max-width: 60rem;
+}
+
+/* Prose links: quiet, with a refined underline on hover */
+.page-main a:not(.link):not(.btn-links):not(.book-btn) {
+  color: #1a1a1a;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
 }
 
 /* Clean link styling: no underlines, underline on hover */

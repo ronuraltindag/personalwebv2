@@ -14,7 +14,7 @@ title:
 ---
 
 ## FIELDS OF INTEREST
-<span style="font-size: 1.3em; font-weight: bold;">Economics of Health and Aging · Social Protection and Economic Security · Public Policy</span>   
+<span style="font-size: 1.3em; font-weight: bold;">Economics of Health and Aging · Social Protection · Public Policy</span>   
 
 ## ONGOING WORK 
 
