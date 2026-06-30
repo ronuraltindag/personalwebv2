@@ -1,13 +1,14 @@
+% !TEX program = lualatex
 \documentclass[12pt]{article}
 
-\usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc} % not used with fontspec (LuaLaTeX/XeLaTeX)
 \usepackage{tabularx, booktabs}
 \usepackage{array,multirow,graphicx}
 \usepackage{changepage}
 \usepackage{url}
 \usepackage{longtable}
 \usepackage{fancyhdr}
-\usepackage{mathptmx}
+% \usepackage{mathptmx} % Replaced by EB Garamond (see below) to match website
 \usepackage[usenames, dvipsnames]{xcolor}
 \usepackage{amssymb, latexsym}
 \usepackage{amsmath}
@@ -31,6 +32,8 @@
 \usepackage{lipsum}
 \usepackage{filecontents}
 % \usepackage{newpxtext,newpxmath} % Commented out - use standard fonts
+\usepackage{fontspec} % requires LuaLaTeX or XeLaTeX
+\setmainfont{EB Garamond}[Scale=1.08] % matches website typeface; ~8% up to match old Times size
 \usepackage{titling}
 \usepackage{xurl}
 \usepackage{tabularx,ragged2e}
@@ -40,8 +43,8 @@
 \usepackage{subcaption}
 \usepackage[
     paper=letterpaper, % Change to letterpaper for US letter
-    inner=1.5cm, % Inner margin
-    outer=1.5cm, % Outer margin
+    inner=2cm, % Inner margin
+    outer=2cm, % Outer margin
     bindingoffset=0cm, % Binding offset
     top=2cm, % Top margin
     bottom=2.5cm, % Bottom margin
@@ -50,7 +53,7 @@
 \usepackage[hyperfootnotes=false]{hyperref}
 \usepackage{cleveref}
 
-\definecolor{ao}{rgb}{0.0, 0.0, 1.0}
+\definecolor{ao}{HTML}{2A7AE2} % website link blue
 \definecolor{bulgarianrose}{rgb}{0.28, 0.02, 0.03}
 
 \newcommand\myshade{85}
@@ -92,13 +95,13 @@
 
 \thispagestyle{firstpage}
 
-\begin{tabular}{p{13.5cm}p{10cm}}
+\begin{tabular}{p{\dimexpr\textwidth-6cm\relax}>{\raggedleft\arraybackslash}p{6cm}}
 Department of Economics, Bentley University &  \href{https://onuraltindag.info/}{https://onuraltindag.info/} \\
 Citizen of T\"{u}rkiye and the United States. & oaltindag@bentley.edu  \\
 \end{tabular}
 
-\begin{tabular}{p{4cm}p{15cm}}
-\multicolumn{2}{l}{\textbf{\uppercase{Professional Experience}}} \\[5pt]
+\begin{tabular}{p{3cm}p{\dimexpr\textwidth-3cm\relax}}
+\multicolumn{2}{l}{\textbf{Professional Experience}} \\[5pt]
 2026 -- 2029 & Bentley University, Gibbons Research Professor. \\
 2023 --  &  Bentley University, Associate Professor of Economics (with tenure).  \\
 & \textit{Parental leaves in 2023 and 2025.} \\
@@ -108,15 +111,15 @@ Citizen of T\"{u}rkiye and the United States. & oaltindag@bentley.edu  \\
 2012 -- 2016 & National Bureau of Economic Research (NBER), Research Assistant. \\ 
 \end{tabular}
 
-\begin{tabular}{p{4cm}p{15cm}}
-\textbf{\uppercase{Education}} \\[5pt]
+\begin{tabular}{p{3cm}p{\dimexpr\textwidth-3cm\relax}}
+\textbf{Education} \\[5pt]
 2010 -- 2016 &  City University of New York, Ph.D. in Economics.  \\ 
 2007 -- 2008 & University Paris 1 Panth\'{e}on - Sorbonne, M.A. in Economics.  \\
 2001 -- 2007 & Galatasaray University, B.A. in Economics. \\ 
 \end{tabular}
 
-\begin{tabular}{p{4cm}p{15cm}}
-\multicolumn{2}{l}{\textbf{\uppercase{Affiliations}}} \\[5pt]  
+\begin{tabular}{p{3cm}p{\dimexpr\textwidth-3cm\relax}}
+\multicolumn{2}{l}{\textbf{Affiliations}} \\[5pt]  
 
 
 2025 -- & IZA Institute of Labor Economics, Research Fellow.  \\ 
@@ -130,168 +133,151 @@ Citizen of T\"{u}rkiye and the United States. & oaltindag@bentley.edu  \\
 2017 -- 2020 & Visiting Scholar, Harvard Center for Population and Development Studies.   \\ 
 \end{tabular}
 
-\noindent\textbf{\uppercase{Fields of Interest}}\\[5pt]
+\noindent\textbf{Fields of Interest}\\[5pt]
 Economics of Health and Aging \textperiodcentered\ Social Protection and Economic Security \textperiodcentered\ Public Policy
 
 \vspace{0.5em}
 
-\noindent\textbf{\uppercase{Ongoing Projects}}\\[5pt]
+\noindent\textbf{Ongoing Projects}\\[5pt]
 \noindent\begin{minipage}{\linewidth}
-Living with Dementia: Mental Health and Mortality Effects on Spouses. \\
+\textbf{Living with Dementia: Mental Health and Mortality Effects on Spouses.} \\
 Altindag, O., Barstad, A., Greve, J., Truskinovsky, Y. \\
-\textit{(Manuscript in preparation. Funded by Hopkins HEADS Center and Independent Research Fund Denmark.)}
+\textit{Manuscript in preparation.}
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Family Spillovers of Dementia. \\
+\textbf{Family Spillovers of Dementia.} \\
 Altindag, O., Greve, J., Truskinovsky, Y. (2025). \\
-NBER Working Paper No. 34635. \\
-\textit{(Under review. Funded by Hopkins HEADS Center, Bentley Research Council, and Independent Research Fund Denmark.)}
+\textit{NBER Working Paper No. 34635 \textperiodcentered\ Under review.}
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Friction at the Door: A Nationwide Experiment on Outreach Channels and Worker Formalization. \\
+\textbf{Friction at the Door: A Nationwide Experiment on Outreach Channels and Worker Formalization.} \\
 with Jade Siu, Dilo\'{a} Athias, and Olivier Sterck. \\
-\textit{(Two RCTs in endline data collection; funded by ILO Jordan with Social Security Corporation Jordan.)}
+\textit{Two RCTs in endline data collection.}
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Business Networking and Social Cohesion: Experimental Evidence from T\"{u}rkiye. \\
+\textbf{Business Networking and Social Cohesion: Experimental Evidence from T\"{u}rkiye.} \\
 with Lydia Assouad, Ceren Baysan, Carlos Molina, and Miray Omurtak. \\
-\textit{(In the endline data-collection stage, RCT funded by JPAL DLI and SSHRC.)}
+\textit{RCT in the endline data-collection stage.}
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Geographic Poverty Targeting in Social Protection Programs: Evidence from a Nationwide Policy Experiment. \\
+\textbf{Geographic Poverty Targeting in Social Protection Programs: Evidence from a Nationwide Policy Experiment.} \\
 with Stephen O'Connell and Rim Achour. \\
-\textit{(Revise and resubmit requested,} \textbf{Journal of Political Economy: Microeconomics}\textit{.)}
+\textit{Revise and resubmit requested, Journal of Political Economy: Microeconomics.}
 \end{minipage}
 
 \vspace{0.5em}
 
-\noindent\textbf{\uppercase{Published Papers}}\\[5pt]
+\noindent\textbf{Published Papers}\\[5pt]
 \noindent\begin{minipage}{\linewidth}
-Impact of Measles, Mumps, and Rubella Vaccination on Hospitalizations and Human Capital: Evidence from Copenhagen School Health Records. \\
-Altindag, O., Greve, J., Tekin, E. (2025) \\
-\textbf{Vaccines}, 13(3), 302.
+\textbf{Impact of Measles, Mumps, and Rubella Vaccination on Hospitalizations and Human Capital: Evidence from Copenhagen School Health Records.} \\
+Altindag, O., Greve, J., Tekin, E. (2025). \textit{Vaccines}, 13(3), 302.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark. \\
-Altindag, O., Greve, J., Tekin, E. (2024) \\
-\textbf{Review of Economics and Statistics}, 106(3), 882-893.
+\textbf{Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark.} \\
+Altindag, O., Greve, J., Tekin, E. (2024). \textit{Review of Economics and Statistics}, 106(3), 882-893.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Information on Measles, Mumps, and Rubella Vaccine in the Copenhagen School Health Records Register. \\
-Altindag, O., Andersen, M., Baker, J., Greve, J., Tekin, E. (2024) \\
-\textbf{Scandinavian Journal of Public Health}, 53(4), 383-390.
+\textbf{Information on Measles, Mumps, and Rubella Vaccine in the Copenhagen School Health Records Register.} \\
+Altindag, O., Andersen, M., Baker, J., Greve, J., Tekin, E. (2024). \textit{Scandinavian Journal of Public Health}, 53(4), 383-390.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-The Short-lived Effects of Unconditional Cash Transfers to Refugees. \\
-Altindag, O., O'Connell, S.D. (2023) \\
-\textbf{Journal of Development Economics}, 160, 102942.
+\textbf{The Short-lived Effects of Unconditional Cash Transfers to Refugees.} \\
+Altindag, O., O'Connell, S.D. (2023). \textit{Journal of Development Economics}, 160, 102942.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Mental Health Costs of Lockdowns: Evidence from Age-specific Curfews in Turkey. \\
-Altindag, O., Erten, B., Keskin, P. (2022) \\
-\textbf{American Economic Journal: Applied Economics}, 14(2), 320-343.
+\textbf{Mental Health Costs of Lockdowns: Evidence from Age-specific Curfews in Turkey.} \\
+Altindag, O., Erten, B., Keskin, P. (2022). \textit{American Economic Journal: Applied Economics}, 14(2), 320-343.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Another Day, Another Visit: Impact of Arkansas' Mandatory Waiting Period for Women Seeking an Abortion by Demographic Groups. \\
-Altindag, O., Joyce, T. (2022) \\
-\textbf{Journal of Public Economics}, 213, 104715.
+\textbf{Another Day, Another Visit: Impact of Arkansas' Mandatory Waiting Period for Women Seeking an Abortion by Demographic Groups.} \\
+Altindag, O., Joyce, T. (2022). \textit{Journal of Public Economics}, 213, 104715.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Targeting Humanitarian Aid Using Administrative Data: Model Design and Validation. \\
-Altindag, O., O'Connell, S.D., Sasmaz, A., Balcioglu, Z., Jerneck, M., Foong, A.K. (2021) \\
-\textbf{Journal of Development Economics}, 148, 102564.
+\textbf{Targeting Humanitarian Aid Using Administrative Data: Model Design and Validation.} \\
+Altindag, O., O'Connell, S.D., Sasmaz, A., Balcioglu, Z., Jerneck, M., Foong, A.K. (2021). \textit{Journal of Development Economics}, 148, 102564.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Do Refugees Impact Voting Behavior in the Host Country? Evidence from Syrian Refugee Inflows in Turkey. \\
-Altindag, O., Kaushal, N. (2021) \\
-\textbf{Public Choice}, 186, 149-178.
+\textbf{Do Refugees Impact Voting Behavior in the Host Country? Evidence from Syrian Refugee Inflows in Turkey.} \\
+Altindag, O., Kaushal, N. (2021). \textit{Public Choice}, 186, 149-178.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Blessing or Burden? The Impact of Refugees on Businesses and the Informal Economy. \\
-Altindag, O., Bakis, O., Rozo, S. (2020) \\
-\textbf{Journal of Development Economics}, 146, 102490.
+\textbf{Blessing or Burden? The Impact of Refugees on Businesses and the Informal Economy.} \\
+Altindag, O., Bakis, O., Rozo, S. (2020). \textit{Journal of Development Economics}, 146, 102490.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Effects of the Affordable Care Act Medicaid Expansion on Subjective Well-Being in the US Adult Population, 2010--2016. \\
-Kobayashi, L., Altindag, O., Truskinovsky, Y., Berkman, L. (2019) \\
-\textbf{American Journal of Public Health}, 109(9), 1236-1242.
+\textbf{Effects of the Affordable Care Act Medicaid Expansion on Subjective Well-Being in the US Adult Population, 2010--2016.} \\
+Kobayashi, L., Altindag, O., Truskinovsky, Y., Berkman, L. (2019). \textit{American Journal of Public Health}, 109(9), 1236-1242.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Can Nonexperimental Methods Provide Unbiased Estimates of a Breastfeeding Intervention?: A Within-Study Comparison of Peer Counseling in Oregon. \\
-Altindag, O., Joyce, T., Reeder, J.A. (2019) \\
-\textbf{Evaluation Review}, 43(3-4), 152-188.
+\textbf{Can Nonexperimental Methods Provide Unbiased Estimates of a Breastfeeding Intervention?: A Within-Study Comparison of Peer Counseling in Oregon.} \\
+Altindag, O., Joyce, T., Reeder, J.A. (2019). \textit{Evaluation Review}, 43(3-4), 152-188.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-On Measuring and Reducing Selection Bias With a Quasi-Doubly Randomized Preference Trial. \\
-Joyce, T., Remler, D.K., Jaeger, D.A., Altindag, O., O'Connell, S.D., Crockett, S. (2017) \\
-\textbf{Journal of Policy Analysis and Management}, 36(2), 438-459.
+\textbf{On Measuring and Reducing Selection Bias With a Quasi-Doubly Randomized Preference Trial.} \\
+Joyce, T., Remler, D.K., Jaeger, D.A., Altindag, O., O'Connell, S.D., Crockett, S. (2017). \textit{Journal of Policy Analysis and Management}, 36(2), 438-459.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Judicial Bypass for Minors Seeking Abortions in Arkansas Versus Other States. \\
-Altindag, O., Joyce, T. (2017) \\
-\textbf{American Journal of Public Health}, 107(8), 1266-1271.
+\textbf{Judicial Bypass for Minors Seeking Abortions in Arkansas Versus Other States.} \\
+Altindag, O., Joyce, T. (2017). \textit{American Journal of Public Health}, 107(8), 1266-1271.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Son Preference, Fertility Decline, and the Nonmissing Girls of Turkey. \\
-Altindag, O. (2016) \\
-\textbf{Demography}, 53, 541-566.
+\textbf{Son Preference, Fertility Decline, and the Nonmissing Girls of Turkey.} \\
+Altindag, O. (2016). \textit{Demography}, 53, 541-566.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Does Classroom Time Matter? \\
-Joyce, T., Crockett, S., Jaeger, D.A., Altindag, O., O'Connell, S.D. (2015) \\
-\textbf{Economics of Education Review}, 46, 64-77.
+\textbf{Does Classroom Time Matter?} \\
+Joyce, T., Crockett, S., Jaeger, D.A., Altindag, O., O'Connell, S.D. (2015). \textit{Economics of Education Review}, 46, 64-77.
 \end{minipage}
 
 \smallskip
 \noindent\begin{minipage}{\linewidth}
-Telephone Peer Counseling of Breastfeeding Among WIC Participants: A Randomized Controlled Trial. \\
-Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014) \\
-\textbf{Pediatrics}, 134, e700-e709.
+\textbf{Telephone Peer Counseling of Breastfeeding Among WIC Participants: A Randomized Controlled Trial.} \\
+Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014). \textit{Pediatrics}, 134, e700-e709.
 \end{minipage}
 
 \vspace{0.5em}
 
-\begin{longtable}{p{4cm}p{15cm}}
-\multicolumn{2}{l}{\textbf{\uppercase{Grants and Competitive Contracts}}} \\[5pt]
+\begin{longtable}{p{3cm}p{\dimexpr\textwidth-3cm\relax}}
+\multicolumn{2}{l}{\textbf{Grants and Competitive Contracts}} \\[5pt]
 \multicolumn{2}{l}{\textbf{Total funding as PI or Co-PI between 2018 -- 2027: \$3,088,712}} \\[10pt]
 \endfirsthead
-\multicolumn{2}{l}{\textbf{\uppercase{Grants and Competitive Contracts}} (cont'd)} \\[5pt]
+\multicolumn{2}{l}{\textbf{Grants and Competitive Contracts} (cont'd)} \\[5pt]
 \endhead
 2025 -- 2027 & Independent Research Fund Denmark.  \\
 & Award amount: \$417,631. Role: Co-PI. \\[3pt]
@@ -323,9 +309,9 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014) \\
 
 \vspace{0.5em}
 
-\begin{tabular}{p{4cm}p{15cm}}
+\begin{tabular}{p{3cm}p{\dimexpr\textwidth-3cm\relax}}
 
-\multicolumn{2}{l}{\textbf{\uppercase{Awards and Fellowships}}} \\[5pt]
+\multicolumn{2}{l}{\textbf{Awards and Fellowships}} \\[5pt]
 
 2026 -- 2029 & Gibbons Research Professorship. \\
 & Bentley University. \\[3pt]
@@ -345,7 +331,7 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014) \\
 
 \\
 
-\multicolumn{2}{l}{\textbf{\uppercase{Teaching Experience}}} \\[5pt]
+\multicolumn{2}{l}{\textbf{Teaching Experience}} \\[5pt]
 2017 -- & Bentley University \\ 
 & Introduction to Econometrics \\ 
 & Intermediate Price Theory \\ 
@@ -358,11 +344,11 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014) \\
 \end{tabular}
 
 
-\begin{tabular}{p{4cm}p{15cm}}
+\begin{tabular}{p{3cm}p{\dimexpr\textwidth-3cm\relax}}
 
 
 
-\multicolumn{2}{l}{\textbf{\uppercase{Consulting Experience}}} \\[5pt]
+\multicolumn{2}{l}{\textbf{Consulting Experience}} \\[5pt]
 2024 -- 2025 & United Nations High Commissioner for Refugees (UNHCR), Jordan. \\
 2023 -- & International Labour Organization (ILO), Jordan. \\ 
 2018 -- 2024 & United Nations High Commissioner for Refugees (UNHCR), Lebanon. \\ 
@@ -370,22 +356,22 @@ Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014) \\
 
 \\
 
-\multicolumn{2}{l}{\textbf{\uppercase{Languages}}} \\[3pt] 
+\multicolumn{2}{l}{\textbf{Languages}} \\[3pt] 
 Human  & Turkish (native), English, French. \\ 
 Computer & \textsf{\textcolor{blue}{R}}, {\sffamily Stata} \\
 
 \end{tabular}
 
-\begin{tabular}{p{15cm}} 
+\begin{tabular}{p{\textwidth}}
 
-\multicolumn{1}{l}{\textbf{\uppercase{Non-Academic Interests}}} \\[5pt] 
+\multicolumn{1}{l}{\textbf{Non-Academic Interests}} \\[5pt] 
 CMAS Divemaster ($\star\star\star$), NAUI Nitrox Diver \\
 Marathoner, proud member of the Somerville Road Runners \\
 
 \end{tabular}
 
 \vspace{0.3cm}
-\noindent\textbf{\uppercase{Presentations and Seminars}} \textit{(includes scheduled)}\\[5pt]
+\noindent\textbf{Presentations and Seminars} \textit{(includes scheduled)}\\[5pt]
 \noindent\textbf{2026:} NBER Economics of Health Program Meeting, NBER Health and Healthcare Variations across the Population, NBER Summer Institute Aging, NBER Coordinating Center on the Economics of AD/ADRD Prevention, Treatment, and Care Annual Meeting, Georgia Tech, ILO Workshop on Informality and Social Protection.\\[3pt]
 \textbf{2025:} Harvard CPDS, Northeastern, Tufts, Wellesley, Brandeis, Forced Displacement Working Group.\\[3pt]
 \textbf{2024:} VIVE Workshop on Health Innovations, Brown, CUNY Graduate Center, Advances in Field Experiments at LSE, World Bank, UVA Batten.\\[3pt]
