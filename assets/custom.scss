@@ -180,7 +180,7 @@ header .logo img {
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    max-width: 80% !important;
+    max-width: 100% !important; /* let the headshot fill the column on mobile */
   }
   .home .intro-text,
   .home .w-50-ns:first-child {
