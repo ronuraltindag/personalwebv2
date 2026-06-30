@@ -2,7 +2,7 @@
 cascade:
   headless: true
 description: |
- Onur Altındağ, PhD, Associate Professor of Economics, Gibbons Research Professor
+ Onur Altındağ, Associate Professor of Economics and Gibbons Research Professor at Bentley University
 show_header: false
 sidebar_left: false
 title: About

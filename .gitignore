@@ -11,3 +11,7 @@ resources/_gen/
 *.aux
 *.log
 *.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc

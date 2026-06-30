@@ -35,7 +35,7 @@ enableEmoji = true
   favicon = "/img/favicon.ico"
   logo = "/img/bentley-logos/dept-econ.png"
   mainSections = ["research", "about", "project", "jobs", "contact","announcements"]
-  navallcaps = true
+  navallcaps = false
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
   socialInHeader = true

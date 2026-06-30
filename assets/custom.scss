@@ -371,3 +371,10 @@ body {
 .page-sidebar a:not(.link):hover {
   text-decoration: underline;
 }
+
+/* No shouty all-caps anywhere: neutralize the tachyons uppercase utility
+   site-wide (section labels, dates, "In this section", "See all", pagination,
+   Google Scholar label, etc.). Letter-spacing from `tracked` is kept. */
+.ttu, .ttu-ns, .ttu-m, .ttu-l {
+  text-transform: none !important;
+}

@@ -8,7 +8,7 @@ images:
   - img/Onur_14.jpeg
 show_action_link: false
 show_social_links: false
-subtitle: PhD, Associate Professor of Economics, Gibbons Research Professor
+subtitle: "Associate Professor of Economics<br>Gibbons Research Professor<br>Bentley University"
 text_align_left: true
 title: Onur Altındağ
 type: home

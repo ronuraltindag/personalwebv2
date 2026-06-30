@@ -26,7 +26,7 @@
   {{ if .Params.description }}
     {{ $desc = .Params.description }}
   {{ else if .Params.subtitle }}
-    {{ $desc = .Params.subtitle }}
+    {{ $desc = .Params.subtitle | replaceRE `<br\s*/?>` ", " }}
   {{ else if .Params.excerpt }}
     {{ $desc = .Params.excerpt }}
   {{ else }}
