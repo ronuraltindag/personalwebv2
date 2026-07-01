@@ -1,4 +1,7 @@
 ---
+weight: 13
+status: published
+citation: "Altindag, O., O'Connell, S.D. (2023). *Journal of Development Economics*, 160, 102942."
 author: 
 categories:
 - Development Economics
@@ -36,11 +39,8 @@ links:
   
 ---
 
-### Abstract 
-
 We study two yearlong unconditional cash-based assistance programs for Syrian refugees in Lebanon, and show that they improve consumption, child well-being, food security, and reduce livelihood coping. Despite high transfer values, we find no evidence of lasting effects at six months after either program ends. Households spend transfers on basic needs, and take children out of work and re-enroll them in school. Beneficiaries increase cash savings and their stock of durable goods, but liquidate and spend these assets during or soon after the beneficiary period. The results are similar for longer assistance periods and across transfer modalities.
 
-**Citation:** Onur Altındağ, Stephen D. O’Connell,
 The short-lived effects of unconditional cash transfers to refugees,
 Journal of Development Economics,
 Volume 160,
@@ -48,7 +48,3 @@ Volume 160,
 102942,
 ISSN 0304-3878,
 https://doi.org/10.1016/j.jdeveco.2022.102942.
-
-
-
-

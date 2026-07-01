@@ -1,0 +1,147 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw8 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        {{ with .Title }}<h1 class="f1 lh-solid measure-narrow mb3 fw4">{{ . }}</h1>{{ end }}
+      </header>
+
+      <section class="post-body pt3 pb4 research-list">
+        {{ with .Params.fields_of_interest }}
+        <section class="pub-section">
+          <div class="pub-section-head"><h2 class="pub-group">Fields of Interest</h2></div>
+          <div class="pub-section-body"><p class="pub-fields">{{ . | markdownify }}</p></div>
+        </section>
+        {{ end }}
+
+        {{ $groups := slice
+            (dict "key" "ongoing"   "title" "Ongoing Work")
+            (dict "key" "published" "title" "Published Papers") }}
+
+        {{ range $g := $groups }}
+          {{ $papers := sort (where $.RegularPages "Params.status" $g.key) "Weight" "asc" }}
+          {{ if $papers }}
+          <section class="pub-section">
+          <div class="pub-section-head"><h2 class="pub-group">{{ $g.title | safeHTML }}</h2></div>
+          <div class="pub-section-body">
+          {{ range $i, $p := $papers }}
+            {{ $id := printf "%s-%d" $g.key $i }}
+            {{ $links := $p.Params.links }}
+            {{ $press := slice }}
+            {{ $resources := slice }}
+            {{ with $links }}
+              {{ $press = where . "icon" "newspaper" }}
+              {{ $resources = where . "icon" "!=" "newspaper" }}
+            {{ end }}
+            {{ $funding := $p.Params.funding }}
+            {{ $status := "" }}
+            {{ if eq $p.Params.status "ongoing" }}{{ $status = $p.Params.study_status }}{{ end }}
+            {{ $hasInfo := or $funding $status }}
+            {{ $hasMore := or $p.Content (gt (len $resources) 0) (gt (len $press) 0) $hasInfo }}
+            <article class="pub">
+              <div class="pub-head">
+                <div class="pub-headtext">
+                  <h3 class="pub-title">{{ $p.Title }}</h3>
+                  {{ with $p.Params.citation }}<p class="pub-cite">{{ . | markdownify }}</p>{{ end }}
+                </div>
+                {{ if $hasMore }}
+                <button class="pub-more" type="button" aria-expanded="false" aria-controls="{{ $id }}-more" data-more="{{ $id }}-more" aria-label="Show details" title="Show details"><span class="pub-more-arrow">&rsaquo;</span></button>
+                {{ end }}
+              </div>
+
+              {{ if $hasMore }}
+              <div id="{{ $id }}-more" class="pub-more-wrap" hidden>
+                <div class="pub-tabs">
+                  {{ if $hasInfo }}
+                    <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-info" data-target="{{ $id }}-info">Info</button>
+                  {{ end }}
+                  {{ if $p.Content }}
+                    <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-abstract" data-target="{{ $id }}-abstract">Abstract</button>
+                  {{ end }}
+                  {{ if $resources }}
+                    <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-resources" data-target="{{ $id }}-resources">Resources</button>
+                  {{ end }}
+                  {{ if $press }}
+                    <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-press" data-target="{{ $id }}-press">Press</button>
+                  {{ end }}
+                </div>
+
+                {{ if $hasInfo }}
+                  <div id="{{ $id }}-info" class="pub-panel pub-info" hidden>
+                    {{ with $status }}<p class="pub-meta"><span class="pub-meta-label">Status</span> {{ . }}</p>{{ end }}
+                    {{ with $funding }}<p class="pub-meta"><span class="pub-meta-label">Funding</span> {{ . | markdownify }}</p>{{ end }}
+                  </div>
+                {{ end }}
+                {{ if $p.Content }}
+                  <div id="{{ $id }}-abstract" class="pub-panel pub-abstract" hidden>{{ $p.Content }}</div>
+                {{ end }}
+                {{ if $resources }}
+                  <div id="{{ $id }}-resources" class="pub-panel" hidden>
+                    {{ range $resources }}{{ partial "shared/pub-link.html" . }}{{ end }}
+                  </div>
+                {{ end }}
+                {{ if $press }}
+                  <div id="{{ $id }}-press" class="pub-panel" hidden>
+                    {{ range $press }}{{ partial "shared/pub-link.html" . }}{{ end }}
+                  </div>
+                {{ end }}
+              </div>
+              {{ end }}
+            </article>
+          {{ end }}
+          </div>
+          </section>
+          {{ end }}
+        {{ end }}
+      </section>
+    </article>
+  </section>
+</main>
+
+<script>
+(function () {
+  // Outer "→" arrow: reveal / hide the Abstract·Resources·Press boxes
+  document.querySelectorAll('.research-list .pub-more').forEach(function (arrow) {
+    arrow.addEventListener('click', function () {
+      var wrap = document.getElementById(arrow.getAttribute('data-more'));
+      if (!wrap) return;
+      var open = arrow.getAttribute('aria-expanded') === 'true';
+      arrow.setAttribute('aria-expanded', String(!open));
+      arrow.classList.toggle('is-open', !open);
+      wrap.hidden = open;
+      if (open) {
+        // Collapse any open box when folding back up
+        wrap.querySelectorAll('.pub-tab').forEach(function (b) {
+          b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active');
+        });
+        wrap.querySelectorAll('.pub-panel').forEach(function (p) { p.hidden = true; });
+      } else {
+        // Opening: reveal the first box (Info) straight away — no extra click
+        var first = wrap.querySelector('.pub-tab');
+        if (first && first.getAttribute('aria-expanded') !== 'true') first.click();
+      }
+    });
+  });
+
+  document.querySelectorAll('.research-list .pub-tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = document.getElementById(btn.getAttribute('data-target'));
+      if (!panel) return;
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      var pub = btn.closest('.pub');
+      // Collapse other open tabs/panels within the same publication
+      pub.querySelectorAll('.pub-tab').forEach(function (b) {
+        if (b !== btn) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); }
+      });
+      pub.querySelectorAll('.pub-panel').forEach(function (p) {
+        if (p !== panel) { p.hidden = true; }
+      });
+      // Toggle the clicked one
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.classList.toggle('is-active', !open);
+      panel.hidden = open;
+    });
+  });
+})();
+</script>
+{{ end }}

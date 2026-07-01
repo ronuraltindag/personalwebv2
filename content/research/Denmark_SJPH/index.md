@@ -1,4 +1,8 @@
 ---
+funding: "Novo Nordisk Foundation."
+weight: 12
+status: published
+citation: "Altindag, O., Andersen, M., Baker, J., Greve, J., Tekin, E. (2024). *Scandinavian Journal of Public Health*, 53(4), 383–390."
 author: Onur Altindag & Matvei Andersen & Jennifer Baker & Jane Greve & Erdal Tekin
 date: 
 categories:
@@ -13,8 +17,6 @@ links:
   url: /pdfs/papers/AABGT_SJPH_2024.pdf
 ---
 
-### Abstract 
-
 Background: The Copenhagen School Health Record Register (CSHRR) includes health information from school
 examinations and is now updated with information on measles, mumps and rubella vaccines for the cohorts born from
 1977 to 1994. Aim: The aim of this study is to provide a comprehensive description and validation the newly digitised
@@ -28,9 +30,3 @@ immigrant children in the CSHRR have missing information on vaccination. Removin
 immunisations enhances data quality. Conclusions: The CSHRR covers a large share of the Danish population
 and includes detailed vaccine information. By linking the data to other registry data, the updated CSHRR is
 valuable resource for future research.
-
-**Citation:** Onur Altindağ,  Matvei Andersen, Jennifer Baker, Jane Greve, Erdal Tekin; Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Register, Scandinavian Journal of Public Health, 2024; doi: https://doi.org/10.1177/140349482412478
-
-
-
-

@@ -1,4 +1,7 @@
 ---
+weight: 25
+status: published
+citation: "Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014). *Pediatrics*, 134, e700–e709."
 author: 
 categories:
 - Health Economics
@@ -29,10 +32,4 @@ links:
   
 ---
 
-### Abstract 
-
 We randomized 1948 pregnant women who intended to breastfeed to receive either standard WIC breastfeeding support or standard support plus telephone peer counseling. We estimated the effect of peer counseling on any and exclusive breastfeeding at 1, 3, and 6 months. At 3 months postpartum, 50.5% of women in the treatment group were still breastfeeding versus 44.1% in the control (P = .01). The effect was driven entirely by an improvement in exclusive breastfeeding, where rates in the treatment group at 3 months (27.3%) exceeded those in the control group (20.2%) by 7.1 percentage points (P < .01). We found no effect of peer counseling at 1 or 6 months. Telephone peer counseling improved exclusive breastfeeding at 3 months postpartum among WIC participants.
-
-**Citation:** Reeder JA, Joyce T, Sibley K, Arnold D, Altindag O. Telephone peer counseling of breastfeeding among WIC participants: a randomized controlled trial. Pediatrics. 2014 Sep;134(3):e700-9. doi: 10.1542/peds.2013-2666. 
-
-

@@ -1,4 +1,7 @@
 ---
+weight: 22
+status: published
+citation: "Altindag, O., Joyce, T. (2017). *American Journal of Public Health*, 107(8), 1266–1271."
 author: 
 categories:
 - Health Economics
@@ -19,8 +22,6 @@ links:
   
 ---
 
-### Abstract 
-
 **Objectives**. To describe demographic characteristics and abortion timing of minors in
 Arkansas who obtained an abortion through a judicial bypass, and to contrast the frequency of judicial bypass in other states in the United States.
 
@@ -39,7 +40,3 @@ excluded.
 **Conclusions**. The demographics of minors who obtain an abortion through a judicial
 bypass differ significantly from those who have parental consent, and there is widespread
 variation in the proportion of bypass cases across states.
-
-**Citation:** "Altindag O, Joyce T. Judicial bypass for minors seeking abortions in Arkansas versus other states. *American Journal of Public Health*. 2017 Aug;107(8):1266-71.
-
-

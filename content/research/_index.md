@@ -1,90 +1,20 @@
 ---
 author: Onur
 cascade:
-  show_author_byline:
-  show_comments: false
-  show_post_date: false
+  - _target:
+      kind: page
+    show_author_byline:
+    show_comments: false
+    show_post_date: false
+    build:
+      render: never
+      list: local
 description:
-layout: single
+layout: list
+fields_of_interest: "Economics of Health and Aging · Social Protection and Economic Security · Public Policy"
 show_author_byline: false
 show_button_links: false
 show_post_date: false
 show_post_thumbnail: false
 title:
 ---
-
-## Fields of Interest
-
-Economics of Health and Aging · Social Protection and Economic Security · Public Policy
-
-## Ongoing Work
-
-**Living with Dementia: Mental Health and Mortality Effects on Spouses.**  
-Altindag, O., Barstad, A., Greve, J., Truskinovsky, Y.  
-*Manuscript in preparation.*
-
-**[Family Spillovers of Dementia.](/research/adrd_denmark)**  
-Altindag, O., Greve, J., Truskinovsky, Y. (2025).  
-*NBER Working Paper No. 34635 · Under review.*
-
-**Friction at the Door: A Nationwide Experiment on Outreach Channels and Worker Formalization.**  
-with Jade Siu, Diloá Athias, and Olivier Sterck.  
-*Endline data collection in progress.*
-
-**Business Networking and Social Cohesion: Experimental Evidence from Türkiye.**  
-with Lydia Assouad, Ceren Baysan, Carlos Molina, and Miray Omurtak.  
-*Endline data collection in progress.*
-
-**[Geographic Poverty Targeting in Social Protection Programs: Evidence from a Nationwide Policy Experiment.](/research/lebanon_geographic)**  
-Altindag, O., O'Connell, S.D., Achour, R. (2024).  
-*Revise and resubmit, Journal of Political Economy: Microeconomics.*
-
-## Published Papers
-
-**[Impact of Measles, Mumps, and Rubella Vaccination on Hospitalizations and Human Capital: Evidence from Copenhagen School Health Records.](/research/denmark_mmr)**  
-Altindag, O., Greve, J., Tekin, E. (2025). *Vaccines*, 13(3), 302.
-
-**[Public Health Policy at Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark.](/research/denmark_sids)**  
-Altindag, O., Greve, J., Tekin, E. (2024). *Review of Economics and Statistics*, 106(3), 882-893.
-
-**[Information on Measles, Mumps and Rubella Vaccine in the Copenhagen School Health Records Register.](/research/denmark_sjph)**  
-Altindag, O., Andersen, M., Baker, J., Greve, J., Tekin, E. (2024). *Scandinavian Journal of Public Health*, 53(4), 383-390.
-
-**[The Short-lived Effects of Unconditional Cash Transfers to Refugees.](/research/lebanon_uct_rd)**  
-Altindag, O., O'Connell, S.D. (2023). *Journal of Development Economics*, 160, 102942.
-
-**[Mental Health Costs of Lockdowns: Evidence from Age-specific Curfews in Turkey.](/research/turkey_curfew)**  
-Altindag, O., Erten, B., Keskin, P. (2022). *American Economic Journal: Applied Economics*, 14(2), 320-343.
-
-**[Another Day, Another Visit: Impact of Arkansas' Mandatory Waiting Period for Women Seeking an Abortion by Demographic Groups.](/research/arkansas_abortion)**  
-Altindag, O., Joyce, T. (2022). *Journal of Public Economics*, 213, 104715.
-
-**[Targeting Humanitarian Aid Using Administrative Data: Model Design and Validation.](/research/lebanon_uct_targeting)**  
-Altindag, O., O'Connell, S.D., Sasmaz, A., Balcioglu, Z., Jerneck, M., Foong, A.K. (2021). *Journal of Development Economics*, 148, 102564.
-
-**[Do Refugees Impact Voting Behavior in the Host Country? Evidence from Syrian Refugee Inflows in Turkey.](/research/turkey_refugees_voting)**  
-Altindag, O., Kaushal, N. (2021). *Public Choice*, 186, 149-178.
-
-**[Blessing or Burden? The Impact of Refugees on Businesses and the Informal Economy.](/research/turkey_refugees_firms)**  
-Altindag, O., Bakis, O., Rozo, S. (2020). *Journal of Development Economics*, 146, 102490.
-
-**[Effects of the Affordable Care Act Medicaid Expansion on Subjective Well-Being in the US Adult Population, 2010–2016.](/research/aca_medicaid_subjective_wellbeing)**  
-Kobayashi, L., Altindag, O., Truskinovsky, Y., Berkman, L. (2019). *American Journal of Public Health*, 109(9), 1236-1242.
-
-**[Can Nonexperimental Methods Provide Unbiased Estimates of a Breastfeeding Intervention?: A Within-Study Comparison of Peer Counseling in Oregon.](/research/oregon_non_experiment)**  
-Altindag, O., Joyce, T., Reeder, J.A. (2019). *Evaluation Review*, 43(3-4), 152-188.
-
-**[On Measuring and Reducing Selection Bias With a Quasi-Doubly Randomized Preference Trial.](/research/baruch_drpt)**  
-Joyce, T., Remler, D.K., Jaeger, D.A., Altindag, O., O'Connell, S.D., Crockett, S. (2017). *Journal of Policy Analysis and Management*, 36(2), 438-459.
-
-**[Judicial Bypass for Minors Seeking Abortions in Arkansas Versus Other States.](/research/arkansas_judicial_bypass)**  
-Altindag, O., Joyce, T. (2017). *American Journal of Public Health*, 107(8), 1266-1271.
-
-**[Son Preference, Fertility Decline, and the Nonmissing Girls of Turkey.](/research/turkey_son_preference)**  
-Altindag, O. (2016). *Demography*, 53, 541-566.
-
-**[Does Classroom Time Matter?](/research/baruch_rct)**  
-Joyce, T., Crockett, S., Jaeger, D.A., Altindag, O., O'Connell, S.D. (2015). *Economics of Education Review*, 46, 64-77.
-
-**[Telephone Peer Counseling of Breastfeeding Among WIC Participants: A Randomized Controlled Trial.](/research/oregon_rct)**  
-Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014). *Pediatrics*, 134, e700-e709.

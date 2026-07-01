@@ -1,4 +1,8 @@
 ---
+funding: "Field work funded by the College of Social Sciences and Humanities Research Development Initiative at Northeastern University."
+weight: 14
+status: published
+citation: "Altindag, O., Erten, B., Keskin, P. (2022). *American Economic Journal: Applied Economics*, 14(2), 320–343."
 author: 
 categories:
 - Health Economics
@@ -41,13 +45,4 @@ links:
  
 ---
 
-### Abstract 
-
 Using a strict, age-specific lockdown order for adults aged 65 and older in Turkey, we examine the mental health consequences of an extended period of tight mobility restrictions on senior adults. Adopting a regression discontinuity design, we find that the curfew-induced decline in mobility substantially worsened mental health outcomes, including somatic and nonsomatic symptoms of mental distress (approximately 0.2 standard deviation). Exploring potential channels, we document an increase in social and physical isolation, with no evidence of robust changes in labor market outcomes or intrahousehold conflict for this subpopulation.
-
-**Citation:** Altindag, Onur, Bilge Erten, and Pinar Keskin. 2022. "Mental Health Costs of Lockdowns: Evidence from Age-Specific Curfews in Turkey." American Economic Journal: Applied Economics, 14 (2): 320-43.
-DOI: 10.1257/app.20200811
-
-
-
-

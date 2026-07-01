@@ -342,12 +342,13 @@ body {
    blog posts. Listing pages (research, jobs — layout:single) are excluded so
    their entries don't wrap into many short lines. */
 .page-main .measure,
-.grid-container:not(.single) .post-content {
+.grid-container:not(.single):not(.list) .post-content {
   max-width: 34em;
 }
 
 /* Listing/single pages get a wider column for paper titles & entries */
-.grid-container.single .page-content {
+.grid-container.single .page-content,
+.grid-container.list .page-content {
   max-width: 60rem;
 }
 
@@ -377,4 +378,216 @@ body {
    Google Scholar label, etc.). Letter-spacing from `tracked` is kept. */
 .ttu, .ttu-ns, .ttu-m, .ttu-l {
   text-transform: none !important;
+}
+
+/* =========================================================================
+   Research page — consolidated publication list with inline accordion.
+   Accent color matches the Bentley Dept. of Economics logo (#0083cb).
+   ========================================================================= */
+
+/* Section = heading in a narrow left column, content in the right column */
+.research-list .pub-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid #e6e6e6;
+}
+.research-list .pub-section:first-child {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  border-top: 0;
+}
+.research-list .pub-section-head {
+  flex: 0 0 11rem;
+  align-self: flex-start;
+  position: sticky;
+  top: 2rem;
+}
+.research-list .pub-section-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.research-list .pub-group {
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #0083cb;
+  margin: 0.15rem 0 0;
+  line-height: 1.3;
+}
+.research-list .pub-fields {
+  margin: 0.15rem 0 0;
+}
+
+.research-list .pub {
+  padding: 1.05rem 0;
+  border-bottom: 1px solid #ececec;
+}
+.research-list .pub-section-body > .pub:first-child {
+  padding-top: 0;
+}
+.research-list .pub-section-body > .pub:last-child {
+  border-bottom: 0;
+}
+
+/* Stack heading above content on narrow screens */
+@media screen and (max-width: 60em) {
+  .research-list .pub-section {
+    display: block;
+    gap: 0;
+  }
+  .research-list .pub-section-head {
+    position: static;
+    margin-bottom: 0.4rem;
+  }
+}
+
+.research-list .pub-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 0.3rem;
+}
+
+.research-list .pub-cite {
+  font-size: 1.02rem;
+  line-height: 1.45;
+  color: #555;
+  margin: 0.1rem 0 0;
+}
+
+/* Button row under each paper */
+.research-list .pub-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+.research-list .pub-tabs:empty {
+  display: none;
+}
+/* If there's only one box (e.g. just Info), the chevron opens it directly —
+   no need to show a lone tab button */
+.research-list .pub-tabs:has(.pub-tab:only-child) {
+  display: none;
+}
+.research-list .pub-tab {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #0083cb;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.42rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+/* Title row: text on the left, the reveal arrow on the right */
+.research-list .pub-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.research-list .pub-headtext {
+  min-width: 0;
+}
+
+/* Single "→" arrow that unfolds the Abstract · Resources · Press boxes */
+.research-list .pub-more {
+  flex: 0 0 auto;
+  background: none;
+  border: 0;
+  padding: 0.1rem 0.3rem;
+  margin-top: 0.15rem;
+  cursor: pointer;
+  color: #0083cb;
+  line-height: 1;
+}
+.research-list .pub-more-arrow {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.research-list .pub-more.is-open .pub-more-arrow {
+  transform: rotate(90deg);
+}
+.research-list .pub-more:hover .pub-more-arrow {
+  transform: translateX(2px);
+}
+.research-list .pub-more.is-open:hover .pub-more-arrow {
+  transform: rotate(90deg);
+}
+.research-list .pub-more-wrap {
+  margin-top: 0.2rem;
+}
+.research-list .pub-tab:hover {
+  background: #e8f4fb;
+}
+.research-list .pub-tab.is-active {
+  background: #0083cb;
+  color: #fff;
+}
+
+/* Expanding panels */
+.research-list .pub-panel {
+  margin-top: 0.7rem;
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 3px solid #0083cb;
+}
+.research-list .pub-abstract p {
+  font-size: 1.12rem;
+  line-height: 1.55;
+  max-width: 42em;
+  margin: 0.2rem 0;
+}
+
+/* Info box: Status / Funding lines */
+.research-list .pub-info .pub-meta {
+  font-size: 1.02rem;
+  line-height: 1.5;
+  max-width: 42em;
+  margin: 0.15rem 0;
+}
+.research-list .pub-info .pub-meta-label {
+  display: inline-block;
+  min-width: 4.6rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #0083cb;
+}
+
+/* Resource / press links rendered as compact chips */
+.research-list a.pub-link {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #0083cb !important;
+  background: #f2f9fd;
+  border: 1px solid #cfe6f5;
+  border-radius: 4px;
+  padding: 0.3rem 0.65rem;
+  margin: 0 0.45rem 0.45rem 0;
+  text-decoration: none !important;
+}
+.research-list a.pub-link:hover {
+  background: #0083cb;
+  color: #fff !important;
+  border-color: #0083cb;
+}
+
+/* Any prose links inside the research list: Bentley blue, no underline */
+.research-list .pub-cite a,
+.research-list .pub-abstract a,
+.research-list .pub-info a {
+  color: #0083cb !important;
+  text-decoration: none !important;
 }
