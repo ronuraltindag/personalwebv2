@@ -1,5 +1,6 @@
-# Google Scholar stats - updated automatically via GitHub Actions
+# Google Scholar stats - update these manually (Google Scholar blocks automated scraping from CI)
 # Your Google Scholar ID: Ds24wSAAAAAJ
+# Source: https://scholar.google.com/citations?user=Ds24wSAAAAAJ
 citations: 1162
 h_index: 13
 i10_index: 15
