@@ -1,6 +1,6 @@
 ---
 funding: "[Novo Nordisk Foundation](https://novonordiskfonden.dk/en/) ($1.5M)."
-weight: 11
+weight: 12
 status: published
 citation: "Altindag, O., Greve, J., Tekin, E. (2024).<br>*Review of Economics and Statistics*, 106(3), 882–893."
 author: Onur Altindag & Jane Greve & Erdal Tekin
@@ -9,7 +9,7 @@ categories:
 draft: false
 excerpt: "Onur Altindağ, Jane Greve, Erdal Tekin; Public Health Policy at Scale: Impact of a Government-Sponsored Information Campaign on Infant Mortality in Denmark. **Review of Economics and Statistics** 2022; doi: https://doi.org/10.1162/rest_a_01211. This research was funded by Novo Nordisk Foundation."
 layout: single
-title: "Public Health Policy At Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark"
+title: "Public Health Policy at Scale: Impact of a Government-sponsored Information Campaign on Infant Mortality in Denmark"
 links:
 - icon: file-pdf
   icon_pack: far
