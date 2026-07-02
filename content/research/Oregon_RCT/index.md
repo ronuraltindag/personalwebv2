@@ -1,7 +1,7 @@
 ---
 weight: 25
 status: published
-citation: "Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014). *Pediatrics*, 134, e700–e709."
+citation: "Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).<br>*Pediatrics*, 134, e700–e709."
 author: 
 categories:
 - Health Economics

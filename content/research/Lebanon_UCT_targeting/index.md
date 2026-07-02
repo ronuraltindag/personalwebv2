@@ -1,7 +1,9 @@
 ---
+funding: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon)."
+partner: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon) (implementation)."
 weight: 16
 status: published
-citation: "Altindag, O., O'Connell, S.D., Sasmaz, A., Balcioglu, Z., Jerneck, M., Foong, A.K. (2021). *Journal of Development Economics*, 148, 102564."
+citation: "Altindag, O., O'Connell, S.D., Sasmaz, A., Balcioglu, Z., Jerneck, M., Foong, A.K. (2021).<br>*Journal of Development Economics*, 148, 102564."
 author: 
 categories:
 - Development Economics

@@ -1,8 +1,9 @@
 ---
 funding: "[HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) ($24K) and [Independent Research Fund Denmark](https://dff.dk/en) ($418K)."
+study_status: "Under review"
 weight: 2
 status: ongoing
-citation: "Altindag, O., Greve, J., Truskinovsky, Y. (2025).<br>*Working paper and under review.*"
+citation: "Altindag, O., Greve, J., Truskinovsky, Y. (2025).<br>*NBER Working Paper No. 34635.*"
 author: Onur Altindag & Jane Greve & Yulya Truskinovsky
 categories:
 - Health Economics

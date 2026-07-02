@@ -1,7 +1,7 @@
 ---
 weight: 17
 status: published
-citation: "Altindag, O., Kaushal, N. (2021). *Public Choice*, 186, 149–178."
+citation: "Altindag, O., Kaushal, N. (2021).<br>*Public Choice*, 186, 149–178."
 author: 
 categories:
 - Development Economics

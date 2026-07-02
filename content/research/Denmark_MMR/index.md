@@ -1,7 +1,8 @@
 ---
+funding: "[Novo Nordisk Foundation](https://novonordiskfonden.dk/en/) ($1.5M)."
 weight: 10
 status: published
-citation: "Altindag, O., Greve, J., Tekin, E. (2025). *Vaccines*, 13(3), 302."
+citation: "Altindag, O., Greve, J., Tekin, E. (2025).<br>*Vaccines*, 13(3), 302."
 author: Onur Altindag & Jane Greve & Erdal Tekin
 date:
 categories:

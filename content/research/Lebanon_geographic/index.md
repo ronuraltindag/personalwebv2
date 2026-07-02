@@ -1,8 +1,10 @@
 ---
-study_status: "Revise and resubmit, Journal of Political Economy: Microeconomics"
+study_status: "RCT completed; 1st round of Revise and Resubmit"
+funding: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon)."
+partner: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon) (implementation)."
 weight: 5
 status: ongoing
-citation: "Altindag, O., O'Connell, S.D., Achour, R. (2024). *Revise and resubmit, Journal of Political Economy: Microeconomics.*"
+citation: "Altindag, O., O'Connell, S.D., Achour, R. (2024).<br>Revise and resubmit, *Journal of Political Economy: Microeconomics*."
 author: Onur Altındağ & Stephen D. O'Connell & Rim Achour
 categories:
 - Development Economics

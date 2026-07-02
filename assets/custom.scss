@@ -457,35 +457,6 @@ body {
   margin: 0.1rem 0 0;
 }
 
-/* Button row under each paper */
-.research-list .pub-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.7rem;
-}
-.research-list .pub-tabs:empty {
-  display: none;
-}
-/* If there's only one box (e.g. just Info), the chevron opens it directly —
-   no need to show a lone tab button */
-.research-list .pub-tabs:has(.pub-tab:only-child) {
-  display: none;
-}
-.research-list .pub-tab {
-  display: inline-flex;
-  align-items: center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1;
-  color: #0083cb;
-  background: transparent;
-  border: 0;
-  border-radius: 4px;
-  padding: 0.42rem 0.7rem;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
-}
 /* Title row: text on the left, the reveal arrow on the right */
 .research-list .pub-head {
   display: flex;
@@ -497,7 +468,7 @@ body {
   min-width: 0;
 }
 
-/* Single "→" arrow that unfolds the Abstract · Resources · Press boxes */
+/* Single "→" arrow that unfolds the paper details */
 .research-list .pub-more {
   flex: 0 0 auto;
   background: none;
@@ -527,14 +498,6 @@ body {
 .research-list .pub-more-wrap {
   margin-top: 0.2rem;
 }
-.research-list .pub-tab:hover {
-  background: #e8f4fb;
-}
-.research-list .pub-tab.is-active {
-  background: #0083cb;
-  color: #fff;
-}
-
 /* Expanding panels */
 .research-list .pub-panel {
   margin-top: 0.7rem;
@@ -548,7 +511,8 @@ body {
   margin: 0.2rem 0;
 }
 
-/* Info box: Status / Funding lines */
+/* Info box: Status / Funding lines + resource links, shown as soon as
+   the chevron opens */
 .research-list .pub-info .pub-meta {
   font-size: 1.02rem;
   line-height: 1.5;
@@ -564,12 +528,19 @@ body {
   text-transform: uppercase;
   color: #0083cb;
 }
+.research-list .pub-info .pub-info-links {
+  margin-top: 0.5rem;
+}
 
-/* Resource / press links rendered as compact chips */
-.research-list a.pub-link {
+/* Chip row: resource/press links and the Abstract/Press toggles share one look */
+.research-list a.pub-link,
+.research-list .pub-tab {
+  appearance: none;
+  -webkit-appearance: none;
   display: inline-block;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
+  line-height: 1.2;
   color: #0083cb !important;
   background: #f2f9fd;
   border: 1px solid #cfe6f5;
@@ -577,11 +548,25 @@ body {
   padding: 0.3rem 0.65rem;
   margin: 0 0.45rem 0.45rem 0;
   text-decoration: none !important;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
 }
-.research-list a.pub-link:hover {
+.research-list a.pub-link:hover,
+.research-list .pub-tab:hover,
+.research-list .pub-tab.is-active {
   background: #0083cb;
   color: #fff !important;
   border-color: #0083cb;
+}
+/* Small "▸" on the Abstract/Press toggles; rotates to "▾" while the box is open */
+.research-list .pub-tab .pub-tab-arrow {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.75em;
+  transition: transform 0.2s ease;
+}
+.research-list .pub-tab.is-active .pub-tab-arrow {
+  transform: rotate(90deg);
 }
 
 /* Any prose links inside the research list: Bentley blue, no underline */

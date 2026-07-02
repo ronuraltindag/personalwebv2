@@ -1,7 +1,7 @@
 ---
 weight: 18
 status: published
-citation: "Altindag, O., Bakis, O., Rozo, S. (2020). *Journal of Development Economics*, 146, 102490."
+citation: "Altindag, O., Bakis, O., Rozo, S. (2020).<br>*Journal of Development Economics*, 146, 102490."
 author: 
 categories:
 - Development Economics

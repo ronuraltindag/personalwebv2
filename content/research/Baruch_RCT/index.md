@@ -1,7 +1,7 @@
 ---
 weight: 24
 status: published
-citation: "Joyce, T., Crockett, S., Jaeger, D.A., Altindag, O., O'Connell, S.D. (2015). *Economics of Education Review*, 46, 64–77."
+citation: "Joyce, T., Crockett, S., Jaeger, D.A., Altindag, O., O'Connell, S.D. (2015).<br>*Economics of Education Review*, 46, 64–77."
 author: 
 categories:
 - Economics of Education

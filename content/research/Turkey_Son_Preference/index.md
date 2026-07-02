@@ -1,7 +1,7 @@
 ---
 weight: 23
 status: published
-citation: "Altindag, O. (2016). *Demography*, 53, 541–566."
+citation: "Altindag, O. (2016).<br>*Demography*, 53, 541–566."
 author: 
 categories:
 - Health Economics

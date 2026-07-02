@@ -1,7 +1,7 @@
 ---
 weight: 21
 status: published
-citation: "Joyce, T., Remler, D.K., Jaeger, D.A., Altindag, O., O'Connell, S.D., Crockett, S. (2017). *Journal of Policy Analysis and Management*, 36(2), 438–459."
+citation: "Joyce, T., Remler, D.K., Jaeger, D.A., Altindag, O., O'Connell, S.D., Crockett, S. (2017).<br>*Journal of Policy Analysis and Management*, 36(2), 438–459."
 author: 
 categories:
 - Economics of Education

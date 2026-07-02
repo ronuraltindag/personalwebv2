@@ -1,8 +1,8 @@
 ---
-funding: "Field work funded by the College of Social Sciences and Humanities Research Development Initiative at Northeastern University."
+funding: "[CSSH Research Development Initiative](https://cssh.northeastern.edu) ($8K)."
 weight: 14
 status: published
-citation: "Altindag, O., Erten, B., Keskin, P. (2022). *American Economic Journal: Applied Economics*, 14(2), 320–343."
+citation: "Altindag, O., Erten, B., Keskin, P. (2022).<br>*American Economic Journal: Applied Economics*, 14(2), 320–343."
 author: 
 categories:
 - Health Economics
@@ -23,6 +23,7 @@ links:
 - icon: laptop-code
   icon_pack: fas
   name: Replication files
+  group: replication
   url: https://www.openicpsr.org/openicpsr/project/131981/version/V1/view
 - icon: newspaper
   icon_pack: far
@@ -31,16 +32,19 @@ links:
 - icon: video
   icon_pack: fas
   name: Bentley TLN 
+  group: press
   url: https://videos.bentley.edu/media/Onur+AltindagA+Lockdown+%26+mental+health/1_zg5c110g?_ga=2.57554030.597439100.1618371692-104916621.1611206386
 
-- icon: newspaper
+- icon: file-alt
   icon_pack: far
-  name: The Institute for Replication (I4R) replication report by Bonander et al. (2023)
+  name: I4R replication report (Bonander et al., 2023)
+  group: replication
   url: https://ideas.repec.org/p/zbw/i4rdps/16.html 
   
-- icon: newspaper
-  icon_pack: far
-  name: A Reply to Comment by Bonander et al. (2023)
+- icon: reply
+  icon_pack: fas
+  name: Our reply (2023)
+  group: replication
   url: https://ideas.repec.org/p/zbw/i4rdps/17.html
  
 ---
