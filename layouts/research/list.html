@@ -45,7 +45,7 @@
             {{ $funding := $p.Params.funding }}
             {{ $status := "" }}
             {{ if eq $p.Params.status "ongoing" }}{{ $status = $p.Params.study_status }}{{ end }}
-            {{ $hasInfo := or $funding $status (gt (len $resources) 0) }}
+            {{ $hasInfo := or $funding $status $p.Params.partner (gt (len $resources) 0) }}
             {{ $hasMore := or $p.Content (gt (len $resources) 0) (gt (len $replication) 0) (gt (len $press) 0) $hasInfo }}
             <article class="pub">
               <div class="pub-head">
@@ -54,14 +54,14 @@
                   {{ with $p.Params.citation }}<p class="pub-cite">{{ . | markdownify }}</p>{{ end }}
                 </div>
                 {{ if $hasMore }}
-                <button class="pub-more" type="button" aria-expanded="false" aria-controls="{{ $id }}-more" data-more="{{ $id }}-more" aria-label="Show details" title="Show details"><span class="pub-more-arrow">&rsaquo;</span></button>
+                <button class="pub-more" type="button" aria-expanded="false" aria-controls="{{ $id }}-more" data-more="{{ $id }}-more" aria-label="Details: {{ $p.Title }}" title="Show details"><span class="pub-more-arrow" aria-hidden="true">&rsaquo;</span></button>
                 {{ end }}
               </div>
 
               {{ if $hasMore }}
               <div id="{{ $id }}-more" class="pub-more-wrap" hidden>
                 {{/* Shown as soon as the chevron opens: status, funding, and one
-                     row of chips — Abstract/Press unfold in place, the rest are
+                     row of chips — Abstract/Replication/Press unfold in place, the rest are
                      direct links */}}
                 <div class="pub-panel pub-info">
                   {{ with $status }}<p class="pub-meta"><span class="pub-meta-label">Status</span> {{ . }}</p>{{ end }}
@@ -70,14 +70,14 @@
                   {{ if or $p.Content $resources $replication $press }}
                     <div class="pub-info-links">
                       {{ if $p.Content }}
-                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-abstract" data-target="{{ $id }}-abstract">Abstract<span class="pub-tab-arrow">&#9656;</span></button>
+                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-abstract" data-target="{{ $id }}-abstract">Abstract<span class="pub-tab-arrow" aria-hidden="true">&#9656;</span></button>
                       {{ end }}
                       {{ range $resources }}{{ partial "shared/pub-link.html" . }}{{ end }}
                       {{ if $replication }}
-                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-replication" data-target="{{ $id }}-replication">Replication<span class="pub-tab-arrow">&#9656;</span></button>
+                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-replication" data-target="{{ $id }}-replication">Replication<span class="pub-tab-arrow" aria-hidden="true">&#9656;</span></button>
                       {{ end }}
                       {{ if $press }}
-                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-press" data-target="{{ $id }}-press">Press<span class="pub-tab-arrow">&#9656;</span></button>
+                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-press" data-target="{{ $id }}-press">Press<span class="pub-tab-arrow" aria-hidden="true">&#9656;</span></button>
                       {{ end }}
                     </div>
                   {{ end }}
@@ -109,10 +109,14 @@
   </section>
 </main>
 
+<noscript><style>
+  .research-list .pub-more-wrap[hidden], .research-list .pub-panel[hidden] { display: block; }
+  .research-list .pub-more { display: none; }
+</style></noscript>
 <script>
 (function () {
-  // Outer "→" arrow: reveal / hide the details (info shows straight away;
-  // Abstract and Press stay behind their tabs)
+  // Outer "›" chevron: reveal / hide the details (info shows straight away;
+  // Abstract/Replication/Press stay behind their toggle chips)
   document.querySelectorAll('.research-list .pub-more').forEach(function (arrow) {
     arrow.addEventListener('click', function () {
       var wrap = document.getElementById(arrow.getAttribute('data-more'));
@@ -120,6 +124,7 @@
       var open = arrow.getAttribute('aria-expanded') === 'true';
       arrow.setAttribute('aria-expanded', String(!open));
       arrow.classList.toggle('is-open', !open);
+      arrow.setAttribute('title', open ? 'Show details' : 'Hide details');
       wrap.hidden = open;
       if (open) {
         // Collapse any open box when folding back up (but not the info block)
@@ -137,6 +142,7 @@
       if (!panel) return;
       var open = btn.getAttribute('aria-expanded') === 'true';
       var pub = btn.closest('.pub');
+      if (!pub) return;
       // Collapse other open tabs/panels within the same publication
       pub.querySelectorAll('.pub-tab').forEach(function (b) {
         if (b !== btn) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); }

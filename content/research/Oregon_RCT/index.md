@@ -30,6 +30,27 @@ links:
   
   
   
+
+- icon: file-alt
+  icon_pack: far
+  name: NICE evidence review
+  group: press
+  url: https://www.ncbi.nlm.nih.gov/books/NBK612340/
+- icon: file-alt
+  icon_pack: far
+  name: AHRQ/USPSTF evidence review
+  group: press
+  url: https://www.ncbi.nlm.nih.gov/books/NBK615493/
+- icon: file-alt
+  icon_pack: far
+  name: AHRQ effectiveness review
+  group: press
+  url: https://www.ncbi.nlm.nih.gov/books/NBK525096/
+- icon: file-alt
+  icon_pack: far
+  name: National Academies WIC report
+  group: press
+  url: https://www.ncbi.nlm.nih.gov/books/NBK379086/
 ---
 
 We randomized 1948 pregnant women who intended to breastfeed to receive either standard WIC breastfeeding support or standard support plus telephone peer counseling. We estimated the effect of peer counseling on any and exclusive breastfeeding at 1, 3, and 6 months. At 3 months postpartum, 50.5% of women in the treatment group were still breastfeeding versus 44.1% in the control (P = .01). The effect was driven entirely by an improvement in exclusive breastfeeding, where rates in the treatment group at 3 months (27.3%) exceeded those in the control group (20.2%) by 7.1 percentage points (P < .01). We found no effect of peer counseling at 1 or 6 months. Telephone peer counseling improved exclusive breastfeeding at 3 months postpartum among WIC participants.

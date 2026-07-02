@@ -212,7 +212,7 @@ header .logo img {
   margin-bottom: 0.75rem;
 }
 .teaching-content h3 a {
-  color: #0066cc;
+  color: #0083cb;
   text-decoration: none;
 }
 .teaching-content h3 a:hover {
@@ -273,7 +273,7 @@ header .logo img {
 /* Book office hours button */
 .teaching-content .book-btn {
   display: inline-block;
-  background: #0066cc;
+  background: #0083cb;
   color: #fff !important;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
@@ -283,7 +283,7 @@ header .logo img {
   transition: background 0.2s;
 }
 .teaching-content .book-btn:hover {
-  background: #0052a3;
+  background: #006da8;
 }
 
 /* Tables in teaching content */
@@ -410,7 +410,7 @@ body {
   min-width: 0;
 }
 .research-list .pub-group {
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #0083cb;
   margin: 0.15rem 0 0;
@@ -471,10 +471,15 @@ body {
 /* Single "→" arrow that unfolds the paper details */
 .research-list .pub-more {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
   background: none;
   border: 0;
   padding: 0.1rem 0.3rem;
-  margin-top: 0.15rem;
+  margin: -0.5rem -0.6rem 0 0;
   cursor: pointer;
   color: #0083cb;
   line-height: 1;
@@ -526,7 +531,7 @@ body {
   font-size: 0.78rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #0083cb;
+  color: #006da8;
 }
 .research-list .pub-info .pub-info-links {
   margin-top: 0.5rem;
@@ -541,7 +546,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
   line-height: 1.2;
-  color: #0083cb !important;
+  color: #006da8 !important;
   background: #f2f9fd;
   border: 1px solid #cfe6f5;
   border-radius: 4px;
@@ -554,11 +559,24 @@ body {
 .research-list a.pub-link:hover,
 .research-list .pub-tab:hover,
 .research-list .pub-tab.is-active {
-  background: #0083cb;
+  background: #006da8;
   color: #fff !important;
-  border-color: #0083cb;
+  border-color: #006da8;
 }
-/* Small "▸" on the Abstract/Press toggles; rotates to "▾" while the box is open */
+/* Long bare URLs (DOIs) in abstracts must never force sideways scrolling */
+.research-list .pub-abstract {
+  overflow-wrap: anywhere;
+}
+
+/* Visible keyboard focus for the interactive research-list elements */
+.research-list .pub-more:focus-visible,
+.research-list .pub-tab:focus-visible,
+.research-list a.pub-link:focus-visible {
+  outline: 2px solid #006da8;
+  outline-offset: 2px;
+}
+
+/* Small "▸" on the Abstract/Replication/Press toggles; rotates to "▾" while open */
 .research-list .pub-tab .pub-tab-arrow {
   display: inline-block;
   margin-left: 0.35rem;
@@ -573,6 +591,20 @@ body {
 .research-list .pub-cite a,
 .research-list .pub-abstract a,
 .research-list .pub-info a {
-  color: #0083cb !important;
+  color: #006da8 !important;
   text-decoration: none !important;
+}
+
+/* Phones: reclaim the oversized tachyons padding (pa4 body, ph5 header) */
+@media screen and (max-width: 48em) {
+  .site-header {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+@media screen and (max-width: 30em) {
+  .page-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

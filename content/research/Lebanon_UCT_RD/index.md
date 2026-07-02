@@ -38,6 +38,24 @@ links:
   url: /pdfs/papers/AOC_RefugeeAidEfx_perm_WP.pdf
   
   
+
+- icon: newspaper
+  icon_pack: far
+  name: ERF Forum
+  url: https://theforum.erf.org.eg/2021/05/09/cash-based-assistance-programmes-refugees-evidence-lebanon/
+- icon: newspaper
+  icon_pack: far
+  name: "VoxDevLit: Refugees"
+  url: https://voxdev.org/voxdevlit/refugees-and-other-forcibly-displaced-populations/supporting-forced-migrants-hosts
+- icon: newspaper
+  icon_pack: far
+  name: Bentley News
+  url: https://www.bentley.edu/news/building-better-aid-programs-refugees
+- icon: file-alt
+  icon_pack: far
+  name: JDC literature review
+  group: press
+  url: https://www.jointdatacenter.org/literature_review/the-short-lived-effects-of-unconditional-cash-transfers-to-refugees/
 ---
 
 We study two yearlong unconditional cash-based assistance programs for Syrian refugees in Lebanon, and show that they improve consumption, child well-being, food security, and reduce livelihood coping. Despite high transfer values, we find no evidence of lasting effects at six months after either program ends. Households spend transfers on basic needs, and take children out of work and re-enroll them in school. Beneficiaries increase cash savings and their stock of durable goods, but liquidate and spend these assets during or soon after the beneficiary period. The results are similar for longer assistance periods and across transfer modalities.

@@ -47,6 +47,11 @@ links:
   group: replication
   url: https://ideas.repec.org/p/zbw/i4rdps/17.html
  
+
+- icon: newspaper
+  icon_pack: far
+  name: AEA Research Highlights
+  url: https://www.aeaweb.org/research/charts/mental-health-lockdowns-turkey
 ---
 
 Using a strict, age-specific lockdown order for adults aged 65 and older in Turkey, we examine the mental health consequences of an extended period of tight mobility restrictions on senior adults. Adopting a regression discontinuity design, we find that the curfew-induced decline in mobility substantially worsened mental health outcomes, including somatic and nonsomatic symptoms of mental distress (approximately 0.2 standard deviation). Exploring potential channels, we document an increase in social and physical isolation, with no evidence of robust changes in labor market outcomes or intrahousehold conflict for this subpopulation.

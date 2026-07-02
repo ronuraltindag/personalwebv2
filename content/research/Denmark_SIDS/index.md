@@ -23,6 +23,15 @@ links:
   icon_pack: far
   name: Newsletter of Emily Oster 
   url: https://www.parentdata.org/p/back-sleeping-and-sids-new-research
+
+- icon: newspaper
+  icon_pack: far
+  name: Videnskab.dk
+  url: https://videnskab.dk/krop-sundhed/unik-dansk-sundhedsplejerskeordning-har-reddet-boerns-liv/
+- icon: newspaper
+  icon_pack: far
+  name: Sygeplejersken
+  url: https://dsr.dk/fag-og-udvikling/sygeplejersken/arkiv/sygeplejersken-argang-2022-nr-14/sundhedsplejersker-mindsker-spaedboernsdoedelighed/
 ---
 
 We evaluate the impact of a nationwide public health intervention on deaths from sudden infant death syndrome (SIDS), using population data from Denmark in a regression discontinuity research design. The information campaign—implemented primarily through a universal nurse home visiting program—reduced infant mortality by 17.2 percent and saved between 11.6-13.5 lives over 10,000 births. The estimated effect sizes are 11-14 times larger among low birthweight and preterm infants relative to the overall population. Improvement in infant mortality is concentrated among those with low socio-economic status and with limited access to health information, thereby reducing health inequities at birth.

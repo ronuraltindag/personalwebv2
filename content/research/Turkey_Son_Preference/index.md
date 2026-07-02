@@ -27,6 +27,12 @@ links:
   icon_pack: fas
   name: Replication files
   url: https://github.com/ronuraltindag/son_preference  
+
+- icon: file-alt
+  icon_pack: far
+  name: World Bank policy review
+  group: press
+  url: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/383641624544462553
 ---
 
 Couples in Turkey exhibit son preference through son-biased differential stopping behavior that does not cause a sex ratio imbalance in the population. Demand for sons leads to lower ratios of boys to girls in larger families but higher ratios in smaller families. Girls are born earlier than their male siblings, and son-biased fertility behavior is persistent in response to decline in fertility over time and across households with parents from different backgrounds. Parents use contraceptive methods to halt fertility following a male birth. The sibling sex composition is associated with gender disparities in health. Among third- or later-born children, female infant mortality is 1.5 percentage points lower if the previous sibling is male. The female survival advantage, however, disappears if the previous sibling is female. Having an older female sibling shifts the gender gap in infant mortality rate by 2 percentage points in favor of males. The improvement in infant mortality is strongest in favor of males who have no older male siblings.

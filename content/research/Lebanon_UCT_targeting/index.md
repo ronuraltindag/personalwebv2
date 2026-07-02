@@ -30,6 +30,16 @@ links:
 
   
   
+
+- icon: newspaper
+  icon_pack: far
+  name: Bentley News
+  url: https://www.bentley.edu/news/building-better-aid-programs-refugees
+- icon: file-alt
+  icon_pack: far
+  name: JDC literature review
+  group: press
+  url: https://www.jointdatacenter.org/literature_review/targeting-humanitarian-aid-using-administrative-data-model-design-and-validation-2/
 ---
 
 We develop and assess the performance of an econometric prediction model that relies on administrative data held by international agencies to target over $380 million annually in unconditional cash transfers to Syrian refugees in Lebanon. Standard metrics of prediction accuracy suggest targeting using administrative data is comparable to a short-form Proxy Means Test, which requires a survey of the entire target population. We show that small differences in accuracy across approaches are largely attributable to a few data fields. These results are robust to a blind validation test performed on a random sample collected after the model derivation, as well as the type of estimator used for prediction. We discuss relative costs, which are likely to feature prominently when alternative approaches are considered in practice.

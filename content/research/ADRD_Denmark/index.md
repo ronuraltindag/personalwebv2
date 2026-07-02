@@ -24,6 +24,11 @@ links:
   icon_pack: fas
   name: NBER Working Paper
   url: https://www.nber.org/papers/w34635
+
+- icon: newspaper
+  icon_pack: far
+  name: Bentley News
+  url: https://www.bentley.edu/news/understanding-emotional-toll-alzheimers-disease
 ---
 
 We use population-wide administrative data from Denmark and an event-study design spanning nearly two decades to examine the impact of having a parent with dementia on adult children's labor market, physical health, and mental health outcomes. We find no meaningful effects on labor supply, earnings, or physical health care use. In contrast, mental health care use increases substantially, driven by daughters, beginning five years before a parent's dementia related death, peaks around the time of death, and converges to the counterfactual trend over seven years. Results suggest that robust long-term care policy can largely insulate adult children economically from parental dementia, but mental health spillovers persist, spurring nearly a decade of elevated use.

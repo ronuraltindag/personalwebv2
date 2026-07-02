@@ -7,4 +7,13 @@ status: ongoing
 citation: "with Jade Siu, Diloá Athias, and Olivier Sterck."
 draft: false
 title: "Friction at the Door: A Nationwide Experiment on Outreach Channels and Worker Formalization"
+links:
+- icon: newspaper
+  icon_pack: far
+  name: ILO news
+  url: https://www.ilo.org/resource/news/ilo-trained-outreach-officials-boost-social-security-registration-among
+- icon: newspaper
+  icon_pack: far
+  name: ILO news (Arabic)
+  url: https://www.ilo.org/beirut/media-centre/WCMS_911762/lang--ar/index.htm
 ---
