@@ -117,7 +117,7 @@ details,
 .site-brand img,
 .site-logo img,
 header .logo img {
-  max-height: 70px !important;
+  max-height: 52px !important;
   height: auto !important;
   width: auto !important;
 }
@@ -443,11 +443,14 @@ body {
   }
 }
 
+/* Paper entry: title (a link to the PDF when there is one), citation, then a
+   visible small-caps row of links/toggles — no hidden chevron. */
 .research-list .pub-title {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.22rem;
+  font-weight: 400;
   line-height: 1.35;
-  margin: 0 0 0.3rem;
+  margin: 0 0 0.25rem;
+  color: #2b2b2b;
 }
 
 .research-list .pub-cite {
@@ -457,143 +460,110 @@ body {
   margin: 0.1rem 0 0;
 }
 
-/* Title row: text on the left, the reveal arrow on the right */
-.research-list .pub-head {
+/* Link row: uppercase DM Sans, hairline underline, one line that wraps */
+.research-list .pub-links {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 1rem;
+  row-gap: 0.35rem;
+  margin-top: 0.55rem;
 }
-.research-list .pub-headtext {
-  min-width: 0;
-}
-
-/* Single "→" arrow that unfolds the paper details */
-.research-list .pub-more {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-  background: none;
-  border: 0;
-  padding: 0.1rem 0.3rem;
-  margin: -0.5rem -0.6rem 0 0;
-  cursor: pointer;
-  color: #0083cb;
-  line-height: 1;
-}
-.research-list .pub-more-arrow {
-  display: inline-block;
-  font-size: 1.7rem;
-  font-weight: 700;
-  line-height: 1;
-  transition: transform 0.2s ease;
-}
-.research-list .pub-more.is-open .pub-more-arrow {
-  transform: rotate(90deg);
-}
-.research-list .pub-more:hover .pub-more-arrow {
-  transform: translateX(2px);
-}
-.research-list .pub-more.is-open:hover .pub-more-arrow {
-  transform: rotate(90deg);
-}
-.research-list .pub-more-wrap {
-  margin-top: 0.2rem;
-}
-/* Expanding panels */
-.research-list .pub-panel {
-  margin-top: 0.7rem;
-  padding: 0.2rem 0 0.2rem 1rem;
-  border-left: 3px solid #0083cb;
-}
-.research-list .pub-abstract p {
-  font-size: 1.12rem;
-  line-height: 1.55;
-  max-width: 42em;
-  margin: 0.2rem 0;
-}
-
-/* Info box: Status / Funding lines + resource links, shown as soon as
-   the chevron opens */
-.research-list .pub-info .pub-meta {
-  font-size: 1.02rem;
-  line-height: 1.5;
-  max-width: 42em;
-  margin: 0.15rem 0;
-}
-.research-list .pub-info .pub-meta-label {
-  display: inline-block;
-  min-width: 4.6rem;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #006da8;
-}
-.research-list .pub-info .pub-info-links {
-  margin-top: 0.5rem;
-}
-
-/* Chip row: resource/press links and the Abstract/Press toggles share one look */
-.research-list a.pub-link,
+.research-list .pub-links a.pub-link,
 .research-list .pub-tab {
   appearance: none;
   -webkit-appearance: none;
   display: inline-block;
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.2;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.4;
   color: #006da8 !important;
-  background: #f2f9fd;
-  border: 1px solid #cfe6f5;
-  border-radius: 4px;
-  padding: 0.3rem 0.65rem;
-  margin: 0 0.45rem 0.45rem 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
   text-decoration: none !important;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition: color 0.15s;
 }
-.research-list a.pub-link:hover,
-.research-list .pub-tab:hover,
+.research-list .pub-links a.pub-link:hover,
+.research-list .pub-tab:hover {
+  color: #1c3d5a !important;
+}
 .research-list .pub-tab.is-active {
-  background: #006da8;
-  color: #fff !important;
-  border-color: #006da8;
+  color: #1c3d5a !important;
 }
-/* Long bare URLs (DOIs) in abstracts must never force sideways scrolling */
-.research-list .pub-abstract {
-  overflow-wrap: anywhere;
+.research-list .pub-links .pub-link i { display: none; } /* text only in the row */
+.research-list .pub-count {
+  margin-left: 0.3em;
+  opacity: 0.7;
 }
 
-/* Visible keyboard focus for the interactive research-list elements */
-.research-list .pub-more:focus-visible,
+/* Expanding panels */
+.research-list .pub-panel[hidden] { display: none; }
+.research-list .pub-panel {
+  margin-top: 0.7rem;
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 3px solid #0083cb;
+  overflow-wrap: anywhere;
+}
+.research-list .pub-abstract p {
+  font-size: 1.08rem;
+  line-height: 1.55;
+  max-width: 42em;
+  margin: 0.2rem 0;
+}
+.research-list .pub-abstract .pub-meta {
+  font-size: 1rem;
+  margin: 0.1rem 0;
+}
+.research-list .pub-abstract .pub-meta + p:not(.pub-meta) {
+  margin-top: 0.6rem;
+}
+.research-list .pub-meta-label {
+  display: inline-block;
+  min-width: 4.6rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #006da8;
+}
+/* Replication / Press panels: one link per line in the same small-caps style */
+.research-list .pub-panel-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.research-list .pub-panel-links a.pub-link {
+  align-self: flex-start;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: #006da8 !important;
+  text-decoration: none !important;
+}
+.research-list .pub-panel-links a.pub-link:hover { color: #1c3d5a !important; }
+.research-list .pub-panel-links .pub-link i { display: none; }
+
+/* Visible keyboard focus */
 .research-list .pub-tab:focus-visible,
 .research-list a.pub-link:focus-visible {
   outline: 2px solid #006da8;
   outline-offset: 2px;
 }
 
-/* Small "▸" on the Abstract/Replication/Press toggles; rotates to "▾" while open */
-.research-list .pub-tab .pub-tab-arrow {
-  display: inline-block;
-  margin-left: 0.35rem;
-  font-size: 0.75em;
-  transition: transform 0.2s ease;
-}
-.research-list .pub-tab.is-active .pub-tab-arrow {
-  transform: rotate(90deg);
-}
-
-/* Any prose links inside the research list: Bentley blue, no underline */
+/* Prose links inside the research list: Bentley blue, no underline */
 .research-list .pub-cite a,
-.research-list .pub-abstract a,
-.research-list .pub-info a {
+.research-list .pub-abstract a {
   color: #006da8 !important;
   text-decoration: none !important;
 }
+
 
 /* Phones: reclaim the oversized tachyons padding (pa4 body, ph5 header) */
 @media screen and (max-width: 48em) {
@@ -608,3 +578,37 @@ body {
     padding-right: 1rem;
   }
 }
+
+/* Landing page: one paragraph, then labeled affiliation / contact lines */
+.home-intro,
+.home-intro p {
+  margin: 0;
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+.home-intro { margin-top: 1.5rem; }
+.home-facts {
+  margin: 1.8rem 0 0;
+}
+.home-contact {
+  margin-top: 1.4rem;
+}
+.home-fact {
+  margin: 0 0 0.6rem;
+}
+.home-fact dt {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #006da8;
+  margin: 0 0 0.05rem;
+}
+.home-fact dd {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.home-fact dd p { margin: 0; }

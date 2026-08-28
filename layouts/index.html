@@ -7,7 +7,17 @@
         {{ with .Params.title }}<h1 class="f1 f-subheadline-l fw5-ns mv4 lh-solid">{{ . }}</h1>{{ end }}
         {{ with .Params.subtitle }}<h2 class="f4 mt0 mb4 tracked lh-title" style="font-family: 'DM Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 500; color: #4a4a4a;">{{ . | safeHTML }}</h2>{{ end }}
         {{ if .Params.show_social_links }}{{ partial "shared/social-links.html" . }}{{ end }}
-        {{ with .Params.description }}<p class="f4 mt4 lh-copy">{{ . | markdownify }}</p>{{ end }}
+        {{ with .Params.description }}<div class="home-intro f4 mt4 lh-copy measure">{{ . | markdownify }}</div>{{ end }}
+        {{ with .Params.affiliations }}
+        <dl class="home-facts">
+          {{ range . }}<div class="home-fact"><dt>{{ .label }}</dt><dd>{{ .text | markdownify }}</dd></div>{{ end }}
+        </dl>
+        {{ end }}
+        {{ with .Params.contact }}
+        <dl class="home-facts home-contact">
+          {{ range . }}<div class="home-fact"><dt>{{ .label }}</dt><dd>{{ .text | markdownify }}</dd></div>{{ end }}
+        </dl>
+        {{ end }}
         {{ if .Params.show_action_link }}<a class="mt4 action {{ .Params.action_type }}" href="{{ .Params.action_link | relURL }}">{{ .Params.action_label | safeHTML }}</a>{{ end }}
       </div>
       <div class="tr w-50-l {{ if .Params.image_left }}ml4{{ else }}mr4{{ end }}">

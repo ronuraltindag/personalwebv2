@@ -26,77 +26,65 @@
           <div class="pub-section-body">
           {{ range $i, $p := $papers }}
             {{ $id := printf "%s-%d" $g.key $i }}
-            {{ $links := $p.Params.links }}
+            {{/* Sort the page's `links` into direct resource links ("Full study" shown
+                 as PDF), replication items, and coverage items. */}}
             {{ $press := slice }}
             {{ $replication := slice }}
             {{ $resources := slice }}
-            {{ with $links }}
-              {{ range . }}
-                {{ $g := default "" .group }}
-                {{ if eq $g "replication" }}
-                  {{ $replication = $replication | append . }}
-                {{ else if or (eq .icon "newspaper") (eq $g "press") }}
-                  {{ $press = $press | append . }}
-                {{ else }}
-                  {{ $resources = $resources | append . }}
-                {{ end }}
+            {{ range $p.Params.links }}
+              {{ $grp := default "" .group }}
+              {{ $name := trim .name " " }}
+              {{ if and (eq .icon "file-pdf") (eq (lower $name) "full study") }}
+                {{ $resources = $resources | append (merge . (dict "name" "PDF")) }}
+              {{ else if eq $grp "replication" }}
+                {{ $replication = $replication | append . }}
+              {{ else if or (eq .icon "newspaper") (eq $grp "press") }}
+                {{ $press = $press | append . }}
+              {{ else }}
+                {{ $resources = $resources | append (merge . (dict "name" $name)) }}
               {{ end }}
             {{ end }}
             {{ $funding := $p.Params.funding }}
             {{ $status := "" }}
             {{ if eq $p.Params.status "ongoing" }}{{ $status = $p.Params.study_status }}{{ end }}
-            {{ $hasInfo := or $funding $status $p.Params.partner (gt (len $resources) 0) }}
-            {{ $hasMore := or $p.Content (gt (len $resources) 0) (gt (len $replication) 0) (gt (len $press) 0) $hasInfo }}
+            {{ $hasMeta := or $funding $status $p.Params.partner }}
+            {{ $hasAbstract := or $p.Content $hasMeta }}
             <article class="pub">
-              <div class="pub-head">
-                <div class="pub-headtext">
-                  <h3 class="pub-title">{{ $p.Title }}</h3>
-                  {{ with $p.Params.citation }}<p class="pub-cite">{{ . | markdownify }}</p>{{ end }}
-                </div>
-                {{ if $hasMore }}
-                <button class="pub-more" type="button" aria-expanded="false" aria-controls="{{ $id }}-more" data-more="{{ $id }}-more" aria-label="Details: {{ $p.Title }}" title="Show details"><span class="pub-more-arrow" aria-hidden="true">&rsaquo;</span></button>
+              <h3 class="pub-title">{{ $p.Title }}</h3>
+              {{ with $p.Params.citation }}<p class="pub-cite">{{ . | markdownify }}</p>{{ end }}
+
+              {{ if or $hasAbstract $resources $replication $press }}
+              <div class="pub-links">
+                {{ if $hasAbstract }}
+                  <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-abstract" data-target="{{ $id }}-abstract">{{ if $p.Content }}Abstract{{ else }}Details{{ end }}</button>
+                {{ end }}
+                {{ range $resources }}{{ partial "shared/pub-link.html" . }}{{ end }}
+                {{ if $replication }}
+                  <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-replication" data-target="{{ $id }}-replication">Replication</button>
+                {{ end }}
+                {{ if $press }}
+                  <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-press" data-target="{{ $id }}-press">Coverage<span class="pub-count">{{ len $press }}</span></button>
                 {{ end }}
               </div>
 
-              {{ if $hasMore }}
-              <div id="{{ $id }}-more" class="pub-more-wrap" hidden>
-                {{/* Shown as soon as the chevron opens: status, funding, and one
-                     row of chips — Abstract/Replication/Press unfold in place, the rest are
-                     direct links */}}
-                <div class="pub-panel pub-info">
+              {{ if $hasAbstract }}
+                <div id="{{ $id }}-abstract" class="pub-panel pub-abstract" hidden>
                   {{ with $status }}<p class="pub-meta"><span class="pub-meta-label">Status</span> {{ . }}</p>{{ end }}
                   {{ with $funding }}<p class="pub-meta"><span class="pub-meta-label">Funding</span> {{ . | markdownify }}</p>{{ end }}
                   {{ with $p.Params.partner }}<p class="pub-meta"><span class="pub-meta-label">Partner</span> {{ . | markdownify }}</p>{{ end }}
-                  {{ if or $p.Content $resources $replication $press }}
-                    <div class="pub-info-links">
-                      {{ if $p.Content }}
-                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-abstract" data-target="{{ $id }}-abstract">Abstract<span class="pub-tab-arrow" aria-hidden="true">&#9656;</span></button>
-                      {{ end }}
-                      {{ range $resources }}{{ partial "shared/pub-link.html" . }}{{ end }}
-                      {{ if $replication }}
-                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-replication" data-target="{{ $id }}-replication">Replication<span class="pub-tab-arrow" aria-hidden="true">&#9656;</span></button>
-                      {{ end }}
-                      {{ if $press }}
-                        <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-press" data-target="{{ $id }}-press">Press<span class="pub-tab-arrow" aria-hidden="true">&#9656;</span></button>
-                      {{ end }}
-                    </div>
-                  {{ end }}
+                  {{ $p.Content }}
                 </div>
-
-                {{ if $p.Content }}
-                  <div id="{{ $id }}-abstract" class="pub-panel pub-abstract" hidden>{{ $p.Content }}</div>
-                {{ end }}
-                {{ if $replication }}
-                  <div id="{{ $id }}-replication" class="pub-panel" hidden>
-                    {{ range $replication }}{{ partial "shared/pub-link.html" . }}{{ end }}
-                  </div>
-                {{ end }}
-                {{ if $press }}
-                  <div id="{{ $id }}-press" class="pub-panel" hidden>
-                    {{ range $press }}{{ partial "shared/pub-link.html" . }}{{ end }}
-                  </div>
-                {{ end }}
-              </div>
+              {{ end }}
+              {{ if $replication }}
+                <div id="{{ $id }}-replication" class="pub-panel pub-panel-links" hidden>
+                  {{ range $replication }}{{ partial "shared/pub-link.html" . }}{{ end }}
+                </div>
+              {{ end }}
+              {{ if $press }}
+                <div id="{{ $id }}-press" class="pub-panel pub-panel-links" hidden>
+                  {{ range $press }}{{ partial "shared/pub-link.html" . }}{{ end }}
+                </div>
+              {{ end }}
               {{ end }}
             </article>
           {{ end }}
@@ -110,47 +98,24 @@
 </main>
 
 <noscript><style>
-  .research-list .pub-more-wrap[hidden], .research-list .pub-panel[hidden] { display: block; }
-  .research-list .pub-more { display: none; }
+  .research-list .pub-panel[hidden] { display: block; }
+  .research-list .pub-tab { display: none; }
 </style></noscript>
 <script>
 (function () {
-  // Outer "›" chevron: reveal / hide the details (info shows straight away;
-  // Abstract/Replication/Press stay behind their toggle chips)
-  document.querySelectorAll('.research-list .pub-more').forEach(function (arrow) {
-    arrow.addEventListener('click', function () {
-      var wrap = document.getElementById(arrow.getAttribute('data-more'));
-      if (!wrap) return;
-      var open = arrow.getAttribute('aria-expanded') === 'true';
-      arrow.setAttribute('aria-expanded', String(!open));
-      arrow.classList.toggle('is-open', !open);
-      arrow.setAttribute('title', open ? 'Show details' : 'Hide details');
-      wrap.hidden = open;
-      if (open) {
-        // Collapse any open box when folding back up (but not the info block)
-        wrap.querySelectorAll('.pub-tab').forEach(function (b) {
-          b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active');
-        });
-        wrap.querySelectorAll('.pub-panel:not(.pub-info)').forEach(function (p) { p.hidden = true; });
-      }
-    });
-  });
-
+  // Abstract / Replication / Press toggles: one panel open per paper at a time
   document.querySelectorAll('.research-list .pub-tab').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var panel = document.getElementById(btn.getAttribute('data-target'));
-      if (!panel) return;
-      var open = btn.getAttribute('aria-expanded') === 'true';
       var pub = btn.closest('.pub');
-      if (!pub) return;
-      // Collapse other open tabs/panels within the same publication
+      if (!panel || !pub) return;
+      var open = btn.getAttribute('aria-expanded') === 'true';
       pub.querySelectorAll('.pub-tab').forEach(function (b) {
         if (b !== btn) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); }
       });
-      pub.querySelectorAll('.pub-panel:not(.pub-info)').forEach(function (p) {
+      pub.querySelectorAll('.pub-panel').forEach(function (p) {
         if (p !== panel) { p.hidden = true; }
       });
-      // Toggle the clicked one
       btn.setAttribute('aria-expanded', String(!open));
       btn.classList.toggle('is-active', !open);
       panel.hidden = open;
