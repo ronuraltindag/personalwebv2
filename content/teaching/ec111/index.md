@@ -112,7 +112,7 @@ Later chapters follow the schedule below. Handouts and the mock exams appear her
 | 14 | Nov 30, Dec 2 | Monopolistic Competition (Ch. 17); Oligopoly (Ch. 18) |
 | 15 | Dec 7 | Review |
 
-*Chapter references are from Mankiw, Principles of Microeconomics, 10th edition (Cengage MindTap). The schedule may change; changes are announced in class and on Brightspace.*
+*Chapter references are from Mankiw, Principles of Microeconomics, 10th edition (Cengage MindTap). The schedule may change; changes are announced in class and by email.*
 
 </details>
 

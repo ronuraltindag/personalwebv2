@@ -61,7 +61,7 @@ The emphasis throughout is on economic reasoning: thinking at the margin, recogn
 
 Office hours are on Mondays and Wednesdays, 11:00 AM – 12:00 PM and 1:00 – 3:00 PM, by appointment. Please [book a 30-minute slot](https://outlook.office.com/bookwithme/user/1c4e4f54e0f0493397e615b2c80a59c7@bentley.edu/meetingtype/rwPThvM0MkK5oGlK_t37nw2?bookingcode=17c9a7b2-69fa-4c48-85ea-ad404642334b&anonymous&ismsaljsauthenabled&ep=mlink) to schedule a meeting. If you need to meet urgently or no slots are available, email me directly.
 
-Announcements go out through Brightspace, which forwards to your Bentley email; check both regularly. Slides, lecture notes, handouts, and mock exams are posted on the course page above after each class. When you email me, put **EC111** in the subject line.
+Announcements come by email from me to your Bentley address; check it regularly. Slides, lecture notes, handouts, and mock exams are posted on the course page above after each class. When you email me, put **EC111** in the subject line.
 
 ---
 
@@ -153,7 +153,7 @@ All students must attend the in-person classes. In-person attendance is essentia
 
 Remote attendance is not an option. This course follows Bentley's [Academic Engagement/Attendance Policy](https://catalog.bentley.edu/undergraduate/academic-policies-procedures/): students who do not attend or engage during the first week are dropped as no-shows, and two or more consecutive weeks of non-participation can lead to administrative withdrawal. If you must miss class, you are responsible for the material; read the chapter and the posted notes, then bring specific questions to office hours.
 
-**Weather and closures.** If the university cancels classes, I will post on Brightspace whether there is an alternative assignment or arrangement for that day.
+**Weather and closures.** If the university cancels classes, I will email you whether there is an alternative assignment or arrangement for that day.
 
 **Electronic devices.** Phones away and laptops and tablets closed for the whole class. The work in this course is drawing and reading diagrams, which you learn by doing them by hand, and a screen in your line of sight costs the people around you as much as it costs you. Using a device during class counts against your participation grade. Exceptions are by my permission only; if you have one, you never need to explain it to anyone in the room. Photographing the board at the end of class is fine.
 
@@ -180,4 +180,4 @@ Remote attendance is not an option. This course follows Bentley's [Academic Enga
 - **Week 15 (Dec 7):** Review
 - **Final Exam:** Friday, December 11, 2026 (8:00–10:00 AM section 20; 6:00–8:00 PM section 10-H)
 
-*Note: Chapter references are from Mankiw's *Principles of Microeconomics*, 10th edition (the MindTap e-book). The schedule, and if necessary other parts of this syllabus, may change during the semester; changes are announced in class and on Brightspace.*
+*Note: Chapter references are from Mankiw's *Principles of Microeconomics*, 10th edition (the MindTap e-book). The schedule, and if necessary other parts of this syllabus, may change during the semester; changes are announced in class and by email.*
