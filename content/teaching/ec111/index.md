@@ -58,7 +58,7 @@ No class Sep 7 (Labor Day), Oct 12 (Fall Break), Nov 25 (Thanksgiving). Last cla
 
 - [Syllabus - Section 10-H, Honors (PDF)](/pdfs/teaching/EC111_FA2026_Syllabus_10H.pdf)
 - [Syllabus - Section 20 (PDF)](/pdfs/teaching/EC111_FA2026_Syllabus_20.pdf)
-- [Lecture Notes, Part I: Chapters 1-4 (PDF)](/pdfs/teaching/EC111_FA2026_Notes.pdf) - My lecture notes. These are supplementary materials to help you follow along, not a replacement for the textbook. They may contain gaps or errors, so use at your own discretion.
+- **Lecture notes** - posted below after each class. These are supplementary materials to help you follow along, not a replacement for the textbook. They may contain gaps or errors, so use at your own discretion.
 
 ### MindTap (Required)
 
@@ -73,15 +73,19 @@ Free temporary access runs until Sep 14, 2026. Registration help: [startstrong.c
 
 ---
 
-<details>
-<summary><strong>Slides</strong></summary>
+<details open>
+<summary><strong>Slides & Lecture Notes</strong></summary>
 
-- [Ch 1: Ten Principles of Economics (PDF)](/pdfs/teaching/EC111_slides/ch01.pdf)
-- [Ch 2: Thinking Like an Economist (PDF)](/pdfs/teaching/EC111_slides/ch02.pdf)
-- [Ch 3: Interdependence and the Gains from Trade (PDF)](/pdfs/teaching/EC111_slides/ch03.pdf)
-- [Ch 4: The Market Forces of Supply and Demand (PDF)](/pdfs/teaching/EC111_slides/ch04.pdf)
+Slides and notes for each chapter are posted here **after** we cover it in class.
 
-More decks are posted as we go.
+| Chapter | Slides | Notes |
+|---------|--------|-------|
+| Ch 1: Ten Principles of Economics | *after Aug 31* | *after Aug 31* |
+| Ch 2: Thinking Like an Economist | *after Sep 2* | *after Sep 2* |
+| Ch 3: Interdependence and the Gains from Trade | *after Sep 9* | *after Sep 9* |
+| Ch 4: The Market Forces of Supply and Demand | *after Sep 16* | *after Sep 16* |
+
+Later chapters follow the schedule below. Handouts and the mock exams appear here too.
 
 </details>
 

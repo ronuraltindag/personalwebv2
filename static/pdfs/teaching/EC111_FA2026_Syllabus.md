@@ -61,7 +61,7 @@ The emphasis throughout is on economic reasoning: thinking at the margin, recogn
 
 Office hours are on Mondays and Wednesdays, 11:00 AM – 12:00 PM and 1:00 – 3:00 PM, by appointment. Please [book a 30-minute slot](https://outlook.office.com/bookwithme/user/1c4e4f54e0f0493397e615b2c80a59c7@bentley.edu/meetingtype/rwPThvM0MkK5oGlK_t37nw2?bookingcode=17c9a7b2-69fa-4c48-85ea-ad404642334b&anonymous&ismsaljsauthenabled&ep=mlink) to schedule a meeting. If you need to meet urgently or no slots are available, email me directly.
 
-Announcements go out through Brightspace, which forwards to your Bentley email; check both regularly. Slides, lecture notes, handouts, and mock exams are posted on the course page above. When you email me, put **EC111** in the subject line.
+Announcements go out through Brightspace, which forwards to your Bentley email; check both regularly. Slides, lecture notes, handouts, and mock exams are posted on the course page above after each class. When you email me, put **EC111** in the subject line.
 
 ---
 
