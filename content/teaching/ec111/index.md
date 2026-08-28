@@ -105,14 +105,14 @@ Later chapters follow the schedule below. Handouts and the mock exams appear her
 | 7 | Oct 14 | Consumers, Producers, and the Efficiency of Markets (Ch. 7) - *no class Oct 12* |
 | 8 | Oct 19, 21 | The Costs of Taxation (Ch. 8); International Trade (Ch. 9) |
 | 9 | Oct 26, 28 | Externalities (Ch. 10); Public Goods and Common Resources (Ch. 11) |
-| 10 | Nov 2, 4 | The Costs of Production (Ch. 13) |
+| 10 | Nov 2, 4 | The Costs of Production (Ch. 14) |
 | 11 | Nov 9, 11 | Review; **Midterm 2 (Nov 11)** |
-| 12 | Nov 16, 18 | Firms in Competitive Markets (Ch. 14) |
-| 13 | Nov 23 | Monopoly (Ch. 15) - *no class Nov 25* |
-| 14 | Nov 30, Dec 2 | Monopolistic Competition (Ch. 16); Oligopoly (Ch. 17) |
+| 12 | Nov 16, 18 | Firms in Competitive Markets (Ch. 15) |
+| 13 | Nov 23 | Monopoly (Ch. 16) - *no class Nov 25* |
+| 14 | Nov 30, Dec 2 | Monopolistic Competition (Ch. 17); Oligopoly (Ch. 18) |
 | 15 | Dec 7 | Review |
 
-*Chapter references are from Mankiw, Principles of Microeconomics (Cengage MindTap). The schedule may change; changes are announced in class and on Brightspace.*
+*Chapter references are from Mankiw, Principles of Microeconomics, 10th edition (Cengage MindTap). The schedule may change; changes are announced in class and on Brightspace.*
 
 </details>
 
