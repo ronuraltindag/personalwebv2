@@ -80,7 +80,7 @@ Slides and notes for each chapter are posted here **after** we cover it in class
 
 | Chapter | Slides | Notes |
 |---------|--------|-------|
-| Ch 1: Ten Principles of Economics | *after Aug 31* | *after Aug 31* |
+| Ch 1: Ten Principles of Economics | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch01_Slides.pdf) | *after Aug 31* |
 | Ch 2: Thinking Like an Economist | *after Sep 2* | *after Sep 2* |
 | Ch 3: Interdependence and the Gains from Trade | *after Sep 9* | *after Sep 9* |
 | Ch 4: The Market Forces of Supply and Demand | *after Sep 16* | *after Sep 16* |
