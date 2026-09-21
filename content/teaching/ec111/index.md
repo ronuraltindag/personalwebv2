@@ -83,6 +83,7 @@ Slides and notes for each chapter are posted here **after** we cover it in class
 | Ch 1: Ten Principles of Economics | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch01_Slides.pdf) | *after Aug 31* | — |
 | Ch 2–3: Thinking Like an Economist; Interdependence and the Gains from Trade | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch02-03_Slides.pdf) | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch02-03_Notes.pdf) | Handout 1 (PPF and trade): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout01_PPF_Trade.pdf) · [answers](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout01_PPF_Trade_Answers.pdf) |
 | Ch 4: The Market Forces of Supply and Demand | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch04_Slides.pdf) | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch04_Notes.pdf) | Handout 2 (supply and demand): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout02_Supply_Demand.pdf) · [answers](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout02_Supply_Demand_Answers.pdf) |
+| Ch 5: Elasticity and Its Application | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch05_Slides.pdf) | *after Sep 23* | — |
 
 Later chapters follow the schedule below. Handouts and the mock exams appear here too.
 
