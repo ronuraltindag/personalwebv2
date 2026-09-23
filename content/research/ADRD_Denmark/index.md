@@ -3,7 +3,20 @@ funding: "[HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzhe
 study_status: "Under review"
 weight: 2
 status: ongoing
-citation: "Altindag, O., Greve, J., Truskinovsky, Y. (2025).<br>*NBER Working Paper No. 34635.*"
+citation: "*NBER Working Paper*"
+bib:
+  type: techreport
+  authors:
+  - "Altındağ, Onur"
+  - "Greve, Jane"
+  - "Truskinovsky, Yulya"
+  series: "NBER Working Paper"
+  number: 34635
+  institution: "National Bureau of Economic Research"
+  year: 2026
+  month: "January"
+  doi: "10.3386/w34635"
+  url: "https://www.nber.org/papers/w34635"
 author: Onur Altindag & Jane Greve & Yulya Truskinovsky
 categories:
 - Health Economics

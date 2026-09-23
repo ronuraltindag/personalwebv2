@@ -1,7 +1,18 @@
 ---
 weight: 17
 status: published
-citation: "Altindag, O., Kaushal, N. (2021).<br>*Public Choice*, 186, 149–178."
+citation: "*Public Choice*, 2021"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  - "Kaushal, Neeraj"
+  journal: "Public Choice"
+  year: 2021
+  volume: 186
+  issue: "1–2"
+  pages: "149–178"
+  doi: "10.1007/s11127-019-00768-3"
 author: 
 categories:
 - Development Economics

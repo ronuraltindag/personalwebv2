@@ -2,7 +2,19 @@
 funding: "[CSSH Research Development Initiative](https://cssh.northeastern.edu) ($8K)."
 weight: 14
 status: published
-citation: "Altindag, O., Erten, B., Keskin, P. (2022).<br>*American Economic Journal: Applied Economics*, 14(2), 320–343."
+citation: "*American Economic Journal: Applied Economics*, 2022"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  - "Erten, Bilge"
+  - "Keskin, Pinar"
+  journal: "American Economic Journal: Applied Economics"
+  year: 2022
+  volume: 14
+  issue: "2"
+  pages: "320–343"
+  doi: "10.1257/app.20200811"
 author: 
 categories:
 - Health Economics

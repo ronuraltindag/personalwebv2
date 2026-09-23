@@ -51,9 +51,23 @@
             {{ $hasAbstract := or $p.Content $hasMeta }}
             <article class="pub">
               <h3 class="pub-title">{{ $p.Title }}</h3>
-              {{ with $p.Params.citation }}<p class="pub-cite">{{ . | markdownify }}</p>{{ end }}
+              {{/* Author line (Family, I.) from the `bib` block, then the venue line in `citation` */}}
+              {{ $authors := "" }}
+              {{ with $p.Params.bib }}
+                {{ $names := slice }}
+                {{ range .authors }}
+                  {{ $parts := split . ", " }}
+                  {{ $inits := "" }}
+                  {{ if gt (len $parts) 1 }}{{ range split (index $parts 1) " " }}{{ with . }}{{ $inits = printf "%s%s." $inits (substr . 0 1) }}{{ end }}{{ end }}{{ end }}
+                  {{ $names = $names | append (printf "%s, %s" (index $parts 0) $inits) }}
+                {{ end }}
+                {{ $authors = delimit $names ", " }}
+              {{ end }}
+              {{ if or $authors $p.Params.citation }}
+              <p class="pub-cite">{{ $authors }}{{ if and $authors $p.Params.citation }}<br>{{ end }}{{ with $p.Params.citation }}{{ . | markdownify }}{{ end }}</p>
+              {{ end }}
 
-              {{ if or $hasAbstract $resources $replication $press }}
+              {{ if or $hasAbstract $resources $replication $press $p.Params.bib }}
               <div class="pub-links">
                 {{ if $hasAbstract }}
                   <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-abstract" data-target="{{ $id }}-abstract">{{ if $p.Content }}Abstract{{ else }}Details{{ end }}</button>
@@ -64,6 +78,9 @@
                 {{ end }}
                 {{ if $press }}
                   <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-press" data-target="{{ $id }}-press">Coverage<span class="pub-count">{{ len $press }}</span></button>
+                {{ end }}
+                {{ if $p.Params.bib }}
+                  <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-cite" data-target="{{ $id }}-cite">Cite</button>
                 {{ end }}
               </div>
 
@@ -85,6 +102,7 @@
                   {{ range $press }}{{ partial "shared/pub-link.html" . }}{{ end }}
                 </div>
               {{ end }}
+              {{ if $p.Params.bib }}{{ partial "shared/pub-cite.html" (dict "page" $p "id" $id) }}{{ end }}
               {{ end }}
             </article>
           {{ end }}
@@ -99,11 +117,12 @@
 
 <noscript><style>
   .research-list .pub-panel[hidden] { display: block; }
-  .research-list .pub-tab { display: none; }
+  .research-list .pub-tab,
+  .research-list .cite-bar { display: none; }
 </style></noscript>
 <script>
 (function () {
-  // Abstract / Replication / Press toggles: one panel open per paper at a time
+  // Abstract / Replication / Coverage / Cite toggles: one panel open per paper at a time
   document.querySelectorAll('.research-list .pub-tab').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var panel = document.getElementById(btn.getAttribute('data-target'));
@@ -119,6 +138,49 @@
       btn.setAttribute('aria-expanded', String(!open));
       btn.classList.toggle('is-active', !open);
       panel.hidden = open;
+    });
+  });
+
+  // Cite panels: switch format, copy the visible version (APA/Chicago keep italics as HTML)
+  document.querySelectorAll('.research-list .pub-cite-panel').forEach(function (panel) {
+    var fmts = panel.querySelectorAll('.cite-fmt');
+    var texts = panel.querySelectorAll('.cite-text');
+    var copy = panel.querySelector('.cite-copy');
+    fmts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var fmt = btn.getAttribute('data-fmt');
+        fmts.forEach(function (b) {
+          b.classList.toggle('is-active', b === btn);
+          b.setAttribute('aria-pressed', String(b === btn));
+        });
+        texts.forEach(function (t) { t.hidden = t.getAttribute('data-fmt') !== fmt; });
+        copy.textContent = 'Copy';
+      });
+    });
+    copy.addEventListener('click', function () {
+      var el = panel.querySelector('.cite-text:not([hidden])');
+      var plain = el.textContent;
+      var done = function () {
+        copy.textContent = 'Copied';
+        setTimeout(function () { copy.textContent = 'Copy'; }, 1500);
+      };
+      var fallback = function () {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        try { if (document.execCommand('copy')) done(); } catch (e) {}
+        sel.removeAllRanges();
+      };
+      if (!navigator.clipboard) return fallback();
+      var write = (el.tagName === 'P' && window.ClipboardItem)
+        ? navigator.clipboard.write([new ClipboardItem({
+            'text/plain': new Blob([plain], { type: 'text/plain' }),
+            'text/html': new Blob([el.innerHTML], { type: 'text/html' })
+          })])
+        : navigator.clipboard.writeText(plain);
+      write.then(done, fallback);
     });
   });
 })();

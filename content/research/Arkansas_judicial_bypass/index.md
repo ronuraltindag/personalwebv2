@@ -1,7 +1,18 @@
 ---
 weight: 22
 status: published
-citation: "Altindag, O., Joyce, T. (2017).<br>*American Journal of Public Health*, 107(8), 1266–1271."
+citation: "*American Journal of Public Health*, 2017"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  - "Joyce, Ted"
+  journal: "American Journal of Public Health"
+  year: 2017
+  volume: 107
+  issue: "8"
+  pages: "1266–1271"
+  doi: "10.2105/AJPH.2017.303822"
 author: 
 categories:
 - Health Economics

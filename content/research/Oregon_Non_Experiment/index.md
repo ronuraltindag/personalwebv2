@@ -2,7 +2,19 @@
 funding: "National Institute of Child Health and Human Development."
 weight: 20
 status: published
-citation: "Altindag, O., Joyce, T., Reeder, J.A. (2019).<br>*Evaluation Review*, 43(3–4), 152–188."
+citation: "*Evaluation Review*, 2019"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  - "Joyce, Theodore J."
+  - "Reeder, Julie A."
+  journal: "Evaluation Review"
+  year: 2019
+  volume: 43
+  issue: "3–4"
+  pages: "152–188"
+  doi: "10.1177/0193841X19865963"
 author: 
 categories:
 - Health Economics

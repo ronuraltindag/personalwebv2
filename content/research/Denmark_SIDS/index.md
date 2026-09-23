@@ -2,7 +2,19 @@
 funding: "[Novo Nordisk Foundation](https://novonordiskfonden.dk/en/) ($1.5M)."
 weight: 12
 status: published
-citation: "Altindag, O., Greve, J., Tekin, E. (2024).<br>*Review of Economics and Statistics*, 106(3), 882–893."
+citation: "*Review of Economics and Statistics*, 2024"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  - "Greve, Jane"
+  - "Tekin, Erdal"
+  journal: "Review of Economics and Statistics"
+  year: 2024
+  volume: 106
+  issue: "3"
+  pages: "882–893"
+  doi: "10.1162/rest_a_01211"
 author: Onur Altindag & Jane Greve & Erdal Tekin
 date: 
 categories:

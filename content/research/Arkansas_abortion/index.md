@@ -1,7 +1,17 @@
 ---
 weight: 15
 status: published
-citation: "Altindag, O., Joyce, T. (2022).<br>*Journal of Public Economics*, 213, 104715."
+citation: "*Journal of Public Economics*, 2022"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  - "Joyce, Theodore"
+  journal: "Journal of Public Economics"
+  year: 2022
+  volume: 213
+  pages: "104715"
+  doi: "10.1016/j.jpubeco.2022.104715"
 author: Onur Altindag & Theodore Joyce
 date:
 draft: false

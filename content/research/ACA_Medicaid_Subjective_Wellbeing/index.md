@@ -1,7 +1,20 @@
 ---
 weight: 19
 status: published
-citation: "Kobayashi, L., Altindag, O., Truskinovsky, Y., Berkman, L. (2019).<br>*American Journal of Public Health*, 109(9), 1236–1242."
+citation: "*American Journal of Public Health*, 2019"
+bib:
+  type: article
+  authors:
+  - "Kobayashi, Lindsay C."
+  - "Altindag, Onur"
+  - "Truskinovsky, Yulya"
+  - "Berkman, Lisa F."
+  journal: "American Journal of Public Health"
+  year: 2019
+  volume: 109
+  issue: "9"
+  pages: "1236–1242"
+  doi: "10.2105/AJPH.2019.305164"
 author: 
 - Health Economics
 - United States

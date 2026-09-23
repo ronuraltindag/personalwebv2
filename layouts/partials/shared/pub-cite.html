@@ -1,0 +1,119 @@
+{{/* Cite panel for one paper: BibTeX, APA and Chicago versions built from the
+     page's `bib` front matter. Receives dict "page" and "id".
+
+     bib:
+       type: article            # article | techreport | unpublished
+       authors: ["Family, Given", ...]
+       year: 2022
+       journal / volume / issue / pages      (article)
+       series / number / institution         (techreport)
+       note                                  (unpublished)
+       doi / month / url                     (optional) */}}
+{{ $p := .page }}
+{{ $b := $p.Params.bib }}
+{{ $title := $p.Title }}
+{{ $doi := "" }}{{ with $b.doi }}{{ $doi = printf "https://doi.org/%s" . }}{{ end }}
+
+{{ $fam := slice }}
+{{ $giv := slice }}
+{{ range $b.authors }}
+  {{ $parts := split . ", " }}
+  {{ $fam = $fam | append (index $parts 0) }}
+  {{ $g := "" }}{{ if gt (len $parts) 1 }}{{ $g = index $parts 1 }}{{ end }}
+  {{ $giv = $giv | append $g }}
+{{ end }}
+{{ $n := len $fam }}
+{{ $last := sub $n 1 }}
+
+{{/* Titles ending in ? or ! take no extra period */}}
+{{ $tEnd := "." }}
+{{ if or (strings.HasSuffix $title "?") (strings.HasSuffix $title "!") }}{{ $tEnd = "" }}{{ end }}
+
+{{/* BibTeX key: first author + year + first content word of the title */}}
+{{ $stop := slice "a" "an" "the" "on" "of" "in" "do" "does" "can" }}
+{{ $word := "" }}
+{{ range split (lower $title) " " }}
+  {{ $w := replaceRE "[^a-z]" "" . }}
+  {{ if and (not $word) $w (not (in $stop $w)) }}{{ $word = $w }}{{ end }}
+{{ end }}
+{{ $first := lower (index $fam 0) }}
+{{ range slice (slice "ı" "i") (slice "ğ" "g") (slice "ş" "s") (slice "ç" "c") (slice "ö" "o") (slice "ü" "u") }}
+  {{ $first = replace $first (index . 0) (index . 1) }}
+{{ end }}
+{{ $key := printf "%s%v%s" (replaceRE "[^a-z]" "" $first) $b.year $word }}
+
+{{/* ---- BibTeX ---- */}}
+{{ $f := slice (printf "  author = {%s}" (delimit $b.authors " and ")) (printf "  title = {%s}" (replace $title "–" "--")) }}
+{{ if eq $b.type "article" }}
+  {{ $f = $f | append (printf "  journal = {%s}" $b.journal) }}
+  {{ $f = $f | append (printf "  year = {%v}" $b.year) }}
+  {{ with $b.volume }}{{ $f = $f | append (printf "  volume = {%v}" .) }}{{ end }}
+  {{ with $b.issue }}{{ $f = $f | append (printf "  number = {%s}" (replace (printf "%v" .) "–" "--")) }}{{ end }}
+  {{ with $b.pages }}{{ $f = $f | append (printf "  pages = {%s}" (replace (printf "%v" .) "–" "--")) }}{{ end }}
+{{ else if eq $b.type "techreport" }}
+  {{ $f = $f | append (printf "  institution = {%s}" $b.institution) }}
+  {{ $f = $f | append "  type = {Working Paper}" }}
+  {{ $f = $f | append (printf "  number = {%v}" $b.number) }}
+  {{ $f = $f | append (printf "  year = {%v}" $b.year) }}
+{{ else }}
+  {{ with $b.note }}{{ $f = $f | append (printf "  note = {%s}" .) }}{{ end }}
+  {{ $f = $f | append (printf "  year = {%v}" $b.year) }}
+{{ end }}
+{{ with $b.month }}{{ $f = $f | append (printf "  month = {%s}" .) }}{{ end }}
+{{ with $b.doi }}{{ $f = $f | append (printf "  doi = {%s}" .) }}{{ end }}
+{{ with $b.url }}{{ $f = $f | append (printf "  url = {%s}" .) }}{{ end }}
+{{ $bibtex := printf "@%s{%s,\n%s\n}" $b.type $key (delimit $f ",\n") }}
+
+{{/* ---- APA: Family, G. G., & Family, G. (Year). ---- */}}
+{{ $apaAu := slice }}
+{{ range $i, $fn := $fam }}
+  {{ $inits := slice }}
+  {{ range split (index $giv $i) " " }}{{ with . }}{{ $inits = $inits | append (printf "%s." (substr . 0 1)) }}{{ end }}{{ end }}
+  {{ $apaAu = $apaAu | append (printf "%s, %s" $fn (delimit $inits " ")) }}
+{{ end }}
+{{ $apaNames := index $apaAu 0 }}
+{{ if gt $n 1 }}{{ $apaNames = printf "%s, & %s" (delimit (first $last $apaAu) ", ") (index $apaAu $last) }}{{ end }}
+{{ $apa := printf "%s (%v). " (htmlEscape $apaNames) $b.year }}
+{{ if eq $b.type "article" }}
+  {{ $apa = printf "%s%s%s <em>%s</em>" $apa (htmlEscape $title) $tEnd (htmlEscape $b.journal) }}
+  {{ with $b.volume }}{{ $apa = printf "%s, <em>%v</em>" $apa . }}{{ end }}
+  {{ with $b.issue }}{{ $apa = printf "%s(%v)" $apa . }}{{ end }}
+  {{ with $b.pages }}{{ $apa = printf "%s, %v" $apa . }}{{ end }}
+  {{ $apa = printf "%s." $apa }}
+{{ else if eq $b.type "techreport" }}
+  {{ $apa = printf "%s<em>%s</em> (%s No. %v). %s." $apa (htmlEscape $title) (htmlEscape $b.series) $b.number (htmlEscape $b.institution) }}
+{{ else }}
+  {{ $apa = printf "%s<em>%s</em> [%s]." $apa (htmlEscape $title) (htmlEscape (default "Unpublished manuscript" $b.note)) }}
+{{ end }}
+{{ with $doi }}{{ $apa = printf "%s %s" $apa . }}{{ end }}
+
+{{/* ---- Chicago author-date: Family, Given, Given Family, and Given Family. Year. ---- */}}
+{{ $chiAu := slice (printf "%s, %s" (index $fam 0) (index $giv 0)) }}
+{{ range $i, $fn := $fam }}{{ if gt $i 0 }}{{ $chiAu = $chiAu | append (printf "%s %s" (index $giv $i) $fn) }}{{ end }}{{ end }}
+{{ $chiNames := index $chiAu 0 }}
+{{ if gt $n 1 }}{{ $chiNames = printf "%s, and %s" (delimit (first $last $chiAu) ", ") (index $chiAu $last) }}{{ end }}
+{{ $chi := printf "%s. %v. “%s%s” " (htmlEscape (strings.TrimSuffix "." $chiNames)) $b.year (htmlEscape $title) $tEnd }}
+{{ if eq $b.type "article" }}
+  {{ $chi = printf "%s<em>%s</em>" $chi (htmlEscape $b.journal) }}
+  {{ with $b.volume }}{{ $chi = printf "%s %v" $chi . }}{{ end }}
+  {{ with $b.issue }}{{ $chi = printf "%s (%v)" $chi . }}{{ end }}
+  {{ with $b.pages }}{{ $chi = printf "%s: %v" $chi . }}{{ end }}
+  {{ $chi = printf "%s." $chi }}
+{{ else if eq $b.type "techreport" }}
+  {{ $chi = printf "%s%s %v. %s." $chi (htmlEscape $b.series) $b.number (htmlEscape $b.institution) }}
+{{ else }}
+  {{ $chi = printf "%s%s." $chi (htmlEscape (default "Unpublished manuscript" $b.note)) }}
+{{ end }}
+{{ with $doi }}{{ $chi = printf "%s %s." $chi . }}{{ end }}
+
+<div id="{{ .id }}-cite" class="pub-panel pub-cite-panel" hidden>
+  <div class="cite-bar">
+    <button class="cite-fmt is-active" type="button" data-fmt="bibtex" aria-pressed="true">BibTeX</button>
+    <button class="cite-fmt" type="button" data-fmt="apa" aria-pressed="false">APA</button>
+    <button class="cite-fmt" type="button" data-fmt="chicago" aria-pressed="false">Chicago</button>
+    <button class="cite-copy" type="button">Copy</button>
+  </div>
+  <pre class="cite-text" data-fmt="bibtex">{{ $bibtex }}</pre>
+  <p class="cite-text" data-fmt="apa" hidden>{{ $apa | safeHTML }}</p>
+  <p class="cite-text" data-fmt="chicago" hidden>{{ $chi | safeHTML }}</p>
+</div>

@@ -550,6 +550,63 @@ body {
 .research-list .pub-panel-links a.pub-link:hover { color: #1c3d5a !important; }
 .research-list .pub-panel-links .pub-link i { display: none; }
 
+/* Cite panel: format switch + copy in the link-row style, then the citation */
+.research-list .cite-bar {
+  display: flex;
+  align-items: baseline;
+  column-gap: 0.9rem;
+}
+.research-list .cite-fmt,
+.research-list .cite-copy {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #8a8a8a;
+  transition: color 0.15s;
+}
+.research-list .cite-fmt:hover,
+.research-list .cite-fmt.is-active { color: #1c3d5a; }
+.research-list .cite-copy {
+  margin-left: auto;
+  color: #006da8;
+}
+.research-list .cite-copy:hover { color: #1c3d5a; }
+.research-list .cite-fmt:focus-visible,
+.research-list .cite-copy:focus-visible {
+  outline: 2px solid #006da8;
+  outline-offset: 2px;
+}
+.research-list .cite-text[hidden] { display: none; }
+.research-list pre.cite-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #333;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0.5rem 0 0.2rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.research-list p.cite-text {
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: #333;
+  max-width: 42em;
+  margin: 0.5rem 0 0.2rem;
+}
+
 /* Visible keyboard focus */
 .research-list .pub-tab:focus-visible,
 .research-list a.pub-link:focus-visible {

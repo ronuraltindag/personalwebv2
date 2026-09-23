@@ -1,7 +1,21 @@
 ---
 weight: 25
 status: published
-citation: "Reeder, J.A., Joyce, T., Sibley, K., Arnold, D., Altindag, O. (2014).<br>*Pediatrics*, 134, e700–e709."
+citation: "*Pediatrics*, 2014"
+bib:
+  type: article
+  authors:
+  - "Reeder, Julie A."
+  - "Joyce, Ted"
+  - "Sibley, Kelly"
+  - "Arnold, Diane"
+  - "Altindag, Onur"
+  journal: "Pediatrics"
+  year: 2014
+  volume: 134
+  issue: "3"
+  pages: "e700–e709"
+  doi: "10.1542/peds.2013-4146"
 author: 
 categories:
 - Health Economics

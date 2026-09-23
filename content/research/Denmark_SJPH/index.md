@@ -2,7 +2,21 @@
 funding: "[Novo Nordisk Foundation](https://novonordiskfonden.dk/en/) ($1.5M)."
 weight: 11
 status: published
-citation: "Altindag, O., Andersen, M., Baker, J., Greve, J., Tekin, E. (2025).<br>*Scandinavian Journal of Public Health*, 53(4), 383–390."
+citation: "*Scandinavian Journal of Public Health*, 2025"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  - "Andersen, Matvei"
+  - "Baker, Jennifer L."
+  - "Greve, Jane"
+  - "Tekin, Erdal"
+  journal: "Scandinavian Journal of Public Health"
+  year: 2025
+  volume: 53
+  issue: "4"
+  pages: "383–390"
+  doi: "10.1177/14034948241247882"
 author: Onur Altindag & Matvei Andersen & Jennifer Baker & Jane Greve & Erdal Tekin
 date: 
 categories:

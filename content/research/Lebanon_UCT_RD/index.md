@@ -2,7 +2,17 @@
 partner: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon) (implementation)."
 weight: 13
 status: published
-citation: "Altindag, O., O'Connell, S.D. (2023).<br>*Journal of Development Economics*, 160, 102942."
+citation: "*Journal of Development Economics*, 2023"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  - "O'Connell, Stephen D."
+  journal: "Journal of Development Economics"
+  year: 2023
+  volume: 160
+  pages: "102942"
+  doi: "10.1016/j.jdeveco.2022.102942"
 author: 
 categories:
 - Development Economics

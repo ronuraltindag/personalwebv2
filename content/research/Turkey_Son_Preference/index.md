@@ -1,7 +1,17 @@
 ---
 weight: 23
 status: published
-citation: "Altindag, O. (2016).<br>*Demography*, 53, 541–566."
+citation: "*Demography*, 2016"
+bib:
+  type: article
+  authors:
+  - "Altindag, Onur"
+  journal: "Demography"
+  year: 2016
+  volume: 53
+  issue: "2"
+  pages: "541–566"
+  doi: "10.1007/s13524-016-0455-0"
 author: 
 categories:
 - Health Economics
