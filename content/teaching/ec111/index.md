@@ -74,6 +74,17 @@ Free temporary access runs until Sep 14, 2026. Registration help: [startstrong.c
 ---
 
 <details open>
+<summary><strong>Midterm 1 Practice</strong></summary>
+
+[Open the Midterm 1 practice set](/teaching/ec111/mt1-practice/). It has 100 questions on Chapters 2 to 5 at the level of the midterm: multiple choice, true/false, and multi-part problems with graphs. A wrong answer shows an explanation, and every problem has a worked solution. It uses the course password.
+
+These are practice questions, not the exam questions. Please tell me what works and what does not: email oaltindag@bentley.edu with "EC111 practice" in the subject, or use the link under each question to report a problem with it.
+
+</details>
+
+---
+
+<details open>
 <summary><strong>Slides & Lecture Notes</strong></summary>
 
 Slides and notes for each chapter are posted here **after** we cover it in class.
