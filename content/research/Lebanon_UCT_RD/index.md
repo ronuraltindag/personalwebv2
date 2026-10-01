@@ -2,6 +2,7 @@
 partner: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon) (implementation)."
 weight: 13
 status: published
+field: economics
 citation: "*Journal of Development Economics*, 2023"
 bib:
   type: article

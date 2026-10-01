@@ -3,6 +3,7 @@ funding: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Leba
 partner: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon) (implementation)."
 weight: 16
 status: published
+field: economics
 citation: "*Journal of Development Economics*, 2021"
 bib:
   type: article

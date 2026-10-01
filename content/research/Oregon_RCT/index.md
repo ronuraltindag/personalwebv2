@@ -1,6 +1,7 @@
 ---
 weight: 25
 status: published
+field: other
 citation: "*Pediatrics*, 2014"
 bib:
   type: article

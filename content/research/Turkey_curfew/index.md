@@ -2,6 +2,7 @@
 funding: "[CSSH Research Development Initiative](https://cssh.northeastern.edu) ($8K)."
 weight: 14
 status: published
+field: economics
 citation: "*American Economic Journal: Applied Economics*, 2022"
 bib:
   type: article

@@ -1,6 +1,7 @@
 ---
 weight: 22
 status: published
+field: other
 citation: "*American Journal of Public Health*, 2017"
 bib:
   type: article

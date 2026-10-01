@@ -14,18 +14,23 @@
         </section>
         {{ end }}
 
+        {{/* Published papers are split by the page's `field`: economics journals first,
+             then public health, demography and policy journals. */}}
         {{ $groups := slice
-            (dict "key" "ongoing"   "title" "Ongoing Work")
-            (dict "key" "published" "title" "Published Papers") }}
+            (dict "key" "ongoing"   "field" ""          "title" "Ongoing Work")
+            (dict "key" "published" "field" "economics" "title" "Published Papers: Economics")
+            (dict "key" "published" "field" "other"     "title" "Published Papers: Public Health, Demography and Policy") }}
 
-        {{ range $g := $groups }}
-          {{ $papers := sort (where $.RegularPages "Params.status" $g.key) "Weight" "asc" }}
+        {{ range $gi, $g := $groups }}
+          {{ $papers := where $.RegularPages "Params.status" $g.key }}
+          {{ with $g.field }}{{ $papers = where $papers "Params.field" . }}{{ end }}
+          {{ $papers = sort $papers "Weight" "asc" }}
           {{ if $papers }}
           <section class="pub-section">
           <div class="pub-section-head"><h2 class="pub-group">{{ $g.title | safeHTML }}</h2></div>
           <div class="pub-section-body">
           {{ range $i, $p := $papers }}
-            {{ $id := printf "%s-%d" $g.key $i }}
+            {{ $id := printf "%s-%d-%d" $g.key $gi $i }}
             {{/* Sort the page's `links` into direct resource links ("Full study" shown
                  as PDF), replication items, and coverage items. */}}
             {{ $press := slice }}

@@ -1,6 +1,7 @@
 ---
 weight: 17
 status: published
+field: economics
 citation: "*Public Choice*, 2021"
 bib:
   type: article

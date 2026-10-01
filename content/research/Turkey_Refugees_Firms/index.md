@@ -1,6 +1,7 @@
 ---
 weight: 18
 status: published
+field: economics
 citation: "*Journal of Development Economics*, 2020"
 bib:
   type: article

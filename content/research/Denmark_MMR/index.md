@@ -2,6 +2,7 @@
 funding: "[Novo Nordisk Foundation](https://novonordiskfonden.dk/en/) ($1.5M)."
 weight: 10
 status: published
+field: other
 citation: "*Vaccines*, 2025"
 bib:
   type: article

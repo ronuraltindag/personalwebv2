@@ -2,6 +2,7 @@
 funding: "[Novo Nordisk Foundation](https://novonordiskfonden.dk/en/) ($1.5M)."
 weight: 12
 status: published
+field: economics
 citation: "*Review of Economics and Statistics*, 2024"
 bib:
   type: article

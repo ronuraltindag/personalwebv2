@@ -1,6 +1,7 @@
 ---
 weight: 19
 status: published
+field: other
 citation: "*American Journal of Public Health*, 2019"
 bib:
   type: article

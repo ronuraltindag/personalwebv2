@@ -1,6 +1,7 @@
 ---
 weight: 15
 status: published
+field: economics
 citation: "*Journal of Public Economics*, 2022"
 bib:
   type: article
