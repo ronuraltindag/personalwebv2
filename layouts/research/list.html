@@ -15,11 +15,11 @@
         {{ end }}
 
         {{/* Published papers are split by the page's `field`: economics journals first,
-             then public health, demography and policy journals. */}}
+             then health, population and policy journals. */}}
         {{ $groups := slice
             (dict "key" "ongoing"   "field" ""          "title" "Ongoing Work")
             (dict "key" "published" "field" "economics" "title" "Published Papers: Economics")
-            (dict "key" "published" "field" "other"     "title" "Published Papers: Public Health, Demography and Policy") }}
+            (dict "key" "published" "field" "other"     "title" "Published Papers: Health, Population and Policy") }}
 
         {{ range $gi, $g := $groups }}
           {{ $papers := where $.RegularPages "Params.status" $g.key }}
