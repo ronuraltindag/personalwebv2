@@ -8,6 +8,14 @@ citation: "with Jade Siu, Diloá Athias, and Olivier Sterck."
 draft: false
 title: "Friction at the Door: A Nationwide Experiment on Outreach Channels and Worker Formalization"
 links:
+- icon: file-pdf
+  icon_pack: far
+  name: ILO report (2025)
+  url: https://doi.org/10.54394/BWOO9132
+- icon: file-pdf
+  icon_pack: far
+  name: ILO policy brief (2025)
+  url: https://doi.org/10.54394/CYFI1732
 - icon: newspaper
   icon_pack: far
   name: ILO news
