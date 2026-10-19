@@ -96,6 +96,7 @@ Slides and notes for each chapter are posted here **after** we cover it in class
 | Ch 4: The Market Forces of Supply and Demand | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch04_Slides.pdf) | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch04_Notes.pdf) | Handout 2 (supply and demand): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout02_Supply_Demand.pdf) · [answers](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout02_Supply_Demand_Answers.pdf) |
 | Ch 5: Elasticity and Its Application | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch05_Slides.pdf) | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch05_Notes.pdf) | Handout 3 (elasticity): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout03_Elasticity.pdf) · [answers](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout03_Elasticity_Answers.pdf) |
 | Ch 6: Supply, Demand, and Government Policies | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch06_Slides.pdf) | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch06_Notes.pdf) | Handout 4 (government policies): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout04_Government_Policies.pdf) · [answers](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout04_Government_Policies_Answers.pdf) |
+| Ch 7: Consumers, Producers, and the Efficiency of Markets | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch07_Slides.pdf) | *after Oct 19* | |
 
 Later chapters follow the schedule below. Handouts and the mock exams appear here too.
 
