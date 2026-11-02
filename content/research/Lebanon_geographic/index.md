@@ -5,7 +5,7 @@ partner: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Leba
 weight: 10
 status: published
 field: economics
-citation: "Accepted, *Journal of Political Economy: Microeconomics*"
+citation: "*Journal of Political Economy: Microeconomics*, accepted"
 bib:
   type: article
   authors:
@@ -23,7 +23,7 @@ categories:
 - Refugees 
 date: "2024-03-12"
 draft: false
-excerpt: "Altindag, O., O'Connell, S.D., Achour, R. (2026). Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment. Accepted, **Journal of Political Economy: Microeconomics**."
+excerpt: "Altindag, O., O'Connell, S.D., Achour, R. (2026). Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment. **Journal of Political Economy: Microeconomics**, accepted."
 layout: single
 title: "Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment"
 links:
