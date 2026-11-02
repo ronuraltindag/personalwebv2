@@ -1,5 +1,5 @@
 ---
-study_status: "RCT; endline data collection in progress"
+study_status: "RCT completed; manuscript in preparation"
 funding: "[J-PAL Displaced Livelihoods Initiative](https://www.povertyactionlab.org/initiative/displaced-livelihoods-initiative) ($154K) and [SSHRC Insight Grant](https://www.sshrc-crsh.gc.ca) ($196K)."
 partner: "[Building Markets, Türkiye](https://buildingmarkets.org) (implementation)."
 weight: 4

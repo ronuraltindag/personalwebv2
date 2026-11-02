@@ -76,7 +76,7 @@
               {{ if or $hasAbstract $resources $replication $press $p.Params.bib }}
               <div class="pub-links">
                 {{ if $hasAbstract }}
-                  <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-abstract" data-target="{{ $id }}-abstract">{{ if $p.Content }}Abstract{{ else }}Details{{ end }}</button>
+                  <button class="pub-tab" type="button" aria-expanded="false" aria-controls="{{ $id }}-abstract" data-target="{{ $id }}-abstract">{{ if $p.Content }}Abstract{{ else }}Status{{ end }}</button>
                 {{ end }}
                 {{ range $resources }}{{ partial "shared/pub-link.html" . }}{{ end }}
                 {{ if $replication }}
