@@ -1,18 +1,20 @@
 ---
-study_status: "RCT completed; revised and resubmitted"
+study_status: "Forthcoming"
 funding: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon)."
 partner: "[UNHCR Lebanon](https://www.unhcr.org/countries/lebanon) and [WFP Lebanon](https://www.wfp.org/countries/lebanon) (implementation)."
-weight: 5
-status: ongoing
-citation: "Revised and resubmitted, *Journal of Political Economy: Microeconomics*"
+weight: 10
+status: published
+field: economics
+citation: "*Journal of Political Economy: Microeconomics*, forthcoming"
 bib:
-  type: unpublished
+  type: article
   authors:
   - "Altindag, Onur"
   - "O'Connell, Stephen D."
   - "Achour, Rim"
-  note: "Working paper"
-  year: 2025
+  journal: "Journal of Political Economy: Microeconomics"
+  year: 2026
+  note: "Forthcoming"
 author: Onur Altındağ & Stephen D. O'Connell & Rim Achour
 categories:
 - Development Economics
@@ -21,7 +23,7 @@ categories:
 - Refugees 
 date: "2024-03-12"
 draft: false
-excerpt: "Altindag, O., O'Connell, S.D., Achour, R. (2025). Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment. Revise and resubmit requested, Journal of Political Economy: Microeconomics."
+excerpt: "Altindag, O., O'Connell, S.D., Achour, R. (2026). Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment. **Journal of Political Economy: Microeconomics**, forthcoming."
 layout: single
 title: "Geographic poverty targeting in social protection programs: Evidence from a nationwide policy experiment"
 links:

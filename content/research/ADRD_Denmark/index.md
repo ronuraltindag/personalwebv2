@@ -1,6 +1,6 @@
 ---
 funding: "[HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) ($24K) and [Independent Research Fund Denmark](https://dff.dk/en) ($418K)."
-study_status: "Under review"
+study_status: "Revise and resubmit, Review of Economics and Statistics"
 weight: 2
 status: ongoing
 citation: "*NBER Working Paper*"
@@ -24,7 +24,7 @@ categories:
 - Event Study
 date: "2025-01-01"
 draft: false
-excerpt: "Altindag, O., Greve, J., Truskinovsky, Y. (2025). Family Spillovers of Dementia. **NBER Working Paper** No. 34635. Seed funding from [HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) and Bentley Research Council. Full funding from [Independent Research Fund Denmark](https://dff.dk/en)."
+excerpt: "Altindag, O., Greve, J., Truskinovsky, Y. (2025). Family Spillovers of Dementia. **NBER Working Paper** No. 34635. Revise and resubmit, Review of Economics and Statistics. Seed funding from [HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzheimers-disease-and-services-center) and Bentley Research Council. Full funding from [Independent Research Fund Denmark](https://dff.dk/en)."
 layout: single
 title: "Family Spillovers of Dementia"
 links:
