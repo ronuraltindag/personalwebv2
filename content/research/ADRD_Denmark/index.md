@@ -3,7 +3,7 @@ funding: "[HEADS Center](https://publichealth.jhu.edu/hopkins-economics-of-alzhe
 study_status: "Revise and resubmit, Review of Economics and Statistics"
 weight: 2
 status: ongoing
-citation: "*NBER Working Paper*"
+citation: "*NBER Working Paper* No. 34635. Revise and resubmit, *Review of Economics and Statistics*"
 bib:
   type: techreport
   authors:
