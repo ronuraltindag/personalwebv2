@@ -98,6 +98,7 @@ Slides and notes for each chapter are posted here **after** we cover it in class
 | Ch 6: Supply, Demand, and Government Policies | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch06_Slides.pdf) | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch06_Notes.pdf) | Handout 4 (government policies): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout04_Government_Policies.pdf) · [answers](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout04_Government_Policies_Answers.pdf) |
 | Ch 7: Consumers, Producers, and the Efficiency of Markets | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch07_Slides.pdf) | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch07_Notes.pdf) | Handout 5 (surplus and efficiency): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout05_Efficiency.pdf) · [answers](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout05_Efficiency_Answers.pdf)<br>Handout 5b (taxes and deadweight loss): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout05b_Taxes.pdf) · [answers](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout05b_Taxes_Answers.pdf) |
 | Ch 9: Application: International Trade | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch09_Slides.pdf) | — | Handout 6 (international trade): [questions](/pdfs/teaching/EC111_slides/EC111_FA2026_Handout06_Trade.pdf) |
+| Ch 10–11: Externalities; Public Goods and Common Resources | [PDF](/pdfs/teaching/EC111_slides/EC111_FA2026_Ch10-11_Slides.pdf) | — | — |
 
 Later chapters follow the schedule below. Handouts and the mock exams appear here too.
 
