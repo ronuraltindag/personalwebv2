@@ -74,6 +74,17 @@ Free temporary access runs until Sep 14, 2026. Registration help: [startstrong.c
 ---
 
 <details open>
+<summary><strong>Midterm 2 Practice</strong></summary>
+
+[Open the Midterm 2 practice set](/teaching/ec111/mt2-practice/). It has 189 multiple-choice questions and 27 problems on Chapters 6 to 10, with an explanation for every answer and a worked solution for every problem. It uses the course password. The Midterm 2 questions will be close to these. The set is available until the exam on Wednesday, November 11.
+
+If a question looks wrong or unclear, use the link under it or email oaltindag@bentley.edu with "EC111 practice" in the subject.
+
+</details>
+
+---
+
+<details>
 <summary><strong>Midterm 1 Practice</strong></summary>
 
 [Open the Midterm 1 practice set](/teaching/ec111/mt1-practice/). It has 100 questions on Chapters 2 to 5 at the level of the midterm: multiple choice, true/false, and multi-part problems with graphs. A wrong answer shows an explanation, and every problem has a worked solution. It uses the course password.
